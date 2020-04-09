@@ -102,7 +102,7 @@
 
                     <div class="form-group">
                       <div class="g-recaptcha"  style="transform:scale(0.50);-webkit-transform:scale(0.50);transform-origin:0 0;-webkit-transform-origin:0 0;"  data-sitekey="6Ld5oeIUAAAAAM9Rql8w-d1HSap5oWJtAQREMGRE" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                      <input class="form-control hidden" id="capcha" name="capcha" value=""  data-recaptcha="true" required data-error="Please complete the Captcha" hidden="">
+                      <input class="form-control hidden" id="capcha2" name="capcha2" value=""  data-recaptcha="true" required data-error="Please complete the Captcha" hidden="">
                       <div class="help-block with-errors"></div>
                     </div>
                     <button type="submit" class="btn btn-secondary source" onclick="getCaptcha()" style="width:100%;background:#2a3f54 ">ENVIAR SOLICITUD</button>
@@ -120,46 +120,43 @@
     </html>
     <script src="/js/jquery-3.4.1.slim.min.js"></script>
     <script>
-      var verifyCallback = function(response) {
+      let verifyCallback = function(response) {
         alert(response);
       };
-      var widgetId1;
-      var onloadCallback = function() {
 
+      let widgetId1;
+      let onloadCallback = function() {
         widgetId1 = grecaptcha.render('example1', {
-
           'sitekey' : '6Ld5oeIUAAAAAM9Rql8w-d1HSap5oWJtAQREMGRE',
           'theme' : 'dark'
-
         });
       };
-      function getCaptcha(){
 
-        var usuario = document.getElementById("usuario").value;
-        var pass = document.getElementById("clave").value;
-        var valueCapcha = grecaptcha.getResponse(widgetId1);
+      function getCaptcha(){
+        let usuario = document.getElementById("usuario").value;
+        let pass = document.getElementById("clave").value;
+        let valueCapcha = grecaptcha.getResponse(widgetId1);
         if(usuario == ""){
           new PNotify({
-           title: 'ATENCIÓN',
-           text: 'Ingresa tu usuario',
+           title: '¡ALERTA!',
+           text: 'Por favor, ingresa tu Usuario.',
            styling: 'bootstrap3'
-         })
+          })
         }else if(pass == ""){
           new PNotify({
-           title: 'ATENCIÓN',
-           text: 'Ingresa tu contraseña',
+           title: '¡ALERTA!',
+           text: 'Por favor, ingresa tu Contraseña.',
            styling: 'bootstrap3'
-         })
+          })
         }else if (valueCapcha == "") {
           new PNotify({
-           title: 'ATENCIÓN',
-           text: 'Debes seleccionar el reCaptcha para continuar',
+           title: '¡ALERTA!',
+           text: 'Por favor, comprueba que no eres un Robot.',
            type:'error',
            styling: 'bootstrap3'
-         })
+          })
         }else{
           document.getElementById("capcha").value= valueCapcha;
         }
       }
-
     </script>
