@@ -8,7 +8,7 @@
 	<script src="/js/pnotify/dist/pnotify.nonblock.js"></script>
 	<script>	
 		new PNotify({
-			title: 'Algo salio mal',
+			title: '¡ALERTA!',
 			text: '<?= session('message') ?>',
 			type:'error',
 			styling: 'bootstrap3'
