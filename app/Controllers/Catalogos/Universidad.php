@@ -4,10 +4,8 @@ use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
 class Universidad extends BaseController {
-
   public function index(){
     $universidad = new UniversidadModel();
-
     $data = [
       'universidades' => $universidad->asObject()
       ->select('cof_universidad.*')
@@ -17,14 +15,11 @@ class Universidad extends BaseController {
   }
 
   public function new(){
-   $user = new UniversidadModel();
-   $persona = new PersonaModel();
-   $roles = new   RolesModel();
-
+   $universidad = new UniversidadModel();
    $validation =  \Config\Services::validation();
-   $this->_loadDefaultView('Crear usuario',['validation'=>$validation, 'user'=> new UniversidadModel(),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll()],'new');
+   $this->_loadDefaultView('Crear universidad',['validation'=>$validation, 'universidad'=> new UniversidadModel()],'new');
+  }
 
- }
  public function create(){
   helper("user");
 
@@ -44,6 +39,7 @@ class Universidad extends BaseController {
  }
  return redirect()->back()->withInput();
 }
+
 public function edit($id = null){
 
   $user = new UniversidadModel();
