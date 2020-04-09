@@ -2,14 +2,23 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i>Landing page <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-home"></i>Inicio<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="/principal">Dashboard</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-edit"></i>Evaluación Docente<span class="fa fa-chevron-down"></span></a>
+                <li><a><i class=" fa fa-cogs"></i>Administración<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="form.html">Evaluación docente</a></li>
+                    <li><a href="/Catalogos/usuario">Usuarios</a></li>
+                    <li><a href="/Catalogos/personas">Personas</a></li>
+                    <li><a href="/Catalogos/universidad">Universidades</a></li>
+                    <li><a href="/Catalogos/facultad">Facultades</a></li>
+                    <li><a href="typography.html">Carreras</a></li>
+                    <li><a href="media_gallery.html">Planes</a></li>
+                    <li><a href="typography.html">Materias</a></li>
+                    <li><a href="typography.html">Plan Materias</a></li>
+                    <li><a href="typography.html">Ciclos</a></li>
+                    <li><a href="general_elements.html">Carga Académica</a></li>                  
                   </ul>
                 </li>
                 <li><a><i class=" fa fa-cog"></i>Administrar Evaluación<span class="fa fa-chevron-down"></span></a>
@@ -22,21 +31,12 @@
                     <li><a href="typography.html">Inscripción</a></li>
                   </ul>
                 </li>
-                <li><a><i class=" fa fa-cogs"></i>Configurar<span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-edit"></i>Evaluación Docente<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="/Catalogos/usuario">Conf.Usuarios</a></li>
-                    <li><a href="/Catalogos/personas">Conf.Personas</a></li>
-                    <li><a href="/Catalogos/universidad">Conf.Universidad</a></li>
-                    <li><a href="/Catalogos/facultad">Conf.Facultad</a></li>
-                    <li><a href="typography.html">Conf.Carreras</a></li>
-                    <li><a href="media_gallery.html">Conf.Planes</a></li>
-                    <li><a href="typography.html">Conf.Materias</a></li>
-                    <li><a href="typography.html">Conf.Plan Materias</a></li>
-                    <li><a href="typography.html">Conf.Ciclos</a></li>
-                    <li><a href="general_elements.html">Conf.Carga Académica</a></li>                  
+                    <li><a href="form.html">Evaluación docente</a></li>
                   </ul>
                 </li>
-                <li><a><i class="fa fa-bar-chart-o"></i>Analisis de resultados<span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-bar-chart-o"></i>Análisis de resultados<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="chartjs.html">Chart JS</a></li>
                     <li><a href="chartjs2.html">Chart JS2</a></li>
@@ -69,6 +69,5 @@
           <img src="/user/img/ucad_low.png" style="width: 40%;margin-left: 26%;">
           <div class="sidebar-footer hidden-small" style="height: 6%">
             <a data-toggle="tooltip"  title="Logout" href="/logout" style="width: 100%;background: #2A3F54">
-
             </a>
           </div>
