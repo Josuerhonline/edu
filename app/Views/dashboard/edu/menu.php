@@ -26,7 +26,7 @@
                   <ul class="nav child_menu">
                     <li><a href="/Catalogos/usuario">Conf.Usuarios</a></li>
                     <li><a href="/Catalogos/personas">Conf.Personas</a></li>
-                    <li><a href="typography.html">Conf.Facultad</a></li>
+                    <li><a href="/Catalogos/facultad">Conf.Facultad</a></li>
                     <li><a href="typography.html">Conf.Carreras</a></li>
                     <li><a href="media_gallery.html">Conf.Planes</a></li>
                     <li><a href="typography.html">Conf.Materias</a></li>
