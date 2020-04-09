@@ -215,7 +215,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<textarea id="direccion" name="direccion" style="width: 77%; height:38px; " placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
+													<textarea id="direccion" name="direccion" style="width: 77%; height:38px;resize: none; " placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
 												</div>
 											</div>
 											<div class="clearfix"></div><br>

@@ -41,8 +41,8 @@
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="universidadId" id="universidadId" >
-														<?php foreach ($facultad as $f): ?>
-															<option value="<?= $f->universidadId ?>"><?= $f->universidad ?></option>
+														<?php foreach ($universidad as $u): ?>
+															<option value="<?= $u->universidadId ?>"><?= $u->universidad ?></option>
 														<?php endforeach?>
 													</select> 
 												</div>
@@ -57,7 +57,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="facultad" name="facultad" value="<?=old('facultad', $facultades->facultad)?>"/>
+													<input class="form-control" type="text" id="facultad" name="facultad" value="<?=old('facultad', $facultad->facultad)?>"/>
 												</div>
 											</div>
 

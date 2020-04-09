@@ -41,7 +41,7 @@
                        <td><?= $f->universidad ?></td>
                        <td><?= $f->facultad ?></td>
                        <td>
-                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/usuario/edit/<?= $f->facultadId?>"><i class="fa fa-pencil"></i></a>
+                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/facultad/edit/<?= $f->facultadId?>"><i class="fa fa-pencil"></i></a>
                         <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?= $f->facultadId ?>)"><i class="fa fa-trash"></i></button>
                       </td>
                     </tr>
@@ -66,7 +66,7 @@
 <script>
   function confirmarBorrar(id){
     swal({   
-      title: "Desea eliminar este registro",   text: "Precione confirmar para eliminar",
+      title: "Desea eliminar este registro",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
       confirmButtonColor: "#DD6B55",   
