@@ -9,6 +9,7 @@
 <div class="right_col" role="main" >
 	<div class="clearfix"></div>
 	<div class="row" >
+		la gran puta
 		<div class="col-md-12 col-sm-12 " >
 			<div class="x_panel" style="border: 1px solid #e1e1e1;" >
 				<div class="x_title">
