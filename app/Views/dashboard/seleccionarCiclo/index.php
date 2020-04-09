@@ -27,7 +27,7 @@
 													<option value="<?= $c->ciclo ?>"><?= $c->ciclo ,' - ', $c->anio ?></option>
 												<?php endforeach?>
 											</select> 
-												<button type="button" class="btn btn-primary col-md-3 float-right" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-top: 5%;background:#2A3F54">SELECCIONAR Y ENTRAR</button>
+												<button type="button" class="btn btn-primary col-md-3 float-right" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-top: 5%;background:#2A3F54">SELECCIONAR</button>
 										</div>
 									</div>
 								</div>
