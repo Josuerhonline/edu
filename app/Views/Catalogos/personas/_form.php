@@ -6,6 +6,8 @@
 	<?= view("dashboard/edu/navbar"); ?>
 	<?= view("dashboard/partials/_session"); ?>
 </div>
+<h1>La concha de la lora</h1>
+culo
 <div class="right_col" role="main" >
 	<div class="clearfix"></div>
 	<div class="row" >
