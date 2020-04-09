@@ -21,7 +21,6 @@
 				</div>
 				<div <?= $created ? "hidden" : "" ?> class="x_title" >
 					<h2>Editar facultad</h2>
-					asdasdasd
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
