@@ -77,4 +77,48 @@ CRITICAL - 2020-04-09 00:37:14 --> facultad_update is not a valid rule.
 #4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
 
+=======
+CRITICAL - 2020-04-09 01:54:11 --> Invalid file: catalogo/universidad/_form.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogo/univer...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogo/univer...', Array, true)
+#2 C:\laragon\www\edu\app\Views\Catalogos\universidad\new.php(3): view('catalogo/univer...', Array)
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/unive...', Array, true)
+#5 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(100): view('Catalogos/unive...', Array)
+#6 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(20): App\Controllers\Catalogos\Universidad->_loadDefaultView('Crear universid...', Array, 'new')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->new()
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-09 01:54:47 --> Undefined variable: user
+#0 C:\laragon\www\edu\app\Views\Catalogos\universidad\_form.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 98, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/unive...', Array, true)
+#3 C:\laragon\www\edu\app\Views\Catalogos\universidad\new.php(3): view('Catalogos/unive...', Array)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/unive...', Array, true)
+#6 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(100): view('Catalogos/unive...', Array)
+#7 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(20): App\Controllers\Catalogos\Universidad->_loadDefaultView('Crear universid...', Array, 'new')
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->new()
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#10 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2020-04-09 01:54:55 --> Undefined variable: user
+#0 C:\laragon\www\edu\app\Views\Catalogos\universidad\_form.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 98, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/unive...', Array, true)
+#3 C:\laragon\www\edu\app\Views\Catalogos\universidad\new.php(3): view('Catalogos/unive...', Array)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/unive...', Array, true)
+#6 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(100): view('Catalogos/unive...', Array)
+#7 C:\laragon\www\edu\app\Controllers\Catalogos\Universidad.php(20): App\Controllers\Catalogos\Universidad->_loadDefaultView('Crear universid...', Array, 'new')
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->new()
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#10 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+>>>>>>> origin/master
