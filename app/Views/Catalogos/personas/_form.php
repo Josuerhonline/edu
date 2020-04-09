@@ -6,7 +6,7 @@
 	<?= view("dashboard/edu/navbar"); ?>
 	<?= view("dashboard/partials/_session"); ?>
 </div>
-La reputa madre
+A la verga las viejas putas
 <div class="right_col" role="main" >
 	<div class="clearfix"></div>
 	<div class="row" >
