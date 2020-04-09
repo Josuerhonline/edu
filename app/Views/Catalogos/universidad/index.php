@@ -22,7 +22,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card-box table-responsive">
-                      <a href="/catalogos/usuario/new" title="Crear" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-plus"></i> Crear</a>
+                      <a href="/catalogos/universidad/new" title="Crear" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-plus"></i> Crear</a>
                       <div class="clearfix"></div>
                       <table id="tablaUsuarios" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
