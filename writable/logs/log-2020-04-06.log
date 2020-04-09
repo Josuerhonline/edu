@@ -1,0 +1,680 @@
+CRITICAL - 2020-04-06 00:41:44 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(20): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:42:24 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:43:23 --> syntax error, unexpected ''pager'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 00:43:35 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 00:43:36 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 00:43:45 --> syntax error, unexpected '$user' (T_VARIABLE), expecting ']'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 00:43:53 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:46:44 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:46:46 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:46:46 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:46:47 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(110): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(21): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:47:21 --> Trying to get property 'estado' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 45, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Usuario.php(111): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Usuario.php(22): App\Controllers\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 00:51:55 --> Call to a member function select() on array
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 00:54:02 --> Too few arguments to function App\Controllers\Usuario::_loadDefaultView(), 2 passed in C:\laragon\www\edu\app\Controllers\Usuario.php on line 20 and exactly 3 expected
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(20): App\Controllers\Usuario->_loadDefaultView(Array, 'index')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->index()
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-06 00:55:00 --> Array to string conversion
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\laragon\\www\\...', 103, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 00:55:09 --> Array to string conversion
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\laragon\\www\\...', 103, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 00:56:36 --> Array to string conversion
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\laragon\\www\\...', 107, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 00:57:21 --> Undefined variable: title
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 105, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 00:58:09 --> Array to string conversion
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\laragon\\www\\...', 106, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 00:58:30 --> Array to string conversion
+#0 C:\laragon\www\edu\app\Controllers\Usuario.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\laragon\\www\\...', 106, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(29): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 21:40:50 --> Undefined offset: 1
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(482): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\laragon\\www\\...', 482, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(174): CodeIgniter\Router\Router->checkRoutes('usuario')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('usuario')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 21:40:53 --> Undefined offset: 1
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(482): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\laragon\\www\\...', 482, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(174): CodeIgniter\Router\Router->checkRoutes('usuario')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('usuario')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 21:40:53 --> Undefined offset: 1
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(482): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\laragon\\www\\...', 482, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(174): CodeIgniter\Router\Router->checkRoutes('usuario')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('usuario')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 21:40:54 --> Undefined offset: 1
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(482): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\laragon\\www\\...', 482, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Router\Router.php(174): CodeIgniter\Router\Router->checkRoutes('usuario')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('usuario')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-06 21:46:24 --> Invalid file: user/control/logout.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/control/lo...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('user/control/lo...', Array, true)
+#2 C:\laragon\www\edu\app\Controllers\web\User.php(65): view('user/control/lo...', Array)
+#3 C:\laragon\www\edu\app\Controllers\web\User.php(11): App\Controllers\web\User->_loadDefaultView(Array, 'logout')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\web\User->index()
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\web\User))
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 21:52:06 --> Too few arguments to function App\Controllers\web\Usuario::_loadDefaultView(), 2 passed in C:\laragon\www\edu\app\Controllers\web\Usuario.php on line 13 and exactly 3 expected
+#0 C:\laragon\www\edu\app\Controllers\web\Usuario.php(13): App\Controllers\web\Usuario->_loadDefaultView(Array, '_form')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\web\Usuario->culo()
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\web\Usuario))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-06 21:56:41 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 21:56:51 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 21:57:34 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 22:11:42 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 22:11:46 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 22:12:39 --> Trying to get property 'usuarioId' of non-object
+#0 C:\laragon\www\edu\app\Views\dashboard\user\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(63): App\Controllers\dashboard\Usuario->_loadDefaultView('Actualizar usua...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->edit()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 22:13:53 --> Invalid file: dashboard/user/dashboard/new.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/user/...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#2 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(29): App\Controllers\dashboard\Usuario->_loadDefaultView('Crear usuario', Array, 'dashboard/new')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->new()
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 22:14:38 --> Invalid file: dashboard/user/dashboard/new.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/user/...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#2 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(109): view('dashboard/user/...', Array)
+#3 C:\laragon\www\edu\app\Controllers\dashboard\Usuario.php(29): App\Controllers\dashboard\Usuario->_loadDefaultView('Crear usuario', Array, 'dashboard/new')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\dashboard\Usuario->new()
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\dashboard\Usuario))
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 22:24:53 --> Invalid file: catalogos/partials/_form-error.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogos/parti...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/parti...', Array, true)
+#2 C:\laragon\www\edu\app\Views\dashboard\user\new.php(3): view('catalogos/parti...')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#5 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(109): view('dashboard/user/...', Array)
+#6 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(29): App\Controllers\catalogos\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->new()
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-06 22:24:55 --> Invalid file: catalogos/partials/_form-error.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogos/parti...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/parti...', Array, true)
+#2 C:\laragon\www\edu\app\Views\dashboard\user\new.php(3): view('catalogos/parti...')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#5 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(109): view('dashboard/user/...', Array)
+#6 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(29): App\Controllers\catalogos\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->new()
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-06 22:24:56 --> Invalid file: catalogos/partials/_form-error.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogos/parti...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/parti...', Array, true)
+#2 C:\laragon\www\edu\app\Views\dashboard\user\new.php(3): view('catalogos/parti...')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#5 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(109): view('dashboard/user/...', Array)
+#6 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(29): App\Controllers\catalogos\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->new()
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-06 22:24:57 --> Invalid file: catalogos/partials/_form-error.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('catalogos/parti...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/parti...', Array, true)
+#2 C:\laragon\www\edu\app\Views\dashboard\user\new.php(3): view('catalogos/parti...')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#5 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(109): view('dashboard/user/...', Array)
+#6 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(29): App\Controllers\catalogos\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->new()
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-04-06 22:51:42 --> Invalid file: ass/user/index.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('ass/user/index....')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('ass/user/index', Array, true)
+#2 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(109): view('ass/user/index', Array)
+#3 C:\laragon\www\edu\app\Controllers\catalogos\Usuario.php(20): App\Controllers\catalogos\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-06 23:05:08 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:15 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:16 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:16 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:53 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:54 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:54 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:54 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:05:54 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:06:37 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:07:23 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:07:24 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:07:24 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:07:32 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:41 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:41 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:42 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:49 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:51 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:51 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:52 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:52 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:52 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:52 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:52 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:53 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:53 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:08:54 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:05 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:05 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:06 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:28 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:29 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:37 --> Class 'App\Models\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\catalogos\Usuario->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\catalogos\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:10:51 --> Class 'App\Models\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Principal->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:32:01 --> Use of undefined constant hola - assumed 'hola' (this will throw an Error in a future version of PHP)
+#0 C:\laragon\www\edu\app\Views\Catalogos\user\index.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\laragon\\www\\...', 84, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Usuario.php(109): view('Catalogos/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Usuario.php(20): App\Controllers\Catalogos\Usuario->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Usuario->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Usuario))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 23:54:19 --> Class 'App\Controllers\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-06 23:55:00 --> Unknown table 'cof_usuarios'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT `cof_usu...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `cof_usu...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `cof_usu...')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT `cof_usu...', Array, false)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(14): CodeIgniter\Model->findAll()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-04-06 23:55:13 --> Undefined property: stdClass::$usuario
+#0 C:\laragon\www\edu\app\Views\Catalogos\user\index.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\laragon\\www\\...', 56, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(105): view('catalogos/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(16): App\Controllers\Catalogos\Personas->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 23:56:38 --> Undefined variable: users
+#0 C:\laragon\www\edu\app\Views\Catalogos\user\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 40, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(105): view('catalogos/user/...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(16): App\Controllers\Catalogos\Personas->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 23:57:06 --> Undefined property: stdClass::$usuario
+#0 C:\laragon\www\edu\app\Views\Catalogos\personas\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\laragon\\www\\...', 57, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/perso...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(105): view('catalogos/perso...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(16): App\Controllers\Catalogos\Personas->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 23:57:35 --> Undefined property: stdClass::$nombreRol
+#0 C:\laragon\www\edu\app\Views\Catalogos\personas\index.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\laragon\\www\\...', 59, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/perso...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(105): view('catalogos/perso...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(16): App\Controllers\Catalogos\Personas->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-06 23:58:11 --> Undefined property: stdClass::$usuarioId
+#0 C:\laragon\www\edu\app\Views\Catalogos\personas\index.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\laragon\\www\\...', 64, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('catalogos/perso...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(105): view('catalogos/perso...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Personas.php(16): App\Controllers\Catalogos\Personas->_loadDefaultView('Listado de usua...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Personas->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Personas))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

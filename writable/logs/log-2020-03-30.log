@@ -1,0 +1,332 @@
+CRITICAL - 2020-03-30 01:36:59 --> syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 01:37:01 --> syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:09:06 --> syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:11:02 --> syntax error, unexpected ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:13:58 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:14:54 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:14:57 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:15:00 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:15:08 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:15:21 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:15:23 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:15:30 --> Call to undefined function App\Controllers\verificarClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-03-30 02:16:55 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:16:56 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:16:58 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:10 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:11 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:12 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:12 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:12 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:12 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:13 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:13 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:13 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:31 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:32 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:33 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:33 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:34 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:46 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:47 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:17:47 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:18:25 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 02:24:19 --> syntax error, unexpected 'unset' (T_UNSET)
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 22:15:21 --> Invalid file: dashboard/principal/index.php
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/princ...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/princ...', Array, true)
+#2 C:\laragon\www\edu\app\Controllers\Principal.php(118): view('dashboard/princ...', Array)
+#3 C:\laragon\www\edu\app\Controllers\Principal.php(22): App\Controllers\Principal->_loadDefaultView('', Array, 'index')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Principal->index()
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-03-30 22:21:21 --> Too few arguments to function App\Controllers\Principal::_loadDefaultView(), 1 passed in C:\laragon\www\edu\app\Controllers\Principal.php on line 22 and exactly 3 expected
+#0 C:\laragon\www\edu\app\Controllers\Principal.php(22): App\Controllers\Principal->_loadDefaultView('index')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Principal->index()
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-03-30 22:21:35 --> Too few arguments to function App\Controllers\Principal::_loadDefaultView(), 2 passed in C:\laragon\www\edu\app\Controllers\Principal.php on line 22 and exactly 3 expected
+#0 C:\laragon\www\edu\app\Controllers\Principal.php(22): App\Controllers\Principal->_loadDefaultView(Array, 'index')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Principal->index()
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

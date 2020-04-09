@@ -1,0 +1,54 @@
+CRITICAL - 2020-04-01 23:48:51 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-01 23:50:54 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-01 23:51:00 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-01 23:51:27 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-01 23:51:32 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-04-01 23:51:46 --> 
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(798): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\laragon\www\edu\app\Filters\AutenticarRolAdmin.php(13): redirect('login')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Filters\Filters.php(162): App\Filters\AutenticarRolAdmin->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(376): CodeIgniter\Filters\Filters->run('principal', 'before')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

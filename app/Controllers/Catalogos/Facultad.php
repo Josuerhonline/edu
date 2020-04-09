@@ -26,72 +26,67 @@ class Facultad extends BaseController {
     $this->_loadDefaultView('Crear facultad',['validation'=>$validation, 'facultad'=> new FacultadModel(),'universidad' => $universidad->asObject()->findAll()],'new');
 
   }
+
   public function create(){
     helper("user");
 
 
-    $user = new UsuariosModel();
+     $facultad = new FacultadModel();
 
-    if($this->validate('users')){
-     $id = $user->insert([
-      'personaId' =>$this->request->getPost('personaId'),
-      'usuario' =>$this->request->getPost('usuario'),
-      'clave' =>hashClave($this->request->getPost('clave')),
-      'rolId' => $this->request->getPost('rolId'),
-      'estado' => 'EN PROCESO',
+    if($this->validate('facultad')){
+     $id = $facultad->insert([
+      'universidadId' =>$this->request->getPost('universidadId'),
+      'facultad' =>$this->request->getPost('facultad'),
     ]);
 
-     return redirect()->to('/Catalogos/usuario')->with('message', 'usuario creado con éxito.');
+     return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad creada con éxito.');
    }
    return redirect()->back()->withInput();
  }
- public function edit($id = null){
 
-  $user = new UsuariosModel();
-  $persona = new PersonaModel();
-  $roles = new   RolesModel();
-  if ($user->find($id) == null)
+ public function edit($id = null){
+    $facultad = new FacultadModel();
+    $universidad = new UniversidadModel();
+  if ($facultad->find($id) == null)
   {
     throw PageNotFoundException::forPageNotFound();
   }  
 
   $validation =  \Config\Services::validation();
-  $this->_loadDefaultView('Actualizar usuario',
-    ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
+  $this->_loadDefaultView('Actualizar facultad',
+    ['validation'=>$validation,'facultad'=> $facultad->asObject()->find($id),'universidad' => $universidad->asObject()->findAll() ],'edit');
 }
 public function update($id = null){
   helper("user");
-  $user = new UsuariosModel();
+     $facultad = new FacultadModel();
 
-  if ($user->find($id) == null)
+  if ($facultad->find($id) == null)
   {
     throw PageNotFoundException::forPageNotFound();
   }  
-  if($this->validate('userUpdate')){
-    $user->update($id, [
-      'personaId' =>$this->request->getPost('personaId_editar'),
-      'usuario' =>$this->request->getPost('usuario'),
-      'clave' =>hashClave($this->request->getPost('clave')),
-      'rolId' => $this->request->getPost('rolId_editar'),
-      'estado' =>$this->request->getPost('estado_editar'),
+  if($this->validate('facultadEditar')){
+    $facultad->update($id, [
+      'universidadId' =>$this->request->getPost('universidadId_editar'),
+      'facultad' =>$this->request->getPost('facultad_editar'),
+
     ]);
-    return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario editado con éxito.');
+    return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
   }
   return redirect()->back()->withInput();
 }
 
 public function delete($id = null){
 
-  $user = new UsuariosModel();
+     $facultad = new FacultadModel();
 
-  if ($user->find($id) == null)
+  if ($facultad->find($id) == null)
   {
     throw PageNotFoundException::forPageNotFound();
   }  
 
-  $user->delete($id);
+  $facultad->delete($id);
 
-  return redirect()->to('/Catalogos/usuario')->with('message', 'usuario eliminado con éxito.');
+  return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad eliminada con éxito.');
   
 }
 

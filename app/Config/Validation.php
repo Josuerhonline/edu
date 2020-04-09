@@ -31,13 +31,21 @@ class Validation
 		'usuario' => 'required|min_length[3]|max_length[255]|is_unique[cof_usuarios.usuario]',
 		'clave' => 'required|min_length[5]|max_length[25]'
 	];
-		public $userUpdate =[
+	public $userUpdate =[
 		'clave' => 'required|min_length[5]|max_length[25]'
 	];
-			public $personaUpdate =[
+	public $personaUpdate =[
 		'DUI' => 'required|min_length[5]|max_length[25]'
 	];
+	public $facultad =[
+		'facultad' => 'required|min_length[5]|max_length[50]',
+	];
+	public $facultadEditar =[
+	'facultad_editar' => 'required|min_length[5]|max_length[50]'
+	];
 
+
+	
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

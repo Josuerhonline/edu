@@ -79,7 +79,7 @@
         type: "success",
       }, 
       function(){
-       window.location.href = "/Catalogos/usuario/delete/"+id;
+       window.location.href = "/Catalogos/facultad/delete/"+id;
      })
     });
   }

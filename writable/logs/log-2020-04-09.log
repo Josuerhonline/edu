@@ -1,0 +1,79 @@
+CRITICAL - 2020-04-09 00:00:15 --> Class 'App\Controllers\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->edit('1')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 00:09:20 --> Undefined variable: user
+#0 C:\laragon\www\edu\app\Views\Catalogos\facultad\edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 2, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/facul...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(106): view('Catalogos/facul...', Array)
+#4 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(60): App\Controllers\Catalogos\Facultad->_loadDefaultView('Actualizar facu...', Array, 'edit')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->edit('1')
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-04-09 00:09:42 --> Undefined variable: personas
+#0 C:\laragon\www\edu\app\Views\dashboard\user\_form.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 44, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#3 C:\laragon\www\edu\app\Views\Catalogos\facultad\edit.php(3): view('dashboard/user/...', Array)
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('Catalogos/facul...', Array, true)
+#6 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(106): view('Catalogos/facul...', Array)
+#7 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(60): App\Controllers\Catalogos\Facultad->_loadDefaultView('Actualizar facu...', Array, 'edit')
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->edit('1')
+#9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#10 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2020-04-09 00:17:17 --> Class 'App\Controllers\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->delete('1')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 00:27:09 --> Undefined variable: user
+#0 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 66, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->update('1')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 00:29:24 --> Class 'App\Controllers\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 00:29:46 --> Undefined variable: user
+#0 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 71, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->update('1')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 00:30:44 --> Class 'App\Controllers\Catalogos\UsuariosModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->delete('1')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 00:36:18 --> facultad_editar is not a valid rule.
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Controller.php(204): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('facultad_editar')
+#1 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(67): CodeIgniter\Controller->validate('facultad_editar')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->update('2')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-09 00:37:14 --> facultad_update is not a valid rule.
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Controller.php(204): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('facultad_update')
+#1 C:\laragon\www\edu\app\Controllers\Catalogos\Facultad.php(67): CodeIgniter\Controller->validate('facultad_update')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Facultad->update('2')
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Facultad))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

@@ -1,0 +1,63 @@
+CRITICAL - 2020-03-26 00:19:13 --> Undefined variable: error
+#0 C:\laragon\www\edu\app\Views\Validations\list_bootstrap.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 22, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Validation\Validation.php(502): CodeIgniter\View\View->render('App\\Views\\Valid...')
+#3 C:\laragon\www\edu\app\Views\dashboard\partials\_form-error.php(1): CodeIgniter\Validation\Validation->listErrors()
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/parti...', Array, true)
+#6 C:\laragon\www\edu\app\Views\dashboard\user\new.php(3): view('dashboard/parti...')
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#8 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/user/...', Array, true)
+#9 C:\laragon\www\edu\app\Controllers\Usuario.php(107): view('dashboard/user/...', Array)
+#10 C:\laragon\www\edu\app\Controllers\Usuario.php(27): App\Controllers\Usuario->_loadDefaultView('Crear usuario', Array, 'new')
+#11 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->new()
+#12 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#13 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#15 {main}
+CRITICAL - 2020-03-26 00:56:57 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'C:\\laragon\\www\\...', 39, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(39): password_hash('123456789')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-26 00:57:44 --> Cannot redeclare hash()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-03-26 00:59:48 --> Cannot redeclare hash()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-03-26 01:01:01 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'C:\\laragon\\www\\...', 39, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(39): password_hash('123456789')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-26 01:02:02 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'C:\\laragon\\www\\...', 39, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(39): password_hash('123456789')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-26 01:03:20 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'C:\\laragon\\www\\...', 39, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(39): password_hash('123456789')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-03-26 01:04:25 --> password_hash() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash()...', 'C:\\laragon\\www\\...', 39, Array)
+#1 C:\laragon\www\edu\app\Controllers\Usuario.php(39): password_hash('43534534534')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Usuario->create()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
