@@ -108,22 +108,6 @@
 													<input class="form-control" type="password" id="clave" name="clave" value=""/>
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el estado<span class="required">*</span>
-												</label>
-												<div class="input-group mb-3 col-md-6">
-													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
-														"></i></span>
-													</div>
-													<select class="form-control"  name="estado_editar" id="estado_editar">
-														<option value="<?=old('estado', $user->estado)?>"><?=old('estado', $user->estado)?></option>
-														<option value="RETIRADO">RETIRADO</option>
-														<option value="ACTIVO">ACTIVO</option>
-														<option value="EN PROCESO">EN PROCESO</option>
-													</select>
-												</div>
-											</div>
 											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
 										</form>
 									</div>
@@ -136,15 +120,6 @@
 		</div>
 	</div>
 </div>
-<script src="/js/jquery-3.4.1.slim.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#personaId').select2();
-	});
-	$(document).ready(function(){
-		$('#personaId_editar').select2();
-	});
-</script>
 
 
 
