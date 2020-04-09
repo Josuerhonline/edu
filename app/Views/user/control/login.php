@@ -4,7 +4,6 @@
   <title>Login | EDU</title>
   <meta charset='UTF-8'>
   <meta name="robots" content="noindex">
-
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
@@ -25,12 +24,11 @@
       <div class="terms">
         <h3>¿Cómo activar su Usuario en EDU?</h3>
         <p class="small">A continuación los pasos para poder registrarse en la plataforma EDU:</p>
-
         <h3>Docentes y Administrativos</h3>
-        <p>Our Services are very diverse, so sometimes additional terms or product requirements (including age requirements) may apply. Additional terms will be available with the relevant Services, and those additional terms become part of your agreement with us if you use those Services.</p>
+        <p>Para poder activar su usuario, deberá digitar el correo electrónico que ha brindado en UCAD para tener contacto y que es al correo que tiene acceso, seguidamente deberá ingresar el usuario que se le ha brindado para ingresar a la plataforma Uonline 5. Al enviar la solicitud, el sistema verificará si usted está registrado y enviará a su correo un código para poder ingresar a la plataforma.</p>
 
         <h3>Estudiantes</h3>
-        <p>You may need a dp Account in order to use some of our Services. You may create your own dp Account, or your dp Account may be assigned to you by an administrator, such as your employer or educational institution. If you are using a dp Account assigned to you by an administrator, different or additional terms may apply and your administrator may be able to access or disable your account.</p>
+        <p>Si usted es estudiante, debe asegurarse que ha brindado en Registro Académico un correo electrónico personal para que podamos enviar los pasos a seguir para acceder. Debe llenar el formulario con su correo brindado y su número de carnet que será el usuario a utilizar.</p>
       </div>
       <!-- RECOVERY -->
       <div class="recovery">
@@ -101,7 +99,7 @@
                     <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Usuario / Carnet">
 
                     <div class="form-group">
-                      <div class="g-recaptcha"  style="transform:scale(0.50);-webkit-transform:scale(0.50);transform-origin:0 0;-webkit-transform-origin:0 0;"  data-sitekey="6Ld5oeIUAAAAAM9Rql8w-d1HSap5oWJtAQREMGRE" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                      <div class="g-recaptcha"  data-sitekey="6Ld5oeIUAAAAAM9Rql8w-d1HSap5oWJtAQREMGRE" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                       <input class="form-control hidden" id="capcha2" name="capcha2" value=""  data-recaptcha="true" required data-error="Please complete the Captcha" hidden="">
                       <div class="help-block with-errors"></div>
                     </div>
