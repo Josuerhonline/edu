@@ -43,13 +43,12 @@
 <script src="/js/jquery-3.4.1.slim.min.js"></script>
 <script type="text/javascript">
 	function procesarCiclo(){
-		var valorCiclo = document.getElementById('cicloId').value;
-		if (valorCiclo=='1') {
+		let valorCiclo = document.getElementById('cicloId').value;
+		if (valorCiclo!="") {
 			window.location="/principal";
-		}else{
-
-		}
+		}else{}
 	}
+
 	$(document).ready(function(){
 		$('#cicloId').select2();
 	});
