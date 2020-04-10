@@ -4,6 +4,7 @@
 <div class="top_nav">
   <?= view("dashboard/edu/navbar"); ?>
   <?= view("dashboard/partials/_session"); ?>
+  <?= view("dashboard/partials/_sessionError"); ?>
 </div>
 <div class="right_col" role="main">
   <div class="clearfix"></div>
@@ -66,23 +67,17 @@
 <script>
   function confirmarBorrar(id){
     swal({   
-      title: "Desea eliminar este registro",   text: "Presione confirmar para eliminar",
+      title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
       confirmButtonColor: "#DD6B55",   
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   
-      swal({
-        title: "ELIMINADO",
-        text: "Registro eliminado con exito",
-        type: "success",
-      }, 
-      function(){
-       window.location.href = "/Catalogos/facultad/delete/"+id;
-     })
+      window.location.href = "/Catalogos/facultad/delete/"+id;
     });
   }
+
   $(document).ready(function() {
     $('#tablaUsuarios').DataTable( {
       "paging":   true,

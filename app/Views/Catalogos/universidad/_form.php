@@ -68,23 +68,36 @@
 
 											<!-- 	campos para editar -->
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la persona<span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre de Universidad<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
+													<input value="<?=old('nombre_universidad_editar', $universidad->universidad)?>" class="form-control" type="text" id="nombre_universidad_editar" name="nombre_universidad_editar"/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el rol<span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Dirección<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-map" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
+													<input value="<?=old('direccion_editar', $universidad->direccion)?>"  class="form-control" type="text" id="direccion_editar" name="direccion_editar"/>
+												</div>
+											</div>
+											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Teléfono<span class="required">*</span>
+												</label>
+												<div class="input-group mb-3 col-md-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
+														"></i></span>
+													</div>
+													<input value="<?=old('telefono_editar', $universidad->telefono)?>" class="form-control" type="text" data-inputmask="'mask': '9999-9999'" id="telefono_editar" name="telefono_editar"/>
 												</div>
 											</div>
 											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>

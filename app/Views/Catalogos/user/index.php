@@ -27,7 +27,7 @@
                       <table id="tablaUsuarios" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
                         <tr>
-                          <th style="color: #fff">Id</th>
+                          <th style="color: #fff">N°</th>
                           <th style="color: #fff" >Nombres</th>
                           <th style="color: #fff">Apellidos</th>
                           <th style="color: #fff">Usuario</th>
@@ -82,7 +82,7 @@
 <script>
   function confirmarBorrar(id){
     swal({   
-      title: "Desea eliminar este registro",   text: "Precione confirmar para eliminar",
+      title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
       confirmButtonColor: "#DD6B55",   
@@ -91,7 +91,7 @@
     }, function(){   
       swal({
         title: "ELIMINADO",
-        text: "Registro eliminado con exito",
+        text: "Registro eliminado con éxito.",
         type: "success",
       }, 
       function(){

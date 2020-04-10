@@ -100,21 +100,14 @@
 <script>
   function confirmarBorrar(id){
     swal({   
-      title: "Desea eliminar este registro",   text: "Precione confirmar para eliminar",
+      title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
       confirmButtonColor: "#DD6B55",   
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   
-      swal({
-        title: "ELIMINADO",
-        text: "Registro eliminado con exito",
-        type: "success",
-      }, 
-      function(){
-       window.location.href = "/Catalogos/personas/delete/"+id;
-     })
+      window.location.href = "/Catalogos/personas/delete/"+id;
     });
   }
   $(document).ready(function() {

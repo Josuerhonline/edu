@@ -59,6 +59,12 @@ class Validation
 		'telefono' => 'required|min_length[9]',
 	];
 
+	public $universidadEditar =[
+		'nombre_universidad_editar' => 'required',
+		'direccion_editar' => 'required',
+		'telefono_editar' => 'required|min_length[9]',
+	];
+
 	
 	/**
 	 * Specifies the views that are used to display the
