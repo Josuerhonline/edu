@@ -1,6 +1,7 @@
 <?php namespace App\Controllers\Catalogos;
 use App\Models\Catalogos\FacultadModel;
 use App\Models\Catalogos\UniversidadModel;
+use App\Models\Catalogos\CarrerasModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
@@ -76,6 +77,12 @@ class Facultad extends BaseController {
 
   public function delete($id = null){
     $facultad = new FacultadModel();
+    $carreras = new CarrerasModel();
+    $buscarCarrera = $carreras->select('facultadId')->where('facultadId',$id)->first();
+
+    if ($buscarCarrera) {
+      return redirect()->to("/Catalogos/facultad")->with('messageError','Lo sentimos, la Facultad tiene Carreras asociadas y no puede ser eliminada.');
+    }
 
     if ($facultad->find($id) == null)
     {
