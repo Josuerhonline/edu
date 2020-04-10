@@ -1,20 +1,47 @@
-<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>404</title>
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"> 
 	<link type="text/css" rel="stylesheet" href="build/css/style_pageError.css" />
-</head>
+</div>
+</div>
+<div class="top_nav">
+	<?= view("dashboard/partials/_session"); ?>
+</div>
+<div class="right_col" role="main" >
+	<div class="clearfix"></div>
+	<div class="row" >
+		<div class="col-md-12 col-sm-12 " >
+			<div class="x_panel" style="border: 1px solid #e1e1e1;" >
+				<div  class="x_title" >
+					
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
+					<div class="clearfix"></div>
+					<div class="col-md-12">
+						<div class="x_content">
+							<div class="x_content">
+								<div class="row">
+									<div class="col-md-12">
 
-<body>
+										<div id="notfound">
+											<div class="notfound">
+												<div class="notfound-404">
+													<h1>EXITO</h1>
 
-	<div id="notfound">
-		<div class="notfound">
-			<div class="notfound-404">
-				<h1>4<span>0</span>4</h1>
+												</div>
+											
+												<p style="padding-top: 40px">Tu nueva contraseña se ha establecido</p>
+												<a href="/logout">Inicia sesión</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<p>Pagina no encontrada</p>
-			<a href="/logout">home page</a>
 		</div>
 	</div>
+</div>
+
 

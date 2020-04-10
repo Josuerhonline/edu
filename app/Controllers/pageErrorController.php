@@ -10,7 +10,7 @@ class pageErrorController extends BaseController {
   }
 
 private function _loadDefaultView($view){
-
+ echo view("dashboard/templates/header");
   echo view("dashboard/edu/$view");
   echo view("dashboard/templates/footer");
 }

@@ -23,6 +23,10 @@ class Validation
 		'title' => 'required|min_length[3]|max_length[255]',
 		'description' => 'min_length[3]|max_length[5000]'
 	];
+		public $cheta =[
+		'nClave' => 'required',
+		
+	];
 
 	public $categories =[
 		'title' => 'required|min_length[3]|max_length[255]'
