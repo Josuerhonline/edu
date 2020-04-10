@@ -134,3 +134,55 @@ CRITICAL - 2020-04-09 21:30:48 --> Call to undefined function App\Controllers\Ca
 #2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2020-04-09 22:06:58 --> Class 'App\Controllers\Catalogos\PersonaModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->edit('1')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 22:09:58 --> Undefined variable: buscarUsuario1
+#0 C:\laragon\www\edu\app\Controllers\web\User.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 32, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\web\User->login_post()
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\web\User))
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-04-09 22:25:02 --> Illegal offset type
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Session\Session.php(481): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'C:\\laragon\\www\\...', 481, Array)
+#1 C:\laragon\www\edu\app\Controllers\web\User.php(33): CodeIgniter\Session\Session->set(Object(App\Models\Catalogos\UsuariosModel))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\web\User->login_post()
+#3 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\web\User))
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-04-09 22:30:47 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 22:30:55 --> syntax error, unexpected 'public' (T_PUBLIC)
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\laragon\\www\\...')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(861): class_exists('\\App\\Controller...', true)
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(388): CodeIgniter\CodeIgniter->startController()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-04-09 22:33:40 --> Undefined variable: users
+#0 C:\laragon\www\edu\app\Views\dashboard\cambioClave\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 40, Array)
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('dashboard/cambi...', Array, true)
+#3 C:\laragon\www\edu\app\Controllers\CambioClave.php(101): view('dashboard/cambi...', Array)
+#4 C:\laragon\www\edu\app\Controllers\CambioClave.php(18): App\Controllers\CambioClave->_loadDefaultView('Listado de facu...', Array, 'index')
+#5 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\CambioClave->index()
+#6 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CambioClave))
+#7 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
