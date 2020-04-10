@@ -22,7 +22,7 @@ class CambioClave extends BaseController {
         'clave' =>hashClave($this->request->getPost('cClave')),
         'estado' =>'ACTIVO',
       ]);
-      return redirect()->to('/pageErrorController')->with('message', 'Usuario editado con éxito.');
+      return redirect()->to('/SeleccionarCiclo')->with('message','Su contraseña ha sido modificada exitosamente.');
     }
     return redirect()->back()->withInput();
   }
