@@ -8,8 +8,7 @@
 </div>
 <div class="right_col" role="main" >
 	<div class="clearfix"></div>
-	<div class="row" >
-		<h1>culo 45</h1>
+	<div class="row">
 		<div class="col-md-12 col-sm-12 " >
 			<div class="x_panel" style="border: 1px solid #e1e1e1;" >
 				<div class="x_title">
@@ -31,17 +30,17 @@
 							<div class="x_content">
 								<div class="row">
 									<div class="col-sm-12">
-										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
+										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" autocomplete="off">
 											<!-- campos para crear -->
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre de Universidad<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombreU" name="nombreU"/>
+													<input class="form-control" type="text" id="nombre_universidad" name="nombre_universidad"/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
@@ -49,7 +48,7 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-map" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<input class="form-control" type="text" id="direccion" name="direccion"/>
@@ -60,10 +59,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="telefono" name="telefono"/>
+													<input class="form-control" type="text" data-inputmask="'mask': '9999-9999'" id="telefono" name="telefono"/>
 												</div>
 											</div>
 

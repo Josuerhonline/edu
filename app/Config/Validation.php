@@ -27,23 +27,33 @@ class Validation
 	public $categories =[
 		'title' => 'required|min_length[3]|max_length[255]'
 	];
+
 	public $users =[
 		'usuario' => 'required|min_length[3]|max_length[255]|is_unique[cof_usuarios.usuario]',
 		'clave' => 'required|min_length[5]|max_length[25]'
 	];
+
 	public $userUpdate =[
 		'clave' => 'required|min_length[5]|max_length[25]'
 	];
+
 	public $personaUpdate =[
 		'DUI' => 'required|min_length[5]|max_length[25]'
 	];
+
 	public $facultad =[
 		'facultad' => 'required|min_length[5]|max_length[50]',
 	];
+	
 	public $facultadEditar =[
 	'facultad_editar' => 'required|min_length[5]|max_length[50]'
 	];
 
+	public $universidad =[
+		'nombre_universidad' => 'required|is_unique[cof_universidad.universidad]',
+		'direccion' => 'required',
+		'telefono' => 'required|min_length[9]',
+	];
 
 	
 	/**

@@ -11,7 +11,7 @@
     <div class="col-md-12 col-sm-12 ">
       <div class="x_panel" style="border: 60%">
         <div class="x_title">
-          <h2>Configuración de usuarios</h2>
+          <h2>Administración de Usuarios</h2>
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">

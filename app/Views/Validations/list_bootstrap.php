@@ -9,7 +9,7 @@
 	<?php foreach ($errors as $error) : ?>
 		<script>	
 			new PNotify({
-				title: 'ALGO SALIO MAL',
+				title: ' ¡ALERTA!',
 				text: '<?= esc($error) ?>',
 				type:'error',
 				styling: 'bootstrap3'

@@ -122,3 +122,15 @@ CRITICAL - 2020-04-09 01:54:55 --> Undefined variable: user
 #11 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #12 {main}
 >>>>>>> origin/master
+CRITICAL - 2020-04-09 20:11:07 --> Class 'App\Controllers\Catalogos\PersonaModel' not found
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->edit('1')
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-04-09 21:30:48 --> Call to undefined function App\Controllers\Catalogos\hashClave()
+#0 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Catalogos\Universidad->create()
+#1 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Catalogos\Universidad))
+#2 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
