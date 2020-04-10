@@ -76,7 +76,7 @@
     }, function(){   
       swal({
         title: "ELIMINADO",
-        text: "Registro eliminado con exito",
+        text: "Registro eliminado con éxito.",
         type: "success",
       }, 
       function(){

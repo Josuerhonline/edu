@@ -15,9 +15,9 @@ class Universidad extends BaseController {
   }
 
   public function new(){
-   $universidad = new UniversidadModel();
-   $validation  =  \Config\Services::validation();
-   $this->_loadDefaultView('Crear universidad',['validation'=>$validation, 'universidad'=> new UniversidadModel()],'new');
+    $universidad = new UniversidadModel();
+    $validation  =  \Config\Services::validation();
+    $this->_loadDefaultView('Crear universidad',['validation'=>$validation, 'universidad'=> new UniversidadModel()],'new');
   }
 
   public function create(){
@@ -31,63 +31,56 @@ class Universidad extends BaseController {
 
       return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad creada con éxito.');
     }
+
     return redirect()->back()->withInput();
   }
 
   public function edit($id = null){
-    $user = new UniversidadModel();
-    $persona = new PersonaModel();
-    $roles = new   RolesModel();
-    if ($user->find($id) == null)
-    {
+    $universidad = new UniversidadModel();
+    if ($universidad->find($id) == null){
       throw PageNotFoundException::forPageNotFound();
     }  
 
     $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Actualizar usuario',
-      ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
+    $this->_loadDefaultView('Actualizar universidad',
+    ['validation'=>$validation,'universidad'=> $universidad->asObject()->find($id)],'edit');
   }
 
   public function update($id = null){
-    helper("user");
-    $user = new UniversidadModel();
+    $universidad = new UniversidadModel();
 
-    if ($user->find($id) == null)
-    {
+    if ($universidad->find($id) == null){
       throw PageNotFoundException::forPageNotFound();
     }  
-    if($this->validate('userUpdate')){
-      $user->update($id, [
-        'personaId' =>$this->request->getPost('personaId_editar'),
-        'usuario' =>$this->request->getPost('usuario'),
-        'clave' =>hashClave($this->request->getPost('clave')),
-        'rolId' => $this->request->getPost('rolId_editar'),
-        'estado' =>$this->request->getPost('estado_editar'),
+
+    if($this->validate('universidadEditar')){
+      $universidad->update($id, [
+        'universidad' =>$this->request->getPost('nombre_universidad_editar'),
+        'direccion' =>$this->request->getPost('direccion_editar'),
+        'telefono' =>$this->request->getPost('telefono_editar'),
       ]);
-      return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario editado con éxito.');
+      return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad edita con éxito.');
     }
+
     return redirect()->back()->withInput();
   }
 
   public function delete($id = null){
-    $user = new UniversidadModel();
+    $universidad = new UniversidadModel();
 
-    if ($user->find($id) == null)
+    if ($universidad->find($id) == null)
     {
       throw PageNotFoundException::forPageNotFound();
     }  
 
-    $user->delete($id);
-
-    return redirect()->to('/Catalogos/usuario')->with('message', 'usuario eliminado con éxito.');
-    
+    $universidad->delete($id);
+    return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad eliminada con éxito.');
   }
 
   private function _loadDefaultView($title,$data,$view){
     $dataHeader =[
       'title' => $title
     ];
-
     echo view("dashboard/templates/header",$dataHeader);
     echo view("Catalogos/universidad/$view",$data);
     echo view("dashboard/templates/footer");

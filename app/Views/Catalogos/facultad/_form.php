@@ -16,7 +16,7 @@
 					<div class="clearfix"></div>
 				</div>
 				<div <?=!$created ? "hidden" : "" ?> class="x_title" >
-					<h2>Crear facultdad</h2>
+					<h2>Crear facultad</h2>
 					<div class="clearfix"></div>
 				</div>
 				<div <?= $created ? "hidden" : "" ?> class="x_title" >
@@ -33,7 +33,7 @@
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
 											<!-- campos para crear -->
 											<div class="item form-group "  <?= !$created ? "hidden" : "" ?> >
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la universidad<span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione Universidad<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
@@ -49,7 +49,7 @@
 											</div>
 											<!-- 	campos para editar -->
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la universidad<span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione Universidad<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
