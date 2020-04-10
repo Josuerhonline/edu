@@ -4,7 +4,7 @@ use App\Models\Catalogos\FacultadModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
-class Usuario extends BaseController {
+class Carreras extends BaseController {
   public function index(){
     $carreras = new CarrerasModel();
 
