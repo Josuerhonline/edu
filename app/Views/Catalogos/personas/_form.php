@@ -34,28 +34,28 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" data-inputmask="'mask': '99999999-9'" required="" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
+													<input class="form-control" type="text" data-inputmask="'mask': '99999999-9'" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
 												</div>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Carnet <span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Carné <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text"  required="" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
+													<input class="form-control" type="text" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
 												</div>
 											</div>
 											<div class="clearfix"></div>
 											<div class="item form-group col-md-6">
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre <span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombres <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombres" required="" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
+													<input class="form-control" type="text" id="nombres" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
 												</div>
 
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Apellidos <span class="required">*</span>
@@ -65,7 +65,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" required="" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
+													<input class="form-control" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
 												</div>
 
 											</div>
@@ -124,7 +124,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="telefono" data-inputmask="'mask': '9999-9999'" name="telefono" required="" value="<?=old('telefono', $personas->telefono)?>"/>
+													<input class="form-control" type="text" id="telefono" data-inputmask="'mask': '9999-9999'" name="telefono" value="<?=old('telefono', $personas->telefono)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -180,7 +180,7 @@
 													</div>
 													<input class="form-control" type="text" readonly="" id="fechaTraslado" name="fechaTraslado" value="<?=old('fechaTraslado', $personas->fechaTraslado)?>"/>
 												</div>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario que traslado <span class="required">*</span>
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario que trasladó <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
@@ -214,7 +214,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<textarea id="direccion" name="direccion" style="width: 77%; height:38px;resize: none; " placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
+													<textarea id="direccion" name="direccion" style="width: 77%; height:38px;resize: none;" placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
 												</div>
 											</div>
 											<div class="clearfix"></div><br>

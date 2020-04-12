@@ -7,7 +7,7 @@
                     <li><a href="/principal">Dashboard</a></li>
                   </ul>
                 </li>
-                <li><a><i class=" fa fa-cogs"></i>Administración<span class="fa fa-chevron-down"></span></a>
+                <li><a><i class=" fa fa-cogs"></i>Configuración General<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="/Catalogos/usuario">Usuarios</a></li>
                     <li><a href="/Catalogos/personas">Personas</a></li>

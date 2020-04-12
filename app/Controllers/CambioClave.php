@@ -4,11 +4,9 @@ use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
 class CambioClave extends BaseController {
-
   public function index(){
-
     $this->_loadDefaultView([],'index');
-     return $this->_redirectAuth();
+    return $this->_redirectAuth();
   }
 
   public function update($id = null){
@@ -21,10 +19,10 @@ class CambioClave extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     } else if($nClave !==  $cClave){
-           return redirect()->to('/CambioClave')->with('messageError','Las contraseñas no son iguales');
+           return redirect()->to('/CambioClave')->with('messageError','Las contraseñas no son iguales, intente nuevamente.');
     }
 
-    if($this->validate('cheta')){
+    if($this->validate('cambioClave')){
       $user->update($id, [
         'clave' =>hashClave($this->request->getPost('cClave')),
         'estado' =>'ACTIVO',
@@ -33,15 +31,15 @@ class CambioClave extends BaseController {
     }
     return redirect()->back()->withInput();
   }
-      private function _redirectAuth(){
-        $session = session();
-       if ($session->rolId=='1' && $session->estado=='ACTIVO') {
-            return redirect()->to("/SeleccionarCiclo")->with('message','Bienvenido: '.$session->usuario);
-        }
+
+  private function _redirectAuth(){
+    $session = session();
+    if ($session->rolId=='1' && $session->estado=='ACTIVO') {
+      return redirect()->to("/SeleccionarCiclo")->with('message','Bienvenido: '.$session->usuario);
     }
+  }
 
   private function _loadDefaultView($title,$view){
-
     $dataHeader =[
       'title' => $title
     ];
@@ -50,6 +48,5 @@ class CambioClave extends BaseController {
     echo view("dashboard/cambioClave/$view");
     echo view("dashboard/templates/footer");
   }
-
 
 }
