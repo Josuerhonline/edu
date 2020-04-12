@@ -136,7 +136,15 @@
 		</div>
 	</div>
 </div>
-
+<script src="/js/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#carreraId').select2();
+	});
+	$(document).ready(function(){
+		$('#carreraId_editar').select2();
+	});
+</script>
 
 
 
