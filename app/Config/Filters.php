@@ -37,7 +37,8 @@ class Filters extends BaseConfig
 		'AutenticarRolAdmin' =>['before' =>[
 			'principal','principal/*',
 			'usuario','usuario/*',
-			'SeleccionarCiclo','SeleccionarCiclo/*'
+			'SeleccionarCiclo','SeleccionarCiclo/*',
+			'CambioClave','CambioClave/*'
 		]
 	]
 ];

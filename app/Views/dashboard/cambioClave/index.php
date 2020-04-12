@@ -2,6 +2,7 @@
 </div>
 <div class="top_nav">
   <?= view("dashboard/partials/_session"); ?>
+    <?= view("dashboard/partials/_sessionError"); ?>
 
 
 </div>

@@ -1,4 +1,3 @@
-<?php use App\Models\UsuariosModel; ?>
 <?= view("dashboard/edu/menu"); ?>
 </div>
 </div>
@@ -12,7 +11,7 @@
 		<div class="col-md-12 col-sm-12 " >
 			<div class="x_panel" style="border: 1px solid #e1e1e1;" >
 				<div class="x_title">
-					<button type="button" class="btn btn-primary" onclick="window.location.href='/catalogos/personas'" style="background: #2A3F54"><i class="glyphicon glyphicon-chevron-left"></i> Regresar</button>
+					<button type="button" class="btn btn-primary" onclick="window.location.href='/catalogos/personas'" style="background: #2A3F54"><i class="fa fa-arrow-left"></i> Regresar</button>
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_title" >

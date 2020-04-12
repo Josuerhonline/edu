@@ -6,7 +6,7 @@ class SeleccionarCicloModel extends Model
 {
     protected $table = 'cof_aper_ciclo';
     protected $primaryKey = 'aperCicloId';
-    protected $allowedFields = ['aperCicloId','ciclo','anio'];
+    protected $allowedFields = ['aperCicloId','ciclo','anio','nombrePersonalizado','fechaInicio','fechaFin','estado'];
 
 
 }

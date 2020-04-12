@@ -23,7 +23,7 @@ class Validation
 		'title' => 'required|min_length[3]|max_length[255]',
 		'description' => 'min_length[3]|max_length[5000]'
 	];
-		public $cheta =[
+	public $cheta =[
 		'nClave' => 'required',
 		
 	];
@@ -46,11 +46,11 @@ class Validation
 	];
 
 	public $facultad =[
-		'facultad' => 'required|min_length[5]|max_length[50]',
+		'facultad' => 'required|is_unique[cof_facultad.facultad]',
 	];
 	
 	public $facultadEditar =[
-	'facultad_editar' => 'required|min_length[5]|max_length[50]'
+		'facultad_editar' => 'required|min_length[5]|max_length[50]'
 	];
 
 	public $universidad =[
@@ -64,7 +64,28 @@ class Validation
 		'direccion_editar' => 'required',
 		'telefono_editar' => 'required|min_length[9]',
 	];
-
+	public $plan =[
+		'plan' => 'required|is_unique[cof_planes.nombrePlan]',
+		'planAcuerdo' => 'required|min_length[3]',
+	];
+	public $planEditar =[
+		'plan_editar' => 'required|min_length[3]',
+		'planAcuerdo_editar' => 'required|min_length[3]',
+	];
+	public $ciclo =[
+		'ciclo' => 'required|is_unique[cof_aper_ciclo.ciclo]',
+		'anio' => 'required|min_length[3]',
+		'nombrePersonalizado' => 'required|is_unique[cof_aper_ciclo.nombrePersonalizado]',
+		'fechaInicio' => 'required',
+		'fechaFin' => 'required',
+	];
+	public $cicloEditar =[
+		'ciclo_editar' => 'required',
+		'anio_editar' => 'required|min_length[3]',
+		'nombrePersonalizado_editar' => 'required|min_length[3]',
+		'fechaInicio_editar' => 'required',
+		'fechaFin_editar' => 'required',
+	];
 	
 	/**
 	 * Specifies the views that are used to display the

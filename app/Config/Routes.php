@@ -87,6 +87,7 @@ $routes->resource('Catalogos/universidad',['except' => ['show']]);
 $routes->resource('Catalogos/facultad',['except' => ['show']]);
 $routes->resource('Catalogos/carreras',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
+$routes->resource('Ciclo',['except' => ['show']]);
 
 
 $routes->get('/login', 'web/User::login');
