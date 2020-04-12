@@ -10,36 +10,32 @@ class Carreras extends BaseController {
 
     $data = [
       'carreras' => $carreras->asObject()
-      ->select('cof_carreras.*')
-      ->findAll()
+      ->select('cof_carreras.*,cof_facultad.facultad AS facultad')
+      ->join('cof_facultad','cof_carreras.facultadId = cof_facultad.facultadId')->findAll()
     ];
 
-    $this->_loadDefaultView( 'Listado de carreras',$data,'index');
+    $this->_loadDefaultView('Listado de carreras',$data,'index');
   }
 
   public function new(){
-    $user = new UsuariosModel();
-    $persona = new PersonaModel();
-    $roles = new   RolesModel();
+    $facultades = new FacultadModel();
 
     $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Crear usuario',['validation'=>$validation, 'user'=> new UsuariosModel(),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll()],'new');
+    $this->_loadDefaultView('Crear carrera',['validation'=>$validation, 'carreras'=> new CarrerasModel(),'facultades' => $facultades->asObject()->findAll()],'new');
   }
 
   public function create(){
-    helper("user");
-    $user = new UsuariosModel();
+    $carreras = new CarrerasModel();
 
-    if($this->validate('users')){
-      $id = $user->insert([
-        'personaId' =>$this->request->getPost('personaId'),
-        'usuario' =>$this->request->getPost('usuario'),
-        'clave' =>hashClave($this->request->getPost('clave')),
-        'rolId' => $this->request->getPost('rolId'),
-        'estado' => 'EN PROCESO',
+    if($this->validate('carreras')){
+      $id = $carreras->insert([
+        'facultadId' =>$this->request->getPost('facultad'),
+        'nombre' =>$this->request->getPost('nombre_carrera'),
+        'nombreCorto' =>$this->request->getPost('nombre_corto'),
+        'estado' => '1',
       ]);
 
-      return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario creado con éxito.');
+      return redirect()->to('/Catalogos/carreras')->with('message', 'Carrera creada con éxito.');
     }
 
     return redirect()->back()->withInput();

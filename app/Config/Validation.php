@@ -65,6 +65,12 @@ class Validation
 		'telefono_editar' => 'required|min_length[9]',
 	];
 
+	public $carreras =[
+		'facultad' => 'required',
+		'nombre_carrera' => 'required|is_unique[cof_carreras.nombre]',
+		'nombre_corto' => 'required',
+	];
+
 	
 	/**
 	 * Specifies the views that are used to display the
