@@ -28,7 +28,7 @@
 													<option value="<?= $c->ciclo ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
 												<?php endforeach?>
 											</select> 
-											<button type="button" class="btn btn-primary col-md-2 float-right" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-top: 5%;background:#2A3F54">INGRESAR</button>
+											<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
 										</div>
 									</div>
 								</div>

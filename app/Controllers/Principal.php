@@ -6,9 +6,7 @@ use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
 class Principal extends BaseController {
-
   public function index(){
-
     $user = new UsuariosModel();
 
     $data = [
@@ -19,6 +17,7 @@ class Principal extends BaseController {
       ->paginate(10),
       'pager' => $user->pager
     ];
+
     $this->_loadDefaultView( '',$data,'index');
   }
 
@@ -29,95 +28,86 @@ class Principal extends BaseController {
 
    $validation =  \Config\Services::validation();
    $this->_loadDefaultView('Crear usuario',['validation'=>$validation, 'user'=> new UsuariosModel(),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll()],'new');
-
- }
- public function create(){
-  helper("user");
-
-
-  $user = new UsuariosModel();
-
-  if($this->validate('users')){
-   $id = $user->insert([
-    'personaId' =>$this->request->getPost('personaId'),
-    'usuario' =>$this->request->getPost('usuario'),
-    'clave' =>hashClave($this->request->getPost('clave')),
-    'rolId' => $this->request->getPost('rolId'),
-    'estado' => 'EN PROCESO',
-  ]);
-
-   return redirect()->to('/usuario')->with('message', 'usuario creado con éxito.');
-
-
- }
-
- return redirect()->back()->withInput();
-}
-
-public function edit($id = null){
-
-  $user = new UsuariosModel();
-  $persona = new PersonaModel();
-  $roles = new   RolesModel();
-  if ($user->find($id) == null)
-  {
-    throw PageNotFoundException::forPageNotFound();
-  }  
-
-  $validation =  \Config\Services::validation();
-  $this->_loadDefaultView('Actualizar usuario',
-    ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
-}
-
-public function update($id = null){
-  helper("user");
-  $user = new UsuariosModel();
-
-  if ($user->find($id) == null)
-  {
-    throw PageNotFoundException::forPageNotFound();
-  }  
-
-  if($this->validate('userUpdate')){
-    $user->update($id, [
-      'personaId' =>$this->request->getPost('personaId_editar'),
-      'usuario' =>$this->request->getPost('usuario'),
-      'clave' =>hashClave($this->request->getPost('clave')),
-      'rolId' => $this->request->getPost('rolId_editar'),
-      'estado' =>$this->request->getPost('estado_editar'),
-    ]);
-
-    return redirect()->to('/usuario')->with('message', 'Usuario editado con éxito.');
-
   }
 
-  return redirect()->back()->withInput();
-}
+  public function create(){
+    helper("user");
+    $user = new UsuariosModel();
 
-public function delete($id = null){
+    if($this->validate('users')){
+      $id = $user->insert([
+        'personaId' =>$this->request->getPost('personaId'),
+        'usuario' =>$this->request->getPost('usuario'),
+        'clave' =>hashClave($this->request->getPost('clave')),
+        'rolId' => $this->request->getPost('rolId'),
+        'estado' => 'EN PROCESO',
+      ]);
 
-  $user = new UsuariosModel();
+      return redirect()->to('/usuario')->with('message', 'usuario creado con éxito.');
+    }
 
-  if ($user->find($id) == null)
-  {
-    throw PageNotFoundException::forPageNotFound();
-  }  
+      return redirect()->back()->withInput();
+  }
 
-  $user->delete($id);
+  public function edit($id = null){
+    $user = new UsuariosModel();
+    $persona = new PersonaModel();
+    $roles = new   RolesModel();
 
-  return redirect()->to('/usuario')->with('message', 'usuario eliminado con éxito.');
-}
+    if ($user->find($id) == null)
+    {
+      throw PageNotFoundException::forPageNotFound();
+    }  
 
-private function _loadDefaultView($title,$data,$view){
+    $validation =  \Config\Services::validation();
+    $this->_loadDefaultView('Actualizar usuario',
+    ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
+  }
 
-  $dataHeader =[
-    'title' => $title
-  ];
+  public function update($id = null){
+    helper("user");
+    $user = new UsuariosModel();
 
+    if ($user->find($id) == null)
+    {
+      throw PageNotFoundException::forPageNotFound();
+    }  
 
-  echo view("dashboard/edu/$view",$data);
-  echo view("dashboard/templates/footer");
-}
+    if($this->validate('userUpdate')){
+      $user->update($id, [
+        'personaId' =>$this->request->getPost('personaId_editar'),
+        'usuario' =>$this->request->getPost('usuario'),
+        'clave' =>hashClave($this->request->getPost('clave')),
+        'rolId' => $this->request->getPost('rolId_editar'),
+        'estado' =>$this->request->getPost('estado_editar'),
+      ]);
 
+      return redirect()->to('/usuario')->with('message', 'Usuario editado con éxito.');
+    }
 
+    return redirect()->back()->withInput();
+  }
+
+  public function delete($id = null){
+    $user = new UsuariosModel();
+
+    if ($user->find($id) == null)
+    {
+      throw PageNotFoundException::forPageNotFound();
+    }  
+
+    $user->delete($id);
+
+    return redirect()->to('/usuario')->with('message', 'usuario eliminado con éxito.');
+  }
+
+  private function _loadDefaultView($title,$data,$view){
+    $dataHeader =[
+      'title' => $title
+    ];
+
+    echo view("dashboard/edu/$view",$data);
+    echo view("dashboard/templates/footer");
+  }
+  
 }

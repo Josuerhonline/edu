@@ -82,7 +82,7 @@
                       <input type="text" class="input" id="usuario" name="usuario" autocomplete="off" placeholder="Usuario">
                       <input type="password" class="input" id="clave" name="clave" autocomplete="off" placeholder="Contraseña">
                       <div class="form-group" style="width: 30px">
-                        <div class="g-recaptcha"  data-sitekey="6LeMmOgUAAAAAABSEJEVHJS4MEKMMIcshPBYVDyC" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+
                         <input class="form-control hidden" id="capcha" name="capcha" value=""  data-recaptcha="true" required data-error="Please complete the Captcha" hidden="">
                         <div class="help-block with-errors"></div>
                       </div>
@@ -99,7 +99,7 @@
                     <input type="text" class="input" id="user_name" autocomplete="off" placeholder="Usuario / Carnet">
 
                     <div class="form-group">
-                      <div class="g-recaptcha"  data-sitekey="6LeMmOgUAAAAAABSEJEVHJS4MEKMMIcshPBYVDyC" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+
                       <input class="form-control hidden" id="capcha2" name="capcha2" value=""  data-recaptcha="true" required data-error="Please complete the Captcha" hidden="">
                       <div class="help-block with-errors"></div>
                     </div>
@@ -125,14 +125,14 @@
       let widgetId1;
       let onloadCallback = function() {
         widgetId1 = grecaptcha.render('example1', {
-          'sitekey' : '6LeMmOgUAAAAAABSEJEVHJS4MEKMMIcshPBYVDyC',
+
           'theme' : 'dark'
         });
       };
 
       function getCaptcha(){
-        let usuario = document.getElementById("usuario").value;
-        let pass = document.getElementById("clave").value;
+        let usuario     = document.getElementById("usuario").value;
+        let pass        = document.getElementById("clave").value;
         let valueCapcha = grecaptcha.getResponse(widgetId1);
         if(usuario == ""){
           new PNotify({
@@ -154,7 +154,7 @@
            styling: 'bootstrap3'
           })
         }else{
-          document.getElementById("capcha").value= valueCapcha;
+          document.getElementById("capcha").value = valueCapcha;
         }
       }
     </script>
