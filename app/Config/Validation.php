@@ -71,6 +71,12 @@ class Validation
 		'nombre_corto' => 'required',
 	];
 
+	public $carrerasEditar =[
+		'facultad_editar' => 'required',
+		'nombre_carrera_editar' => 'required',
+		'nombre_corto_editar' => 'required',
+	];
+
 	
 	/**
 	 * Specifies the views that are used to display the

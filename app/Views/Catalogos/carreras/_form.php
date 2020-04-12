@@ -80,7 +80,7 @@
 													</div>
 													<select class="form-control col-md-11" name="facultad_editar" id="facultad_editar" >
 														<?php foreach ($facultades as $f): ?>
-															<option value="<?= $f->facultadId ?>"><?= $f->facultad ?></option>
+															<option <?= $carreras->facultadId !== $f->facultadId ?: "selected"?> value="<?= $f->facultadId ?>"><?= $f->facultad ?> </option>
 														<?php endforeach?>
 													</select>  
 												</div>
@@ -93,7 +93,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombre_carrera_editar" name="nombre_carrera_editar"/> 
+													<input value="<?=old('nombre_carrera_editar', $carreras->nombre)?>" class="form-control" type="text" id="nombre_carrera_editar" name="nombre_carrera_editar"/> 
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
@@ -104,7 +104,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombre_corto_editar" name="nombre_corto_editar"/> 
+													<input value="<?=old('nombre_corto_editar', $carreras->nombreCorto)?>" class="form-control" type="text" id="nombre_corto_editar" name="nombre_corto_editar"/> 
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
@@ -116,9 +116,8 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estado_editar" id="estado_editar">
-														<option value="<?=old('estado', $carreras->estado)?>"><?=old('estado', $carreras->estado)?></option>
-														<option value="1">ACTIVO</option>
-														<option value="0">INACTIVO</option>
+														<option selected value="<?=old('estado', $carreras->estado)?>"><?=old('estado', $carreras->estado == '0' ?"INACTIVO": "ACTIVO")?></option>
+														<option value="<?= $carreras->estado == '0' ? "1": "0"?>"><?= $carreras->estado == '0' ? "ACTIVO": "INACTIVO"?></option>
 													</select>
 												</div>
 											</div>

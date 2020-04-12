@@ -29,8 +29,9 @@
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">Nº</th>
-                          <th style="color: #fff" >Facultad</th>
-                          <th style="color: #fff">Nombre</th>
+                          <th style="color: #fff" >Nombre de Carrera</th>
+                          <th style="color: #fff" >Nombre Corto</th>
+                          <th style="color: #fff">Facultad</th>
                           <th style="color: #fff">Estado</th>
                           <th style="color: #fff">Opciones</th>
                         </tr>
@@ -45,8 +46,9 @@
                        ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
-                       <td><?= $c->facultad ?></td>
                        <td><?= $c->nombre ?></td>
+                       <td><?= $c->nombreCorto ?></td>
+                       <td><?= $c->facultad ?></td>
                        <td><?= $c->estado ?></td>
                        <td>
                         <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/carreras/edit/<?= $c->carreraId?>"><i class="fa fa-pencil"></i></a>
