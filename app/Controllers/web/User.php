@@ -23,7 +23,7 @@ class User extends BaseController {
         $url              =  'https://www.google.com/recaptcha/api/siteverify';
 
         $data             =  array(
-            'secret'      => '6LdcxugUAAAAADv3rAg8lU368QFsn1Fm7UQdalJ6',
+            'secret'      => '6LeMmOgUAAAAALu8tlHkihej7tHwF0XUBLyapP8f',
             'response'    => $recaptcha
         );
 
