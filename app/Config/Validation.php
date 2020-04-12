@@ -79,6 +79,18 @@ class Validation
 		'fechaInicio' => 'required',
 		'fechaFin' => 'required',
 	];
+	    public $ciclo_errors = [
+        'ciclo' => [
+            'required'    => 'NO SEA TAN PENDEJO.',
+        ],
+        'anio'    => [
+            'required' => 'Por favor ingrese un valor para el campo años.'
+        ]
+        ,
+        'nombrePersonalizado'    => [
+            'required' => 'Por favor ingrese un valor para el nombre personalizado.'
+        ]
+    ];
 	public $cicloEditar =[
 		'ciclo_editar' => 'required',
 		'anio_editar' => 'required|min_length[3]',
@@ -86,7 +98,10 @@ class Validation
 		'fechaInicio_editar' => 'required',
 		'fechaFin_editar' => 'required',
 	];
+
 	
+
+
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

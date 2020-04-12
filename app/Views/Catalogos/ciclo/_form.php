@@ -39,7 +39,7 @@
 													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" type="text" id="ciclo" name="ciclo">
+												<input class="form-control" type="text" id="ciclo" name="ciclo" >
 											</div>
 										</div>
 										<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
