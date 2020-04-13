@@ -282,6 +282,44 @@ class Validation
 		]
 	];
 
+	//Validaciones para Carreras
+	public $carreras =[
+		'facultad'       => 'required',
+		'nombre_carrera' => 'required|is_unique[cof_carreras.nombre]',
+		'nombre_corto'   => 'required',
+	];
+	public $carreras_errors = [
+        'facultad' => [
+			'required'   => 'Por favor, seleccione una Facultad.',
+        ],
+        'nombre_carrera' => [
+			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
+			'is_unique' => 'Lo sentimos, el nombre de carrera ya existe en la base de datos. Intente nuevamente.',
+        ]
+        ,
+        'nombre_corto' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
+		]
+	];
+
+	public $carrerasEditar =[
+		'facultad_editar'       => 'required',
+		'nombre_carrera_editar' => 'required',
+		'nombre_corto_editar'   => 'required',
+	];
+	public $carrerasEditar_errors = [
+        'facultad_editar' => [
+			'required'   => 'Por favor, seleccione una Facultad.',
+        ],
+        'nombre_carrera_editar' => [
+			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
+        ]
+        ,
+        'nombre_corto_editar' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
+		]
+	];
+
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

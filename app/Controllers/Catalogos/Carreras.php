@@ -1,6 +1,7 @@
 <?php namespace App\Controllers\Catalogos;
 use App\Models\Catalogos\CarrerasModel;
 use App\Models\Catalogos\FacultadModel;
+use App\Models\Catalogos\PlanesModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
@@ -77,13 +78,13 @@ class Carreras extends BaseController {
   }
 
   public function delete($id = null){
-    $carreras = new CarrerasModel();
-/*     $planes = new PlanesModel();
+    $carreras   = new CarrerasModel();
+    $planes     = new PlanesModel();
     $buscarPlan = $planes->select('carreraId')->where('carreraId',$id)->first();
 
     if ($buscarPlan) {
-      return redirect()->to("/Catalogos/universidad")->with('messageError','Lo sentimos, la Carrera tiene Planes asociados y no puede ser eliminada.');
-    } pendiente*/
+      return redirect()->to("/Catalogos/carreras")->with('messageError','Lo sentimos, la Carrera tiene Planes asociados y no puede ser eliminada.');
+    }
 
     if ($carreras->find($id) == null)
     {
