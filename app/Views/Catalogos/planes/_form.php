@@ -55,7 +55,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="plan" name="plan">
+													<input class="form-control" value="<?= old('plan') ?>" type="text" id="plan" name="plan">
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
@@ -66,7 +66,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control"  type="text" id="planAcuerdo" name="planAcuerdo">
+													<input class="form-control" value="<?= old('planAcuerdo') ?>"  type="text" id="planAcuerdo" name="planAcuerdo">
 												</div>
 											</div>
 											<!-- 	campos para editar -->
@@ -94,7 +94,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="plan_editar" name="plan_editar" value="<?=old('nombrePlan', $plan->nombrePlan)?>"/>
+													<input class="form-control" type="text" id="plan_editar" name="plan_editar" value="<?=old('plan_editar', $plan->nombrePlan)?>"/>
 												</div>
 											</div>
 
@@ -106,7 +106,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="planAcuerdo_editar" name="planAcuerdo_editar" value="<?=old('plaAcuerdo', $plan->plaAcuerdo)?>"/>
+													<input class="form-control" type="text" id="planAcuerdo_editar" name="planAcuerdo_editar" value="<?=old('planAcuerdo_editar', $plan->plaAcuerdo)?>"/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>

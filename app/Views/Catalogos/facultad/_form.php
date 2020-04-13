@@ -70,7 +70,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="facultad" name="facultad">
+													<input class="form-control" value="<?= old('facultad') ?>" type="text" id="facultad" name="facultad">
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
@@ -81,7 +81,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="facultad_editar" name="facultad_editar" value="<?=old('facultad', $facultad->facultad)?>"/>
+													<input class="form-control" type="text" id="facultad_editar" name="facultad_editar" value="<?=old('facultad_editar', $facultad->facultad)?>"/>
 												</div>
 											</div>
 

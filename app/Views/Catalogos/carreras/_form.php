@@ -42,7 +42,7 @@
 													</div>
 													<select class="form-control col-md-11" name="facultad" id="facultad" >
 														<?php foreach ($facultades as $f): ?>
-															<option value="<?= $f->facultadId ?>"><?= $f->facultad ?></option>
+															<option  value="<?= $f->facultadId ?>"><?= $f->facultad ?></option>
 														<?php endforeach?>
 													</select> 
 												</div>
@@ -55,7 +55,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombre_carrera" name="nombre_carrera"/> 
+													<input class="form-control" value="<?= old('nombre_carrera') ?>" type="text" id="nombre_carrera" name="nombre_carrera"/> 
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?> >
@@ -66,7 +66,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="fa fa-pencil" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombre_corto" name="nombre_corto"/> 
+													<input class="form-control"  value="<?= old('nombre_corto') ?>"  type="text" id="nombre_corto" name="nombre_corto"/> 
 												</div>
 											</div>
 											<!-- 	campos para editar -->

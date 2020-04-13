@@ -194,14 +194,14 @@ class Validation
 		'planAcuerdo' => 'required|min_length[3]',
 	];
 	public $plan_errors = [
-        'plan' => [
+		'plan' => [
 			'required'  => 'Por favor, ingrese el nombre del Plan.',
 			'is_unique' => 'Lo sentimos este Plan ya existe en la base de datos. Intente nuevamente.'
-        ],
-        'planAcuerdo'    => [
+		],
+		'planAcuerdo'    => [
 			'required'   => 'Por favor, ingrese el Plan Acuerdo para el Plan.',
 			'min_length' => 'El Plan Acuerdo debe ser mayor a tres caracteres. Intente nuevamente.'
-        ]
+		]
 	];
 
 	public $planEditar =[
@@ -209,14 +209,14 @@ class Validation
 		'planAcuerdo_editar' => 'required|min_length[3]',
 	];
 	public $planEditar_errors = [
-        'plan_editar' => [
+		'plan_editar' => [
 			'required'   => 'Por favor, ingrese el nombre del Plan.',
 			'min_length' => 'El Plan debe ser mayor a tres caracteres. Intente nuevamente.'
-        ],
-        'planAcuerdo_editar'    => [
+		],
+		'planAcuerdo_editar'    => [
 			'required'   => 'Por favor, ingrese el Plan Acuerdo para el Plan.',
 			'min_length' => 'El Plan Acuerdo debe ser mayor a tres caracteres. Intente nuevamente.'
-        ]
+		]
 	];
 
 	//Validaciones para Ciclos
@@ -228,18 +228,18 @@ class Validation
 		'fechaFin'            => 'required',
 	];
 	public $ciclo_errors = [
-        'ciclo' => [
+		'ciclo' => [
 			'required'   => 'Por favor, ingrese el Ciclo.',
 			'min_length' => 'El Ciclo debe tener un caracter (Ej: 1). Intente nuevamente.',
 			'max_length' => 'El Ciclo debe tener un caracter (Ej: 1). Intente nuevamente.'
-        ],
-        'anio' => [
+		],
+		'anio' => [
 			'required'   => 'Por favor, ingrese el Año para el ciclo.',
 			'min_length' => 'El Año debe tener cuatro caracteres (Ej: 2020). Intente nuevamente.',
 			'max_length' => 'El Año debe tener cuatro caracteres (Ej: 2020). Intente nuevamente.'
-        ]
-        ,
-        'nombrePersonalizado' => [
+		]
+		,
+		'nombrePersonalizado' => [
 			'required'  => 'Por favor, ingrese el Nombre Personalizado.',
 			'is_unique' => 'Lo sentimos el Nombre Personalizado ya existe en la base de datos. Intente nuevamente.'
 		],
@@ -259,18 +259,18 @@ class Validation
 		'fechaFin_editar'            => 'required',
 	];
 	public $cicloEditar_errors = [
-        'ciclo_editar' => [
+		'ciclo_editar' => [
 			'required'   => 'Por favor, ingrese el Ciclo.',
 			'min_length' => 'El Ciclo debe tener un caracter (Ej: 1). Intente nuevamente.',
 			'max_length' => 'El Ciclo debe tener un caracter (Ej: 1). Intente nuevamente.'
-        ],
-        'anio_editar' => [
+		],
+		'anio_editar' => [
 			'required'   => 'Por favor, ingrese el Año para el ciclo.',
 			'min_length' => 'El Año debe tener cuatro caracteres (Ej: 2020). Intente nuevamente.',
 			'max_length' => 'El Año debe tener cuatro caracteres (Ej: 2020). Intente nuevamente.'
-        ]
-        ,
-        'nombrePersonalizado_editar' => [
+		]
+		,
+		'nombrePersonalizado_editar' => [
 			'required'   => 'Por favor, ingrese el Nombre Personalizado.',
 			'min_length' => 'El nombre personalizado debe ser mayor a tres caracteres. Intente nuevamente.'
 		],
@@ -289,15 +289,15 @@ class Validation
 		'nombre_corto'   => 'required',
 	];
 	public $carreras_errors = [
-        'facultad' => [
+		'facultad' => [
 			'required'   => 'Por favor, seleccione una Facultad.',
-        ],
-        'nombre_carrera' => [
+		],
+		'nombre_carrera' => [
 			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
 			'is_unique' => 'Lo sentimos, el nombre de carrera ya existe en la base de datos. Intente nuevamente.',
-        ]
-        ,
-        'nombre_corto' => [
+		]
+		,
+		'nombre_corto' => [
 			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
 		]
 	];
@@ -308,18 +308,54 @@ class Validation
 		'nombre_corto_editar'   => 'required',
 	];
 	public $carrerasEditar_errors = [
-        'facultad_editar' => [
+		'facultad_editar' => [
 			'required'   => 'Por favor, seleccione una Facultad.',
-        ],
-        'nombre_carrera_editar' => [
+		],
+		'nombre_carrera_editar' => [
 			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
-        ]
-        ,
-        'nombre_corto_editar' => [
+		]
+		,
+		'nombre_corto_editar' => [
 			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
 		]
 	];
-
+	public $materia =[
+		'nombre'       => 'required|is_unique[cof_materias.nombre]',
+		'codMateria' => 'required|is_unique[cof_materias.codMateria]',
+		'nombreCorto'   => 'required|is_unique[cof_materias.nombreCorto]',
+	];
+	public $materia_errors = [
+		'nombre' => [
+			'required'   => 'Por favor, ingrese el nombre de la materia.',
+			'is_unique'   => 'El nombre de la materia ya existe.',
+		],
+		'codMateria' => [
+			'required'  => 'Por favor, ingrese el código de la materia.',
+			'is_unique'   => 'El código de la materia ya existe.',
+		]
+		,
+		'nombreCorto' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la materia.',
+			'is_unique'   => 'El nombre corto de la materia ya existe.',
+		]
+	];
+	public $materia_editar =[
+		'nombre_editar'       => 'required',
+		'codMateria_editar' => 'required',
+		'nombreCorto_editar'   => 'required',
+	];
+	public $materia_editar_errors = [
+		'nombre_editar' => [
+			'required'   => 'Por favor, ingrese el nombre de la materia.',
+		],
+		'codMateria_editar' => [
+			'required'  => 'Por favor, ingrese el código de la materia.',
+		]
+		,
+		'nombreCorto_editar' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la materia.',
+		]
+	];
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

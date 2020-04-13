@@ -40,7 +40,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombre_universidad" name="nombre_universidad"/>
+													<input class="form-control" value="<?= old('nombre_universidad') ?>" type="text" id="nombre_universidad" name="nombre_universidad"/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
@@ -51,7 +51,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-map" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="direccion" name="direccion"/>
+													<input class="form-control" value="<?= old('direccion') ?>" type="text" id="direccion" name="direccion"/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
@@ -62,7 +62,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" data-inputmask="'mask': '9999-9999'" id="telefono" name="telefono"/>
+													<input class="form-control" value="<?= old('telefono') ?>" type="text" data-inputmask="'mask': '9999-9999'" id="telefono" name="telefono"/>
 												</div>
 											</div>
 

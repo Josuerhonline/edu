@@ -1874,7 +1874,8 @@ a:focus {
 }
 
 .nav li li.current-page a {
-    color: #fff
+    color: #fff;
+    border-bottom: 1px solid #1abb9c;
 }
 
 .nav.side-menu>li.active>a {

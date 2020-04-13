@@ -15,7 +15,7 @@
                     <li><a href="/Catalogos/facultad">Facultades</a></li>
                     <li><a href="/Catalogos/carreras">Carreras</a></li>
                     <li><a href="/Catalogos/planes">Planes</a></li>
-                    <li><a href="typography.html">Materias</a></li>
+                    <li><a href="/Catalogos/materias">Materias</a></li>
                     <li><a href="typography.html">Plan Materias</a></li>
                     <li><a href="/Catalogos/ciclo">Ciclos</a></li>
                     <li><a href="general_elements.html">Carga Académica</a></li>                  

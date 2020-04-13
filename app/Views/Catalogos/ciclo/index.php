@@ -1,6 +1,7 @@
 <?= view("dashboard/edu/menu"); ?>
 </div>
 </div>
+
 <div class="top_nav">
   <?= view("dashboard/edu/navbar"); ?>
   <?= view("dashboard/partials/_session"); ?>
