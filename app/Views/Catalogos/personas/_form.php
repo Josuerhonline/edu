@@ -79,11 +79,9 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="tipoPersona" id="tipoPersona">
-														<option value="<?=old('tipoPersona', $personas->tipoPersona)?>"><?=old('tipoPersona', $personas->tipoPersona)?></option>
-														<option value="Estudiante">Estudiante</option>
-														<option value="Docente">Docente</option>
-														<option value="Administrador">Administrador</option>
-														<option value="Empleado">Empleado</option>
+														<option <?= $personas->tipoPersona !== "E" ?: "selected"?> value="E">Estudiante</option>
+														<option <?= $personas->tipoPersona !== "D" ?: "selected"?> value="D">Docente</option>
+														<option <?= $personas->tipoPersona !== "A" ?: "selected"?> value="A">Administrador</option>
 													</select>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Estado civil <span class="required">*</span>
@@ -94,11 +92,10 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estadoCivil" id="estadoCivil">
-														<option value="<?=old('estadoCivil', $personas->estadoCivil)?>"><?=old('estadoCivil', $personas->estadoCivil)?></option>
-														<option value="Soltero(a)">Soltero(a)</option>
-														<option value="Casado(o)">Casado(o)</option>
-														<option value="Estudiante">Estudiante</option>
-														<option value="Empleado">Empleado</option>
+														<option <?= $personas->estadoCivil !== "S" ?: "selected"?> value="S">Soltero/a</option>
+														<option <?= $personas->estadoCivil !== "C" ?: "selected"?> value="C">Casado/a</option>
+														<option <?= $personas->estadoCivil !== "D" ?: "selected"?> value="D">Divorciado/a</option>
+														<option <?= $personas->estadoCivil !== "V" ?: "selected"?> value="V">Viudo/a</option>
 													</select>
 												</div>
 											</div>
@@ -112,9 +109,8 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="sexo" id="sexo">
-														<option value="<?=old('sexo', $personas->sexo)?>"><?=old('sexo', $personas->sexo)?></option>
-														<option value="M">M</option>
-														<option value="F">F</option>
+														<option <?= $personas->sexo !== "M" ?: "selected"?> value="M">Masculino</option>
+														<option <?= $personas->sexo !== "F" ?: "selected"?> value="F">Femenino</option>
 													</select>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Teléfono <span class="required">*</span>
@@ -201,10 +197,8 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estado" id="estado">
-														<option value="<?=old('estado', $personas->estado)?>"><?=old('estado', $personas->estado)?></option>
-														<option value="RETIRADO">RETIRADO</option>
-														<option value="ACTIVO">ACTIVO</option>
-														<option value="EN PROCESO">EN PROCESO</option>
+														<option <?= $personas->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
+														<option <?= $personas->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 													</select>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Dirección <span class="required">*</span>

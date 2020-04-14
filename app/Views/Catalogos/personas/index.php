@@ -46,17 +46,29 @@
                         </tr>
                       </thead>
                       <tbody>
-                       <?php $num=0;  foreach ($personas as $key => $v): ?>
+                       <?php $num=0;  foreach ($personas as $key => $v):
+                        //Validar estado de persona
+                        if ($v->estado =='1'){
+                          $v->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                        }elseif ($v->estado =='0') {
+                          $v->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
+                        }
 
-                       <?php if ($v->estado =='ACTIVO'){
-                        $v->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                        //Validar tipo de persona
+                        if ($v->tipoPersona =='A'){
+                          $v->tipoPersona ='ADMINISTRADOR';
+                        }elseif ($v->tipoPersona =='D') {
+                          $v->tipoPersona ='DOCENTE';
+                        }elseif ($v->tipoPersona =='E') {
+                          $v->tipoPersona ='ESTUDIANTE';
+                        }
 
-                      }elseif ($v->estado =='RETIRADO') {
-                        $v->estado ='<font color="red" style="font-weight:bold;">RETIRADO</font>';
-
-                      }elseif ($v->estado =='EN PROCESO') {
-                        $v->estado ='<font color="#1D79B9" style="font-weight:bold;">EN PROCESO</font>';
-                      }
+                        //Validar tipo de persona
+                        if ($v->sexo =='M'){
+                          $v->sexo ='MASCULINO';
+                        }elseif ($v->sexo =='F') {
+                          $v->sexo ='FEMENINO';
+                        }
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
