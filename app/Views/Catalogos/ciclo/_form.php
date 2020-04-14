@@ -151,9 +151,8 @@
 													"></i></span>
 												</div>
 												<select class="form-control"  name="estado" id="estado">
-													<option  value="<?=old('estado', $ciclo->estado)?>"><?=old('estado', $ciclo->estado)?></option>
-													<option value="ACTIVO">ACTIVO</option>
-													<option value="INACTIVO">INACTIVO</option>
+													<option <?= $ciclo->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
+													<option <?= $ciclo->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 												</select>
 											</div>
 										</div>

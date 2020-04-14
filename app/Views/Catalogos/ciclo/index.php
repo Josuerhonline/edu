@@ -13,7 +13,7 @@
     <div class="col-md-12 col-sm-12 ">
       <div class="x_panel" style="border: 60%">
         <div class="x_title">
-          <h2>Administración de ciclos</h2>
+          <h2>Administración de Ciclos</h2>
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -40,14 +40,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                       <?php $num=0;  foreach ($ciclos as $key => $c): ?>
-
-                       <?php if ($c->estado =='ACTIVO'){
-                        $c->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
-
-                      }elseif ($c->estado =='INACTIVO') {
-                        $c->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
-                      }
+                       <?php $num=0;  foreach ($ciclos as $key => $c):
+                        if ($c->estado =='1'){
+                          $c->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                        }elseif ($c->estado =='0') {
+                          $c->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
+                        }
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
