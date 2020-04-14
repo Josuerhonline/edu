@@ -27,7 +27,7 @@
                       <table id="tabla" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
                         <tr>
-                          <th style="color: #fff">Id</th>
+                          <th style="color: #fff">N°</th>
                           <th style="color: #fff">Dui</th>
                           <th style="color: #fff">Carnet</th>
                           <th style="color: #fff">Nombres</th>
