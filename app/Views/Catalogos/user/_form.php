@@ -123,10 +123,9 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estado_editar" id="estado_editar">
-														<option value="<?=old('estado', $user->estado)?>"><?=old('estado', $user->estado)?></option>
-														<option value="RETIRADO">RETIRADO</option>
-														<option value="ACTIVO">ACTIVO</option>
-														<option value="EN PROCESO">EN PROCESO</option>
+														<option <?= $user->estado !== "EN PROCESO" ?: "selected"?> value="EN PROCESO">EN PROCESO</option>
+														<option <?= $user->estado !== "ACTIVO" ?: "selected"?> value="ACTIVO">ACTIVO</option>
+														<option <?= $user->estado !== "RETIRADO" ?: "selected"?> value="RETIRADO">RETIRADO</option>
 													</select>
 												</div>
 											</div>
