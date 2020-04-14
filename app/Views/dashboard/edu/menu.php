@@ -18,7 +18,7 @@
                     <li><a href="/Catalogos/materias">Materias</a></li>
                     <li><a href="typography.html">Plan Materias</a></li>
                     <li><a href="/Catalogos/ciclo">Ciclos</a></li>
-                    <li><a href="general_elements.html">Carga Académica</a></li>                  
+                    <li><a href="/Catalogos/CargaAdemic">Carga Académica</a></li>                  
                   </ul>
                 </li>
                 <li><a><i class=" fa fa-cog"></i>Administrar Evaluación<span class="fa fa-chevron-down"></span></a>

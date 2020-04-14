@@ -111,7 +111,7 @@
 													<div class="input-group-prepend">
 														<span class="input-group-text" id="basic-addon1">***</span>
 													</div>
-													<input class="form-control" type="password" id="clave" name="clave" value=""/>
+													<input class="form-control"  type="password" id="clave" name="clave" value=""/>
 												</div>
 											</div>
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
@@ -123,9 +123,10 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estado_editar" id="estado_editar">
-														<option <?= $user->estado !== "EN PROCESO" ?: "selected"?> value="EN PROCESO">EN PROCESO</option>
-														<option <?= $user->estado !== "ACTIVO" ?: "selected"?> value="ACTIVO">ACTIVO</option>
-														<option <?= $user->estado !== "RETIRADO" ?: "selected"?> value="RETIRADO">RETIRADO</option>
+														<option value="<?=old('estado', $user->estado)?>"><?=old('estado', $user->estado)?></option>
+														<option value="RETIRADO">RETIRADO</option>
+														<option value="ACTIVO">ACTIVO</option>
+														<option value="EN PROCESO">EN PROCESO</option>
 													</select>
 												</div>
 											</div>

@@ -86,9 +86,11 @@ $routes->resource('Catalogos/personas',['except' => ['show']]);
 $routes->resource('Catalogos/universidad',['except' => ['show']]);
 $routes->resource('Catalogos/facultad',['except' => ['show']]);
 $routes->resource('Catalogos/carreras',['except' => ['show']]);
+$routes->resource('Catalogos/Ciclo',['except' => ['show']]);
+$routes->resource('Catalogos/Materias',['except' => ['show']]);
+$routes->resource('Catalogos/CargaAdemic',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
-$routes->resource('Ciclo',['except' => ['show']]);
-$routes->resource('Materias',['except' => ['show']]);
+
 
 
 $routes->get('/login', 'web/User::login');
