@@ -35,7 +35,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control col-md-11" name="personaId_editar" id="personaId_editar">
+													<select class="form-control col-md-11" name="personaId" id="personaId">
 														<?php foreach ($personas as $p): ?>
 															<option <?= $cargaAcademica->personaId !== $p->personaId ?: "selected"?> value="<?= $p->personaId ?>"><?= $p->nombres, ' ',$p->apellidos,' - ', $p->carnet ?> </option>
 														<?php endforeach?>
@@ -50,13 +50,14 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control col-md-11" name="personaId_editar" id="personaId_editar">
+													<select class="form-control col-md-11" name="planMateria" id="planMateria">
 														<?php foreach ($planM as $n): ?>
-															<option <?= $cargaAcademica->planMateriaId !== $n->planMateriaId ?: "selected"?> value="<?= $n->planId ?>"><?= $n->planId?> </option>
+															<option <?= $cargaAcademica->planMateriaId !== $n->planMateriaId ?: "selected"?> value="<?= $n->planMateriaId ?>"><?= $n->nombre,' - ', $n->nombrePlan?> </option>
 														<?php endforeach?>
 													</select> 
 												</div>
 											</div>
+
 											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el ciclo<span class="required">*</span>
 												</label>
@@ -65,7 +66,7 @@
 														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control col-md-11" name="personaId_editar" id="personaId_editar">
+													<select class="form-control col-md-11" name="ciclo" id="ciclo">
 														<?php foreach ($ciclo as $c): ?>
 															<option <?= $cargaAcademica->aperCicloId !== $c->aperCicloId ?: "selected"?> value="<?= $c->aperCicloId ?>"><?= $c->nombrePersonalizado?> </option>
 														<?php endforeach?>
@@ -105,7 +106,10 @@
 		$('#personaId').select2();
 	});
 	$(document).ready(function(){
-		$('#personaId_editar').select2();
+		$('#planMateria').select2();
+	});
+		$(document).ready(function(){
+		$('#ciclo').select2();
 	});
 	$(function () {
 		$('#datetimepicker4').datetimepicker({

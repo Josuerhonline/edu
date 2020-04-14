@@ -44,7 +44,7 @@
                         //Validar estado de persona
                        if ($c->estadoCarga =='1'){
                         $c->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
-                      }elseif ($c->estado =='0') {
+                      }elseif ($c->estadoCarga =='0') {
                         $c->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
                       }
                       ?>
@@ -90,7 +90,7 @@
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   
-      window.location.href = "/Catalogos/cargaAcademica/delete/"+id;
+      window.location.href = "/Catalogos/CargaAdemic/delete/"+id;
     });
   }
   $(document).ready(function() {

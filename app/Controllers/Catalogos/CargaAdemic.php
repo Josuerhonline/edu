@@ -2,6 +2,7 @@
 use App\Models\Catalogos\PersonaModel;
 use App\Models\Catalogos\CargaAcademicaModel;
 use App\Models\Catalogos\PlanMateriaModel;
+use App\Models\Catalogos\PlanMateriaModelView;
 use App\Models\Catalogos\UsuariosModel;
 use App\Models\Catalogos\PlanesModel;
 use App\Models\Catalogos\MateriasModel;
@@ -14,12 +15,11 @@ class CargaAdemic extends BaseController {
     $cargaAcademica = new CargaAcademicaModel();
     $data = [
       'cargaAcademicas' => $cargaAcademica->asObject()
-      ->select('cof_carga_academica.*, cof_personas.*,cof_plan_materia.planMateriaId as planMateriaId,cof_plan_materia.materiaId as materiaId,cof_plan_materia.planId as planId,cof_materias.nombre as nombre,cof_aper_ciclo.*,cof_planes.*')
+      ->select('cof_carga_academica.*, cof_personas.*,view_planmateria.*,cof_aper_ciclo.*')
       ->join('cof_aper_ciclo','cof_aper_ciclo.aperCicloId = cof_carga_academica.aperCicloId')
       ->join('cof_personas','cof_personas.personaId = cof_carga_academica.personaId')
-      ->join('cof_plan_materia','cof_plan_materia.planMateriaId = cof_carga_academica.planMateriaId')
-      ->join('cof_materias','cof_materias.materiaId = cof_plan_materia.materiaId')
-      ->join('cof_planes','cof_planes.planId = cof_plan_materia.planId')
+      ->join('view_planmateria','view_planmateria.planMateriaId = cof_carga_academica.planMateriaId')
+
       ->findAll()
     ];
 
@@ -30,7 +30,7 @@ class CargaAdemic extends BaseController {
   public function edit($id = null){
     $cargaAcademica = new CargaAcademicaModel();
     $persona = new PersonaModel();
-    $planMateria = new PlanMateriaModel();
+    $planMateria = new PlanMateriaModelView;
     $planes = new PlanesModel();
     $materias = new MateriasModel();
     $ciclo = new SeleccionarCicloModel();
@@ -46,30 +46,34 @@ class CargaAdemic extends BaseController {
   }
 
   public function update($id = null){
-    helper("cargaAcademica");
-    $cargaAcademica = new UsuariosModel();
+    $cargaAcademica = new CargaAcademicaModel();
 
     if ($cargaAcademica->find($id) == null)
     {
       throw PageNotFoundException::forPageNotFound();
     } 
 
-    if($this->validate('cargaAcademicaUpdate')){
+    if($this->validate('cargaAcademica')){
       $cargaAcademica->update($id, [
-        'personaId' =>$this->request->getPost('personaId_editar'),
-        'usuario' =>$this->request->getPost('usuario'),
-        'clave' =>hashClave($this->request->getPost('clave')),
-        'rolId' => $this->request->getPost('rolId_editar'),
-        'estado' =>$this->request->getPost('estado_editar'),
+        'personaId' =>$this->request->getPost('personaId'),
+        'planMateriaId' =>$this->request->getPost('planMateria'),
+        'aperCicloId' =>$this->request->getPost('ciclo'),
+        'estadoCarga' =>$this->request->getPost('estado'),
       ]);
-      return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario editado con éxito.');
+      return redirect()->to('/Catalogos/CargaAdemic')->with('message', 'Carga Académica editada con éxito.');
     }
 
     return redirect()->back()->withInput();
   }
 
   public function delete($id = null){
-    $cargaAcademica = new UsuariosModel();
+   $cargaAcademica = new CargaAcademicaModel();
+    $planMateria = new PlanMateriaModel();
+    $buscarplanMateria = $planMateria->select('planMateriaId')->where('planMateriaId',$id)->first();
+
+    if ($buscarplanMateria) {
+      return redirect()->to("/Catalogos/CargaAdemic")->with('messageError','Lo sentimos, Esta carga Académica tiene planes asociados y no puede ser eliminada.');
+    }    
 
     if ($cargaAcademica->find($id) == null)
     {
@@ -77,9 +81,9 @@ class CargaAdemic extends BaseController {
     }  
 
     $cargaAcademica->delete($id);
-
-    return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario eliminado con éxito.');
+    return redirect()->to('/Catalogos/CargaAdemic')->with('message', 'Carga Académica eliminada con éxito.');
   }
+
 
   private function _loadDefaultView($title,$data,$view){
     $dataHeader =[

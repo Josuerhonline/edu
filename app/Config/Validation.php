@@ -356,6 +356,12 @@ class Validation
 			'required'  => 'Por favor, ingrese el Nombre Corto de la materia.',
 		]
 	];
+
+	public $cargaAcademica =[
+		'personaId'=> 'required',
+
+	];
+
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.
