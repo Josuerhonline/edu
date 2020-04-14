@@ -12,7 +12,7 @@
     <div class="col-md-12 col-sm-12 ">
       <div class="x_panel" style="border: 60%">
         <div class="x_title">
-          <h2>Administración de materias</h2>
+          <h2>Administración de Materias</h2>
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -37,14 +37,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                       <?php $num=0;  foreach ($materias as $key => $m): ?>
-
-                       <?php if ($m->estado =='ACTIVO'){
-                        $m->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
-
-                      }elseif ($m->estado =='INACTIVO') {
-                        $m->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
-                      }
+                       <?php $num=0;  foreach ($materias as $key => $m):
+                        if ($m->estado =='1'){
+                          $m->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                        }elseif ($m->estado =='0') {
+                          $m->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
+                        }
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>

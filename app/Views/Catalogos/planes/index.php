@@ -37,15 +37,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <?php $num=0;  foreach ($planes as $key => $p): ?>
-
-                        <?php if ($p->estado =='ACTIVO'){
-                          $p->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
-
-                        }elseif ($p->estado =='INACTIVO') {
-                          $p->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
-
-                        }
+                        <?php $num=0;  foreach ($planes as $key => $p):
+                          if ($p->estado =='A'){
+                            $p->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                          }elseif ($p->estado =='I') {
+                            $p->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
+                          }
                         ?>
                         <tr>
                          <td><?= $num+=1; ?></td>

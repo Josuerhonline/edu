@@ -67,7 +67,7 @@
 
 										<!-- 	campos para editar -->
 										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">materia <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre de la materia <span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
@@ -78,7 +78,7 @@
 											</div>
 										</div>
 										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Año <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Código de la materia <span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
@@ -108,9 +108,8 @@
 													"></i></span>
 												</div>
 												<select class="form-control"  name="estado" id="estado">
-													<option  value="<?=old('estado', $materias->estado)?>"><?=old('estado', $materias->estado)?></option>
-													<option value="ACTIVO">ACTIVO</option>
-													<option value="INACTIVO">INACTIVO</option>
+													<option <?= $materias->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
+													<option <?= $materias->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 												</select>
 											</div>
 										</div>
