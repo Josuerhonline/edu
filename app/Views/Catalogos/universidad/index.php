@@ -71,7 +71,8 @@
       title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
-      confirmButtonColor: "#DD6B55",   
+      confirmButtonColor: "#DD6B55",  
+      cancelButtonText: "Cancelar", 
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   
