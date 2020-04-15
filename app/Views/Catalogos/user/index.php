@@ -89,14 +89,7 @@
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   
-      swal({
-        title: "ELIMINADO",
-        text: "Registro eliminado con éxito.",
-        type: "success",
-      }, 
-      function(){
-       window.location.href = "/Catalogos/usuario/delete/"+id;
-     })
+      window.location.href = "/Catalogos/usuario/delete/"+id;
     });
   }
   $(document).ready(function() {
