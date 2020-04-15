@@ -359,7 +359,19 @@ class Validation
 
 	public $cargaAcademica =[
 		'personaId'=> 'required',
+	];
 
+	public $planMateria =[
+		'planId'    => 'required',
+		'materiaId' => 'required',
+	];
+	public $planMateria_errors = [
+		'planId' => [
+			'required'   => 'Por favor, seleccione un Plan.',
+		],
+		'materiaId' => [
+			'required'  => 'Por favor, seleccione una Materia.',
+		]
 	];
 
 	/**
