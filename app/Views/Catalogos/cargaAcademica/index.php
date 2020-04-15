@@ -12,7 +12,7 @@
     <div class="col-md-12 col-sm-12 ">
       <div class="x_panel" style="border: 60%">
         <div class="x_title">
-          <h2>Administración de Personas</h2>
+          <h2>Administración de Cargas Académicas</h2>
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -28,9 +28,7 @@
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">Nº</th>
-                          <th style="color: #fff">Nombres</th>
-                          <th style="color: #fff">Apellidos</th>
-                          <th style="color: #fff">Carnet</th>
+                          <th style="color: #fff">Nombre de Docente</th>
                           <th style="color: #fff">Materia</th>
                           <th style="color: #fff">Plan</th>
                           <th style="color: #fff">Ciclo</th>
@@ -50,9 +48,7 @@
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
-                       <td><?= $c->nombres ?></td>
-                       <td><?= $c->apellidos ?></td>
-                       <td><?= $c->carnet ?></td>
+                       <td><?= $c->nombres, ' ',$c->apellidos ?></td>
                        <td><?= $c->nombre ?></td>
                        <td><?= $c->nombrePlan ?></td>
                        <td><?= $c->nombrePersonalizado ?></td>
@@ -86,7 +82,8 @@
       title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
       type: "warning",   
       showCancelButton: true,   
-      confirmButtonColor: "#DD6B55",   
+      confirmButtonColor: "#DD6B55",
+      cancelButtonText: "Cancelar",   
       confirmButtonText: "Confirmar",   
       closeOnConfirm: false 
     }, function(){   

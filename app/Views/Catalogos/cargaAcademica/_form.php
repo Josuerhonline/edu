@@ -37,7 +37,7 @@
 													</div>
 													<select class="form-control col-md-11" name="personaId" id="personaId">
 														<?php foreach ($personas as $p): ?>
-															<option <?= $cargaAcademica->personaId !== $p->personaId ?: "selected"?> value="<?= $p->personaId ?>"><?= $p->nombres, ' ',$p->apellidos,' - ', $p->carnet ?> </option>
+															<option <?= $cargaAcademica->personaId !== $p->personaId ?: "selected"?> value="<?= $p->personaId ?>"><?= $p->nombres, ' ',$p->apellidos ?> </option>
 														<?php endforeach?>
 													</select> 
 												</div>
