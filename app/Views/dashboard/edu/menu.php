@@ -16,17 +16,17 @@
                     <li><a href="/Catalogos/carreras">Carreras</a></li>
                     <li><a href="/Catalogos/planes">Planes</a></li>
                     <li><a href="/Catalogos/materias">Materias</a></li>
-                    <li><a href="typography.html">Plan Materias</a></li>
+                    <li><a href="/Catalogos/planesMaterias">Plan Materias</a></li>
                     <li><a href="/Catalogos/ciclo">Ciclos</a></li>
                     <li><a href="/Catalogos/CargaAdemic">Carga Académica</a></li>                  
                   </ul>
                 </li>
                 <li><a><i class=" fa fa-cog"></i>Administrar Evaluación<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="general_elements.html">Temas de capacitación</a></li>
+                    <li><a href="general_elements.html">Temas de Capacitación</a></li>
                     <li><a href="media_gallery.html">Preguntas</a></li>
-                    <li><a href="typography.html">Areas de evaluación</a></li>
-                    <li><a href="typography.html">Aperturas</a></li>
+                    <li><a href="typography.html">Áreas de evaluación</a></li>
+                    <li><a href="typography.html">Aperturar Evaluación</a></li>
                     <li><a href="typography.html">Instrumento</a></li>
                     <li><a href="typography.html">Inscripción</a></li>
                   </ul>
