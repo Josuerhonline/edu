@@ -1,6 +1,7 @@
 <?php namespace App\Controllers\Catalogos;
 use App\Models\Catalogos\PlanMateriaModelView;
 use App\Models\Catalogos\PlanMateriaModel;
+use App\Models\Catalogos\CargaAcademicaModel;
 use App\Models\Catalogos\PlanesModel;
 use App\Models\Catalogos\MateriasModel;
 use App\Controllers\BaseController;
@@ -50,6 +51,23 @@ class PlanesMaterias extends BaseController{
         }
     
         return redirect()->back()->withInput();
+    }
+
+    public function delete($id = null){
+        $planMateria       = new PlanMateriaModel;
+        $cargaAcademica    = new CargaAcademicaModel();
+        $buscarplanMateria = $cargaAcademica->select('planMateriaId')->where('planMateriaId',$id)->first();
+     
+        if ($buscarplanMateria) {
+           return redirect()->to("/Catalogos/PlanesMaterias")->with('messageError','Lo sentimos, este Plan Materia tiene Cargas Académicas asociadas y no puede ser eliminada.');
+        }    
+     
+        if ($cargaAcademica->find($id) == null){
+           throw PageNotFoundException::forPageNotFound();
+        }  
+     
+        $planMateria->delete($id);
+        return redirect()->to('/Catalogos/PlanesMaterias')->with('message', 'Plan Materia eliminado con éxito.');
     }
 
     private function _loadDefaultView($title,$data,$view){
