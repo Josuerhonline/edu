@@ -15,7 +15,7 @@ class SeleccionarCiclo extends BaseController {
       ->paginate(10),
       'pager' => $datos->pager
     ];
-    $this->_loadDefaultView( 'Listado de usuarios',$data,'index');
+    $this->_loadDefaultView( 'Seleccionar Ciclo',$data,'index');
   }
 
 private function _loadDefaultView($title,$data,$view){

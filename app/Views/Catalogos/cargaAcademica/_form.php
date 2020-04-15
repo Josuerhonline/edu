@@ -16,7 +16,7 @@
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_title" >
-					<h2>Editar persona</h2>
+					<h2>Editar carga académica</h2>
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px;">

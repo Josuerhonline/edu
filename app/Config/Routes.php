@@ -89,6 +89,7 @@ $routes->resource('Catalogos/carreras',['except' => ['show']]);
 $routes->resource('Catalogos/Ciclo',['except' => ['show']]);
 $routes->resource('Catalogos/Materias',['except' => ['show']]);
 $routes->resource('Catalogos/CargaAdemic',['except' => ['show']]);
+$routes->resource('CatalogosEvaluacion/TemasCapacitacion',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
 
 

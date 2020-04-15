@@ -361,7 +361,26 @@ class Validation
 		'personaId'=> 'required',
 
 	];
-
+// VALIDACIONES PARA CATALGOS EVALUACION 
+	public $temaCapacitacion =[
+		'tema'       => 'required|is_unique[eva_temas_capacitacion.tema]',
+	];
+	public $temaCapacitacion_errors = [
+		'tema' => [
+			'required'  => 'Por favor, ingrese el Nombre del tema de capacitación.',
+			'is_unique'   => 'El nombre del tema de capacitación  ya existe.',
+		],
+		
+	];
+	public $temaCapacitacion_editar =[
+		'tema_editar'       => 'required',
+	];
+	public $temaCapacitacion_editar_errors = [
+		'tema_editar' => [
+			'required'  => 'Por favor, ingrese el Nombre del tema de capacitación.',
+		],
+		
+	];
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.
