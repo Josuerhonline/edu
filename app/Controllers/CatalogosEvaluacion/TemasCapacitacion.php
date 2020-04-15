@@ -58,8 +58,9 @@ class TemasCapacitacion extends BaseController {
       throw PageNotFoundException::forPageNotFound();
     }
   // VALIDAR SI EL VALOR INGRESADO NO EXISTE EN LA BASE DE DATOS, ACTUALIZAR SOLO SI ES EL MISMO VALOR O UNO NO EXISTENTE EN LA BASE DE DATOS
+    $idValor = "TemaCapacitacionId";
     $valor = $this->request->getPost('tema_editar');
-    $buscarTema = $tema->select('tema')->where('tema',$valor)->first();
+    $buscarTema = $tema->select('TemaCapacitacionId')->where('tema',$valor)->where( $idValor != $id)->first();
     if ($buscarTema) {
       return redirect()->to("/CatalogosEvaluacion/TemasCapacitacion")->with('messageError','Lo sentimos, el tema de capacitación ya existe');
     }
