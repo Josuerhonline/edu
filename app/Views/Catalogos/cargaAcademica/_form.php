@@ -47,7 +47,7 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-book" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="planMateria" id="planMateria">
@@ -63,7 +63,7 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="ciclo" id="ciclo">
