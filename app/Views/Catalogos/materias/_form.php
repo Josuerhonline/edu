@@ -78,7 +78,7 @@
 											</div>
 										</div>
 										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
-
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Código de la materia <span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">

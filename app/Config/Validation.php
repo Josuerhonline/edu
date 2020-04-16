@@ -393,6 +393,48 @@ class Validation
 		],
 		
 	];
+
+	public $temaCapacitacion_editar1 =[
+		'tema_editar'       => 'required|is_unique[eva_temas_capacitacion.tema]',
+	];
+	public $temaCapacitacion_editar1_errors = [
+		'tema_editar' => [
+			'is_unique'  => 'Lo sentimos, Este tema de capacitación ya existe',
+		],
+		
+	];
+
+
+	public $pregunta =[
+	'pregunta'       => 'required|is_unique[eva_preguntas.pregunta]',
+	];
+	public $pregunta_errors = [
+		'pregunta' => [
+			'required'  => 'Por favor, ingrese la pregunta.',
+			'is_unique'  => 'Lo sentimos, Esta pregunta ya existe',
+		],
+		
+	];
+
+	public $pregunta_editar =[
+		'pregunta_editar'       => 'required',
+	];
+	public $pregunta_editar_errors = [
+		'pregunta_editar' => [
+			'required'  => 'Por favor, ingrese la pregunta.',
+		],
+		
+	];
+
+	public $pregunta_editar1 =[
+		'pregunta_editar'       => 'required|is_unique[eva_preguntas.pregunta]',
+	];
+	public $pregunta_editar1_errors = [
+		'pregunta_editar' => [
+			'is_unique'  => 'Lo sentimos, Esta pregunta ya existe',
+		],
+		
+	];
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

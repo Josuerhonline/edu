@@ -23,7 +23,7 @@ class Planes extends BaseController {
     $carrera = new CarrerasModel();
 
     $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Crear plan',['validation'=>$validation, 'plan'=> new PlanesModel(),'carrera' => $carrera->asObject()->findAll()],'new');
+    $this->_loadDefaultView('Crear plan',['validation'=>$validation, 'plan'=> new PlanesModel(),'carrera' => $carrera->asObject()->where('estado','1')->findAll()],'new');
   }
 
   public function create(){
@@ -54,7 +54,7 @@ class Planes extends BaseController {
 
     $validation =  \Config\Services::validation();
     $this->_loadDefaultView('Actualizar plan',
-      ['validation'=>$validation,'plan'=> $plan->asObject()->find($id),'carrera' => $carrera->asObject()->findAll() ],'edit');
+      ['validation'=>$validation,'plan'=> $plan->asObject()->find($id),'carrera' => $carrera->asObject()->where('estado','1')->findAll() ],'edit');
   }
 
   public function update($id = null){

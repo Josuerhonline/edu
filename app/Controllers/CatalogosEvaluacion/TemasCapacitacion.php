@@ -58,49 +58,53 @@ class TemasCapacitacion extends BaseController {
       throw PageNotFoundException::forPageNotFound();
     }
   // VALIDAR SI EL VALOR INGRESADO NO EXISTE EN LA BASE DE DATOS, ACTUALIZAR SOLO SI ES EL MISMO VALOR O UNO NO EXISTENTE EN LA BASE DE DATOS
-    $idValor = "TemaCapacitacionId";
     $valor = $this->request->getPost('tema_editar');
-    $buscarTema = $tema->select('TemaCapacitacionId')->where('tema',$valor)->where( $idValor != $id)->first();
+    $buscarTema = $tema->select('tema')->where('tema',$valor)->where('temaCapacitacionId',$id)->first();
     if ($buscarTema) {
-      return redirect()->to("/CatalogosEvaluacion/TemasCapacitacion")->with('messageError','Lo sentimos, el tema de capacitación ya existe');
+     if($this->validate('temaCapacitacion_editar')){
+      $tema->update($id, [
+        'estado' =>$this->request->getPost('estado'),
+      ]);
+      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
     }
-    if($this->validate('temaCapacitacion_editar')){
+  }else if(!$buscarTema){
+    if($this->validate('temaCapacitacion_editar1')){
       $tema->update($id, [
         'tema' =>$this->request->getPost('tema_editar'),
         'estado' =>$this->request->getPost('estado'),
       ]);
-      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema editado con éxito.');
+      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
     }
+ }
+ return redirect()->back()->withInput();
+}
 
-    return redirect()->back()->withInput();
+public function delete($id = null){
+  $tema = new TemasCapacitacionModel();
+  $pregunta = new preguntasModel();
+  $buscarpregunta = $pregunta->select('TemaCapacitacionId')->where('TemaCapacitacionId',$id)->first();
+
+  if ($buscarpregunta) {
+    return redirect()->to("/CatalogosEvaluacion/TemasCapacitacion")->with('messageError','Lo sentimos, el tema de capacitación esta asociado a una pregunta  y no puede ser eliminado.');
   }
 
-  public function delete($id = null){
-    $tema = new TemasCapacitacionModel();
-    $pregunta = new preguntasModel();
-    $buscarpregunta = $pregunta->select('TemaCapacitacionId')->where('TemaCapacitacionId',$id)->first();
+  if ($tema->find($id) == null)
+  {
+    throw PageNotFoundException::forPageNotFound();
+  }  
 
-    if ($buscarpregunta) {
-      return redirect()->to("/CatalogosEvaluacion/TemasCapacitacion")->with('messageError','Lo sentimos, el tema de capacitación esta asociado a una pregunta  y no puede ser eliminado.');
-    }
+  $tema->delete($id);
 
-    if ($tema->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }  
+  return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación eliminado con éxito.'); 
+}
 
-    $tema->delete($id);
+private function _loadDefaultView($title,$data,$view){
+  $dataHeader =[
+    'title' => $title
+  ];
 
-    return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación eliminado con éxito.'); 
-  }
-
-  private function _loadDefaultView($title,$data,$view){
-    $dataHeader =[
-      'title' => $title
-    ];
-
-    echo view("dashboard/templates/header",$dataHeader);
-    echo view("CatalogosEvaluacion/TemasCapacitacion/$view",$data);
-    echo view("dashboard/templates/footer");
-  }
+  echo view("dashboard/templates/header",$dataHeader);
+  echo view("CatalogosEvaluacion/TemasCapacitacion/$view",$data);
+  echo view("dashboard/templates/footer");
+}
 }

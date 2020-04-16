@@ -118,8 +118,8 @@
 														"></i></span>
 													</div>
 													<select class="form-control"  name="estado" id="estado">
-														<option <?= $plan->estado !== "A" ?: "selected"?> value="A">ACTIVO</option>
-														<option <?= $plan->estado !== "I" ?: "selected"?> value="I">INACTIVO</option>
+														<option <?= $plan->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
+														<option <?= $plan->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 													</select>
 												</div>
 											</div>

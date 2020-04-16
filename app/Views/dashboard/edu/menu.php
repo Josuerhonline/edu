@@ -24,7 +24,7 @@
                 <li><a><i class=" fa fa-cog"></i>Administrar Evaluación<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="/CatalogosEvaluacion/TemasCapacitacion">Temas de Capacitación</a></li>
-                    <li><a href="media_gallery.html">Preguntas</a></li>
+                    <li><a href="/CatalogosEvaluacion/Preguntas">Preguntas</a></li>
                     <li><a href="typography.html">Áreas de evaluación</a></li>
                     <li><a href="typography.html">Aperturar Evaluación</a></li>
                     <li><a href="typography.html">Instrumento</a></li>

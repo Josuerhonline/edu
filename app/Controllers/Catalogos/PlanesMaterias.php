@@ -31,7 +31,7 @@ class PlanesMaterias extends BaseController{
     
         $validation =  \Config\Services::validation();
         $this->_loadDefaultView('Actualizar Plan materia',
-          ['validation'=>$validation,'planMateria'=> $planMateria->asObject()->find($id),'plan' => $planes->asObject()->findAll(),'materia' => $materias->asObject()->findAll()],'edit');
+          ['validation'=>$validation,'planMateria'=> $planMateria->asObject()->find($id),'plan' => $planes->asObject()->where('estado','1')->findAll(),'materia' => $materias->asObject()->findAll()],'edit');
     }
 
     public function update($id = null){

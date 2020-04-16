@@ -31,8 +31,6 @@ class CargaAdemic extends BaseController {
     $cargaAcademica = new CargaAcademicaModel();
     $persona = new PersonaModel();
     $planMateria = new PlanMateriaModelView;
-    $planes = new PlanesModel();
-    $materias = new MateriasModel();
     $ciclo = new SeleccionarCicloModel();
 
     if ($cargaAcademica->find($id) == null)
@@ -42,7 +40,7 @@ class CargaAdemic extends BaseController {
 
     $validation =  \Config\Services::validation();
     $this->_loadDefaultView('Actualizar usuario',
-      ['validation'=>$validation,'cargaAcademica'=> $cargaAcademica->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'plan' => $planes->asObject()->findAll(),'materia' => $materias->asObject()->findAll(),'ciclo' => $ciclo->asObject()->findAll(),'planM' => $planMateria->asObject()->findAll() ],'edit');
+      ['validation'=>$validation,'cargaAcademica'=> $cargaAcademica->asObject()->find($id),'personas' => $persona->asObject()->where('estado','1')->findAll(),'ciclo' => $ciclo->asObject()->where('estado','1')->findAll(),'planM' => $planMateria->asObject()->findAll() ],'edit');
   }
 
   public function update($id = null){
