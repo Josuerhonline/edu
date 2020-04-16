@@ -30,7 +30,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- campos para crear -->
-										<div class="item form-group col-md-12"  <?= !$created ? "hidden" : "" ?> >
+										<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?> >
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el tema de capacitación<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
@@ -45,7 +45,7 @@
 												</select> 
 											</div>
 										</div>
-										<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
+										<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?>>
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Pregunta<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
@@ -53,11 +53,11 @@
 													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-question" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" value="<?=old('pregunta', $preguntas->pregunta)?>" type="text" id="pregunta" name="pregunta">
+												<textarea class="form-control"  type="text" id="pregunta" name="pregunta"><?=old('pregunta', $preguntas->pregunta)?></textarea>
 											</div>
 										</div>		
 										<!-- 	campos para editar -->
-										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el tema de capacitación<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
@@ -72,7 +72,7 @@
 												</select> 
 											</div>
 										</div>
-										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Pregunta<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
@@ -80,10 +80,10 @@
 													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-question" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" value="<?=old('pregunta_editar', $preguntas->pregunta)?>" type="text" id="pregunta_editar" name="pregunta_editar">
+												<textarea class="form-control" type="text" id="pregunta_editar" name="pregunta_editar"><?=old('pregunta_editar', $preguntas->pregunta)?></textarea>
 											</div>
 										</div>
-										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Estado <span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
@@ -97,7 +97,7 @@
 												</select>
 											</div>
 										</div>
-										<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
+										<button class="btn btn-success" type="submit" style="width: 44%;margin-left: 24%"><i class="fa fa-save"></i> <?=$textButton?></button>
 									</div>
 								</div>
 							</div>
