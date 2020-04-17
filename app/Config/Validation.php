@@ -462,6 +462,49 @@ class Validation
 		],
 		
 	];
+	public $aperEva =[
+		'fechaInicio'       => 'required|is_unique[eva_aper_evaluacion.fechaInicio]',
+		'fechaFin'       => 'required|is_unique[eva_aper_evaluacion.fechaFin]',
+	];
+	public $aperEva_errors = [
+		'fechaInicio' => [
+			'required'  => 'Por favor, ingrese la fecha de inicio.',
+			'is_unique'  => 'Lo sentimos, Esta fecha de inicio para aperturar una evaluación ya existe',
+		],
+		'fechaFin' => [
+			'required'  => 'Por favor, ingrese la fecha de finalización.',
+			'is_unique'  => 'Lo sentimos, Esta fecha de finalización para aperturar una evaluación ya existe',
+		],
+	];
+	public $aperEva_editar =[
+		'ciclo_editar'       => 'required',
+	];
+	public $aperEva_editar_errors = [
+		'ciclo_editar' => [
+			'required'  => 'Por favor, seleccione el ciclo.',
+		],
+		
+	];
+	public $aperEva_editar1 =[
+		'fechaInicio_editar'       => 'required|is_unique[eva_aper_evaluacion.fechaInicio]',
+	];
+	public $aperEva_editar1_errors = [
+		'fechaInicio_editar' => [
+			'required'  => 'Por favor, ingrese la fecha de inicio.',
+			'is_unique'  => 'Lo sentimos, Esta fecha de inicio para aperturar una evaluación ya existe',
+		],
+		
+	];
+	public $aperEva_editar2 =[
+		'fechaFin_editar'       => 'required|is_unique[eva_aper_evaluacion.fechaFin]',
+	];
+	public $aperEva_editar2_errors = [
+		'fechaFin_editar' => [
+			'required'  => 'Por favor, ingrese la fecha de finalización.',
+			'is_unique'  => 'Lo sentimos, Esta fecha de finalización para aperturar una evaluación ya existe',
+		],
+		
+	];
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

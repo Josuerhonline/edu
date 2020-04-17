@@ -1,6 +1,6 @@
 <?php namespace App\Controllers\Catalogos;
 use App\Models\SeleccionarCicloModel;
-use App\Models\Catalogos\CargaAcademica;
+use App\Models\Catalogos\CargaAcademicaModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
@@ -80,7 +80,7 @@ class Ciclo extends BaseController {
 
   public function delete($id = null){
     $ciclo = new SeleccionarCicloModel();
-    $carga = new CargaAcademica();
+    $carga = new CargaAcademicaModel();
     $buscarCarga = $carga->select('aperCicloId')->where('aperCicloId',$id)->first();
 
     if ($buscarCarga) {
