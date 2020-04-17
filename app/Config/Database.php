@@ -31,9 +31,9 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => 'root1234',
+		'hostname' => 'databaseedu.cxw0n271m3ls.us-east-2.rds.amazonaws.com',
+		'username' => 'admin',
+		'password' => 'edu2020$',
 		'database' => 'db_edu',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
