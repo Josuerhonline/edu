@@ -406,7 +406,7 @@ class Validation
 
 
 	public $pregunta =[
-	'pregunta'       => 'required|is_unique[eva_preguntas.pregunta]',
+		'pregunta'       => 'required|is_unique[eva_preguntas.pregunta]',
 	];
 	public $pregunta_errors = [
 		'pregunta' => [
@@ -432,6 +432,33 @@ class Validation
 	public $pregunta_editar1_errors = [
 		'pregunta_editar' => [
 			'is_unique'  => 'Lo sentimos, Esta pregunta ya existe',
+		],
+		
+	];
+	public $area =[
+		'area'       => 'required|is_unique[eva_areas_evaluacion.areaEvaluacion]',
+	];
+	public $area_errors = [
+		'area' => [
+			'required'  => 'Por favor, ingrese el area de evaluación.',
+			'is_unique'  => 'Lo sentimos, Esta area de evaluación ya existe',
+		],
+	];
+	public $area_editar =[
+		'area_editar'       => 'required',
+	];
+	public $area_editar_errors = [
+		'area_editar' => [
+			'required'  => 'Por favor, ingrese el area de evaluación.',
+		],
+		
+	];
+	public $area_editar1 =[
+		'area_editar'       => 'required|is_unique[eva_areas_evaluacion.areaEvaluacion]',
+	];
+	public $area_editar1_errors = [
+		'area_editar' => [
+			'is_unique'  => 'Lo sentimos, Esta area de evaluación ya existe',
 		],
 		
 	];

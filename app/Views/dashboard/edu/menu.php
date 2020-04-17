@@ -25,7 +25,7 @@
                   <ul class="nav child_menu">
                     <li><a href="/CatalogosEvaluacion/TemasCapacitacion">Temas de Capacitación</a></li>
                     <li><a href="/CatalogosEvaluacion/Preguntas">Preguntas</a></li>
-                    <li><a href="typography.html">Áreas de evaluación</a></li>
+                    <li><a href="/CatalogosEvaluacion/AreasEvaluacion">Áreas de evaluación</a></li>
                     <li><a href="typography.html">Aperturar Evaluación</a></li>
                     <li><a href="typography.html">Instrumento</a></li>
                     <li><a href="typography.html">Inscripción</a></li>
