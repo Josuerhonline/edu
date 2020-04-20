@@ -67,7 +67,7 @@
             return false;
         });
         $($this.buttons.finish).click(function() {
-        $("#culo").submit();
+            $("#frmInstrumento").submit();
         });
 
         $($this.steps).bind("click", function(e){
