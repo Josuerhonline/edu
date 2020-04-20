@@ -20,6 +20,7 @@
   <link href="/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
   <link href="/vendors/datatables.net-bs/css/datatableResponsive.css" rel="stylesheet">
   <link rel="stylesheet" href="/sweetalert/sweetalert.css">
+
 </head>
 <body class="nav-md">
   <div class="container body">

@@ -3810,12 +3810,8 @@ a.btn-danger {
 textarea {
     padding: 10px;
     vertical-align: top;
-    width: 200px
-}
-
-textarea:focus {
-    outline-style: solid;
-    outline-width: 8px
+    width: 100%;
+    resize: none;
 }
 
 .btn_ {
@@ -4797,8 +4793,8 @@ ul.project_files li a i {
  * License: MIT
  */
 
-.tabs-left,
-.tabs-right {
+ .tabs-left,
+ .tabs-right {
     border-bottom: none;
     padding-top: 2px
 }
@@ -5604,16 +5600,17 @@ fieldset {
 }
 
 .wizard_horizontal ul.wizard_steps li a .step_no {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 100px;
-    display: block;
-    margin: 0 auto 5px;
-    font-size: 16px;
-    text-align: center;
-    position: relative;
-    z-index: 5
+ width: 40%;
+ height: 40px;
+ line-height: 40px;
+ border-radius: 100px;
+ display: block;
+ margin: 0 auto 5px;
+
+ font-size: 16px;
+ text-align: center;
+ position: relative;
+ z-index: 5
 }
 
 .wizard_horizontal ul.wizard_steps li a.selected:before,

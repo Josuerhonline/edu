@@ -11,7 +11,7 @@
  * http://tech-laboratory.blogspot.com
  */
 
-function SmartWizard(target, options) {
+ function SmartWizard(target, options) {
     this.target       = target;
     this.options      = options;
     this.curStepIdx   = options.selected;
@@ -21,16 +21,16 @@ function SmartWizard(target, options) {
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-        next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
-        previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-        finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
-    };
+       previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
+       next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
+       finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
+   };
 
     /*
      * Private functions
      */
 
-    var _init = function($this) {
+     var _init = function($this) {
         var elmActionBar = $('<div></div>').addClass("actionBar");
         elmActionBar.append($this.msgBox);
         $('.close',$this.msgBox).click(function() {
@@ -53,8 +53,8 @@ function SmartWizard(target, options) {
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
         elmActionBar.append($this.buttons.finish)
-                    .append($this.buttons.next)
-                    .append($this.buttons.previous);
+        .append($this.buttons.next)
+        .append($this.buttons.previous);
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -67,20 +67,7 @@ function SmartWizard(target, options) {
             return false;
         });
         $($this.buttons.finish).click(function() {
-            if(!$(this).hasClass('buttonDisabled')){
-                if($.isFunction($this.options.onFinish)) {
-                    var context = { fromStep: $this.curStepIdx + 1 };
-                    if(!$this.options.onFinish.call(this,$($this.steps), context)){
-                        return false;
-                    }
-                }else{
-                    var frm = $this.target.parents('form');
-                    if(frm && frm.length){
-                        frm.submit();
-                    }
-                }
-            }
-            return false;
+        $("#culo").submit();
         });
 
         $($this.steps).bind("click", function(e){
@@ -130,7 +117,7 @@ function SmartWizard(target, options) {
         return $(
             $(selStep, $this.target).attr("href").replace(/^.+#/, '#'),
             $this.target
-        );
+            );
     };
 
     var _loadContent = function($this, stepIdx) {
@@ -262,7 +249,7 @@ function SmartWizard(target, options) {
         if (! $this.options.cycleSteps){
             if (0 >= $this.curStepIdx) {
                 $($this.buttons.previous).addClass("buttonDisabled");
-				if ($this.options.hideButtonsOnDisabled) {
+                if ($this.options.hideButtonsOnDisabled) {
                     $($this.buttons.previous).hide();
                 }
             }else{
@@ -301,7 +288,7 @@ function SmartWizard(target, options) {
      * Public methods
      */
 
-    SmartWizard.prototype.goForward = function(){
+     SmartWizard.prototype.goForward = function(){
         var nextStepIdx = this.curStepIdx + 1;
         if (this.steps.length <= nextStepIdx){
             if (! this.options.cycleSteps){
@@ -398,32 +385,32 @@ function SmartWizard(target, options) {
 
 (function($){
 
-$.fn.smartWizard = function(method) {
-    var args = arguments;
-    var rv = undefined;
-    var allObjs = this.each(function() {
-        var wiz = $(this).data('smartWizard');
-        if (typeof method == 'object' || ! method || ! wiz) {
-            var options = $.extend({}, $.fn.smartWizard.defaults, method || {});
-            if (! wiz) {
-                wiz = new SmartWizard($(this), options);
-                $(this).data('smartWizard', wiz);
-            }
-        } else {
-            if (typeof SmartWizard.prototype[method] == "function") {
-                rv = SmartWizard.prototype[method].apply(wiz, Array.prototype.slice.call(args, 1));
-                return rv;
+    $.fn.smartWizard = function(method) {
+        var args = arguments;
+        var rv = undefined;
+        var allObjs = this.each(function() {
+            var wiz = $(this).data('smartWizard');
+            if (typeof method == 'object' || ! method || ! wiz) {
+                var options = $.extend({}, $.fn.smartWizard.defaults, method || {});
+                if (! wiz) {
+                    wiz = new SmartWizard($(this), options);
+                    $(this).data('smartWizard', wiz);
+                }
             } else {
-                $.error('Method ' + method + ' does not exist on jQuery.smartWizard');
+                if (typeof SmartWizard.prototype[method] == "function") {
+                    rv = SmartWizard.prototype[method].apply(wiz, Array.prototype.slice.call(args, 1));
+                    return rv;
+                } else {
+                    $.error('Method ' + method + ' does not exist on jQuery.smartWizard');
+                }
             }
+        });
+        if (rv === undefined) {
+            return allObjs;
+        } else {
+            return rv;
         }
-    });
-    if (rv === undefined) {
-        return allObjs;
-    } else {
-        return rv;
-    }
-};
+    };
 
 // Default Properties and Events
 $.fn.smartWizard.defaults = {
@@ -437,9 +424,9 @@ $.fn.smartWizard.defaults = {
     enableFinishButton: false, // make finish button enabled always
 	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
-    labelNext:'Next',
-    labelPrevious:'Previous',
-    labelFinish:'Finish',
+    labelNext:'Siguiente',
+    labelPrevious:'Anterior',
+    labelFinish:'Finalizar',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
     onShowStep: null,  // triggers when showing a step

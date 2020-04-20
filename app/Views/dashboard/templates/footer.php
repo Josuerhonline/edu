@@ -5,7 +5,7 @@
 	</div>
 	<br>
 </footer>
-<script src="/vendors/jquery/dist/jquery.min.js"></script>
+<script src="/vendors/jquery/dist/jquery.js"></script>
 <script src="/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/vendors/fastclick/lib/fastclick.js"></script>
 <script src="/vendors/nprogress/nprogress.js"></script>
@@ -40,5 +40,8 @@
 <script src="/vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 <script src="/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 <script src="/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+
+
 </body>
 </html>

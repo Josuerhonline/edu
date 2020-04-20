@@ -27,7 +27,7 @@
                     <li><a href="/CatalogosEvaluacion/Preguntas">Preguntas</a></li>
                     <li><a href="/CatalogosEvaluacion/AreasEvaluacion">Áreas de evaluación</a></li>
                     <li><a href="/CatalogosEvaluacion/AperEvaluacion">Aperturar Evaluación</a></li>
-                    <li><a href="typography.html">Instrumento</a></li>
+                    <li><a href="/CatalogosEvaluacion/Instrumento">Instrumento</a></li>
                     <li><a href="typography.html">Inscripción</a></li>
                   </ul>
                 </li>

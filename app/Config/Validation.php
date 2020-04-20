@@ -505,6 +505,14 @@ class Validation
 		],
 		
 	];
+		public $instrumento =[
+		'nombre'       => 'required',
+	];
+	public $instrumento_errors = [
+		'nombre' => [
+			'required'  => 'Por favor, ERROR.',
+			],
+	];
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.
