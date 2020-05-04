@@ -11,6 +11,7 @@
  * http://tech-laboratory.blogspot.com
  */
 
+
  function SmartWizard(target, options) {
     this.target       = target;
     this.options      = options;
@@ -21,10 +22,10 @@
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-       previous : $('<a>'+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-       next : $('<a>'+options.labelNext+'</a>').attr("href","#").addClass("buttonNext"),
-       finish  : $('<a>'+options.labelFinish+'</a>').attr("href","#").addClass("buttonFinish")
-   };
+     previous : $('<a>'+options.iconoPrevios+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
+     next : $('<a>'+options.labelNext+options.iconoNext+'</a>').attr("href","#").addClass("buttonNext"),
+     finish  : $('<a>'+options.icono+options.labelFinish+'</a>').attr("href","#").addClass("btn btn-info")
+ };
 
     /*
      * Private functions
@@ -53,8 +54,9 @@
         elmActionBar.append($this.loader);
         $this.target.append($this.elmStepContainer);
         elmActionBar.append($this.buttons.finish)
-        .append($this.buttons.next)
-        .append($this.buttons.previous);
+        .append($this.buttons.previous)
+        .append($this.buttons.next);
+
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -67,8 +69,41 @@
             return false;
         });
         $($this.buttons.finish).click(function() {
-            $("#frmInstrumento").submit();
-        });
+            var formulario = document.getElementById("formulario").value;
+            var nombre = document.getElementById("nombre").value;
+            var descripcion = document.getElementById("descripcion").value;
+            var pregunta1 = document.getElementById("pregunta1").value;
+            var pregunta2 = document.getElementById("pregunta2").value;
+            var pregunta3 = document.getElementById("pregunta3").value;
+            var pregunta4 = document.getElementById("pregunta4").value;
+            var pregunta5 = document.getElementById("pregunta5").value;
+            var pregunta6 = document.getElementById("pregunta6").value;
+            var pregunta7 = document.getElementById("pregunta7").value;
+            var pregunta8 = document.getElementById("pregunta8").value;
+            var pregunta9 = document.getElementById("pregunta9").value;
+            var pregunta10 = document.getElementById("pregunta10").value;
+            if (pregunta1 == "pregunta 1" || pregunta2 == "pregunta 2" || pregunta3 == "pregunta 3" || pregunta4 == "pregunta 4" || pregunta5 == "pregunta 5" ||
+                pregunta6 == "pregunta 6" || pregunta7 == "pregunta 7" || pregunta8 == "pregunta 8" || pregunta9 == "pregunta 9" || pregunta10 == "pregunta 10") {
+                new PNotify({
+                    title: '¡ADVERTENCIA!',
+                    text: 'Asegurate de seleccionar todas las preguntas',
+                    type:'warning',
+                    styling: 'bootstrap3'
+                })
+        }else if(nombre == "" || descripcion ==""){
+            new PNotify({
+                title: '¡ADVERTENCIA!',
+                text: 'Asegurate de completar los datos generales',
+                type:'warning',
+                styling: 'bootstrap3'
+            })
+        }else if(formulario == "editar"){
+         $("#frmInstrumentoEditar").submit();
+     }else{
+        $("#frmInstrumento").submit();
+    }
+
+});
 
         $($this.steps).bind("click", function(e){
             if($this.steps.index(this) == $this.curStepIdx){
@@ -271,7 +306,11 @@
             }
         }
         // Finish Button
-        if (! $this.steps.hasClass('disabled') || $this.options.enableFinishButton){
+        var formulario = document.getElementById("formulario").value;
+        if (formulario == "editar") {
+            $($this.buttons.finish).removeClass("buttonDisabled");
+        }
+        else if (! $this.steps.hasClass('disabled') || $this.options.enableFinishButton){
             $($this.buttons.finish).removeClass("buttonDisabled");
             if ($this.options.hideButtonsOnDisabled) {
                 $($this.buttons.finish).show();
@@ -424,9 +463,13 @@ $.fn.smartWizard.defaults = {
     enableFinishButton: false, // make finish button enabled always
 	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
-    labelNext:'Siguiente',
-    labelPrevious:'Anterior',
-    labelFinish:'Finalizar',
+    labelNext:'Siguiente ',
+    labelPrevious:' Anterior',
+    labelFinish:' Finalizar',
+    icono: '<i class="fa fa-save" ></i>',
+    iconoNext: '<i class="fa fa-arrow-circle-right" ></i>',
+    iconoPrevios: '<i class="fa fa-arrow-circle-left" ></i>',
+    iconoPrevios: '<i class="fa fa-arrow-circle-left" ></i>',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
     onShowStep: null,  // triggers when showing a step

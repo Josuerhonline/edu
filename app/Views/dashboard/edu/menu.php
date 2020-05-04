@@ -1,6 +1,5 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              <h3>Período:</h3>
               <ul class="nav side-menu">
                 <li><a><i class="fa fa-home"></i>Inicio<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
@@ -28,7 +27,7 @@
                     <li><a href="/CatalogosEvaluacion/AreasEvaluacion">Áreas de evaluación</a></li>
                     <li><a href="/CatalogosEvaluacion/AperEvaluacion">Aperturar Evaluación</a></li>
                     <li><a href="/CatalogosEvaluacion/Instrumento">Instrumento</a></li>
-                    <li><a href="typography.html">Inscripción</a></li>
+                    <li><a href="/CatalogosEvaluacion/Inscripcion">Inscripción</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-edit"></i>Evaluación Docente<span class="fa fa-chevron-down"></span></a>
@@ -38,11 +37,7 @@
                 </li>
                 <li><a><i class="fa fa-bar-chart-o"></i>Análisis de resultados<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="chartjs.html">Chart JS</a></li>
-                    <li><a href="chartjs2.html">Chart JS2</a></li>
-                    <li><a href="morisjs.html">Moris JS</a></li>
-                    <li><a href="echarts.html">ECharts</a></li>
-                    <li><a href="other_charts.html">Other Charts</a></li>
+                    <li><a href="chartjs.html">Gráficos</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-file-pdf-o"></i>Reportes<span class="fa fa-chevron-down"></span></a>

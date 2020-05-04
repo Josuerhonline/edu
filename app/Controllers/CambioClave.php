@@ -5,7 +5,7 @@ use \CodeIgniter\Exceptions\PageNotFoundException;
 
 class CambioClave extends BaseController {
   public function index(){
-    $this->_loadDefaultView([],'index');
+    $this->_loadDefaultView('Cambio de clave','index');
     return $this->_redirectAuth();
   }
 

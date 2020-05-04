@@ -505,14 +505,52 @@ class Validation
 		],
 		
 	];
-		public $instrumento =[
-		'nombre'       => 'required',
+	public $instrumento =[
+		'nombre'       => 'required|is_unique[eva_instrumento.nombreInstrumento]',
 	];
 	public $instrumento_errors = [
 		'nombre' => [
-			'required'  => 'Por favor, ERROR.',
-			],
+			'required'  => 'Por favor, Ingrese el nombre del instrumento',
+			'is_unique'  => 'Lo sentimos, el nombre del instrumento ya existe',
+		],
 	];
+	public $instrumento_editar =[
+		'nombre'       => 'required',
+	];
+	public $instrumento_editar_errors = [
+		'nombre' => [
+			'required'  => 'Por favor, Ingrese el nombre del instrumento',
+		],
+	];
+	public $preguntas =[
+		'descripcion'       => 'required',
+	];
+	public $preguntas_errors = [
+		'descripcion' => [
+			'required'  => 'Por favor, ingrese una descripción.',
+		],
+		
+	];
+	public $inscripcion =[
+		'persona'       => 'required',
+	];
+	public $inscripcion_errors = [
+		'persona' => [
+			'required'  => 'Por favor, seleccione una persona.',
+		],
+		
+	];
+	public $inscripcion_editar =[
+		'persona' => 'required|is_unique[eva_inscripcion.personaId]',
+	];
+	public $inscripcion_editar_errors = [
+		'persona' => [
+			'required'  => 'Por favor, seleccione una persona.',
+			'is_unique'  => 'Lo sentimos, esta persona ya tiene una inscripción.',
+		],
+		
+	];
+
 	/**
 	 * Specifies the views that are used to display the
 	 * errors.

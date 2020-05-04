@@ -6,6 +6,9 @@
 	<?= view("dashboard/partials/_session"); ?>
 </div>
 <div class="right_col" role="main" >
+	<link rel="stylesheet" href="/build/css/selects.css">
+
+<link rel="stylesheet" href="/build/css/select2.css">
 	<div class="clearfix"></div>
 	<div class="row" >
 		<div class="col-md-12 col-sm-12 " >

@@ -93,6 +93,8 @@ $routes->resource('CatalogosEvaluacion/TemasCapacitacion',['except' => ['show']]
 $routes->resource('CatalogosEvaluacion/Preguntas',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/AreasEvaluacion',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/Instrumento',['except' => ['show']]);
+$routes->resource('CatalogosEvaluacion/Inscripcion',['except' => ['show']]);
+$routes->resource('EvaluacionDocente/EvaluacionDocente',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
 
 

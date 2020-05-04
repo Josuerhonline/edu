@@ -6,6 +6,6 @@ class preguntasViewModel extends Model
 {
     protected $table = 'view_preguntas';
     protected $primaryKey = 'preguntaId';
-    protected $allowedFields = ['pregunta','tema'];
+    protected $allowedFields = ['preguntaId','pregunta','tema'];
 
 }
