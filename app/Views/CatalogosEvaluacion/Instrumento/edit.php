@@ -1,4 +1,4 @@
 <?= view("dashboard/partials/_form-error"); ?>
-<form action="/CatalogosEvaluacion/AperEvaluacion/update/<?= $aperEva->aperEvaluacionId ?>" method="POST" enctype="multipart/form-data">
-<?= view("CatalogosEvaluacion/AperEvaluacion/_form",['textButton' => 'Actualizar','created' => false]); ?>
+<form id="frmInstrumentoEditar"	action="/CatalogosEvaluacion/Instrumento/update/<?= $instrumento->instrumentoId ?>" method="POST" enctype="multipart/form-data">
+<?= view("CatalogosEvaluacion/Instrumento/_formEditar",['textButton' => 'Actualizar','created' => false]); ?>
 </form>

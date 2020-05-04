@@ -53,7 +53,7 @@
 													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-question" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<textarea class="form-control"  type="text" id="pregunta" name="pregunta"><?=old('pregunta', $preguntas->pregunta)?></textarea>
+												<textarea class="col-md-11"  type="text" id="pregunta" name="pregunta"><?=old('pregunta', $preguntas->pregunta)?></textarea>
 											</div>
 										</div>		
 										<!-- 	campos para editar -->
@@ -80,7 +80,7 @@
 													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-question" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<textarea class="form-control" type="text" id="pregunta_editar" name="pregunta_editar"><?=old('pregunta_editar', $preguntas->pregunta)?></textarea>
+												<textarea class="col-md-11" type="text" id="pregunta_editar" name="pregunta_editar"><?=old('pregunta_editar', $preguntas->pregunta)?></textarea>
 											</div>
 										</div>
 										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>

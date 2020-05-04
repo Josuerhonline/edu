@@ -6,6 +6,6 @@ class InstrumentoDetalleModel extends Model
 {
     protected $table = 'eva_instrumento_detalle';
     protected $primaryKey = 'instrumentoDetalleId';
-    protected $allowedFields = ['instrumentoId','preguntaId'];
+    protected $allowedFields = ['instrumentoDetalleId','instrumentoId','preguntaId','orden'];
 
 }

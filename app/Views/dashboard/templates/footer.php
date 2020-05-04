@@ -1,7 +1,7 @@
 </div>
 <footer style="background: #172D44;">
 	<div class="pull-right" >
-		<?php  echo date('Y') ?> - Universidad Cristiana de las Asambleas de Dios  
+		<font color="white">	<?php  echo date('Y') ?> - Universidad Cristiana de las Asambleas de Dios  </font>
 	</div>
 	<br>
 </footer>

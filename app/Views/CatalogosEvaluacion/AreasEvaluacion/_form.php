@@ -15,11 +15,11 @@
 					<div class="clearfix"></div>
 				</div>
 				<div <?=!$created ? "hidden" : "" ?> class="x_title" >
-					<h2>Crear area de evaluación</h2>
+					<h2>Crear área de evaluación</h2>
 					<div class="clearfix"></div>
 				</div>
 				<div <?= $created ? "hidden" : "" ?> class="x_title" >
-					<h2>Editar area de evaluación</h2>
+					<h2>Editar área de evaluación</h2>
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -31,7 +31,7 @@
 									<div class="col-sm-12">
 										<!-- campos para crear -->
 										<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?>>
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del area de evaluación <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del área de evaluación <span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
@@ -43,7 +43,7 @@
 										</div>		
 										<!-- 	campos para editar -->
 										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del area de evaluación<span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del área de evaluación<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">

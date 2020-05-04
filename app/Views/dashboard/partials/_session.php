@@ -8,7 +8,7 @@
 	<script src="/js/pnotify/dist/pnotify.nonblock.js"></script>
 	<script>	
 		new PNotify({
-			title: '¡ALERTA!',
+			title: '¡NOTIFICACIÓN!',
 			text: '<?= session('message') ?>',
 			type:'success',
 			styling: 'bootstrap3'
