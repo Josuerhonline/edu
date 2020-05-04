@@ -13,7 +13,7 @@ class Personas extends BaseController {
       'personas' => $user->asObject()
       ->select('cof_personas.*')->findAll()
     ];
-    $this->_loadDefaultView( 'Listado de usuarios',$data,'index');
+    $this->_loadDefaultView( 'Listado de Personas',$data,'index');
   }
 
   public function edit($id = null){

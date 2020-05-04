@@ -33,14 +33,8 @@
                           <th style="color: #fff">Nombres</th>
                           <th style="color: #fff">Apellidos</th>
                           <th style="color: #fff">Tipo de persona</th>
-                          <th style="color: #fff">Sexo</th>
-                          <th style="color: #fff">Dirección</th>
                           <th style="color: #fff">Teléfono</th>
                           <th style="color: #fff">Email</th>
-                          <th style="color: #fff">Fecha de Ingreso</th>
-                          <th style="color: #fff">Año de ingreso</th>
-                          <th style="color: #fff">Fecha de traslado</th>
-                          <th style="color: #fff">Usuario que traslado</th>
                           <th style="color: #fff">Estado</th>
                           <th style="color: #fff">Opciones</th>
                         </tr>
@@ -62,13 +56,6 @@
                         }elseif ($v->tipoPersona =='E') {
                           $v->tipoPersona ='ESTUDIANTE';
                         }
-
-                        //Validar tipo de persona
-                        if ($v->sexo =='M'){
-                          $v->sexo ='MASCULINO';
-                        }elseif ($v->sexo =='F') {
-                          $v->sexo ='FEMENINO';
-                        }
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
@@ -77,14 +64,8 @@
                        <td><?= $v->nombres ?></td>
                        <td><?= $v->apellidos ?></td>
                        <td><?= $v->tipoPersona ?></td>
-                       <td><?= $v->sexo ?></td>
-                       <td><?= $v->direccion ?></td>
                        <td><?= $v->telefono ?></td>
                        <td><?= $v->email ?></td>
-                       <td><?= $v->fechaIngreso ?></td>
-                       <td><?= $v->anioIngreso ?></td> 
-                       <td><?= $v->fechaTraslado ?></td> 
-                       <td><?= $v->usuarioTraslado ?></td> 
                        <td><?= $v->estado ?></td> 
                        <td>
                         <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/personas/edit/<?= $v->personaId?>"><i class="fa fa-pencil"></i></a>
