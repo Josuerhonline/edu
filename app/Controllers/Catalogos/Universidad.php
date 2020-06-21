@@ -53,14 +53,25 @@ class Universidad extends BaseController {
     if ($universidad->find($id) == null){
       throw PageNotFoundException::forPageNotFound();
     }  
-
-    if($this->validate('universidadEditar')){
+    $uni = $this->request->getPost('nombre_universidad_editar');
+    $buscarUniversidad = $universidad->select('universidad')->where('universidad',$uni)->where('universidadId',$id)->first();
+    if ($buscarUniversidad) {
+      $universidad->update($id, [
+        'direccion' =>$this->request->getPost('direccion_editar'),
+        'telefono' =>$this->request->getPost('telefono_editar'),
+      ]);
+      return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad edita con éxito.');
+    }
+    if (!$buscarUniversidad) {
+      if($this->validate('universidadEditar')){
       $universidad->update($id, [
         'universidad' =>$this->request->getPost('nombre_universidad_editar'),
         'direccion' =>$this->request->getPost('direccion_editar'),
         'telefono' =>$this->request->getPost('telefono_editar'),
       ]);
       return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad edita con éxito.');
+    }
+
     }
 
     return redirect()->back()->withInput();

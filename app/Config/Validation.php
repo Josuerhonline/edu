@@ -59,14 +59,15 @@ class Validation
 	];
 
 	public $userUpdate =[
-		'usuario' => 'required|min_length[3]|max_length[20]',
+		'usuario' =>  'required|min_length[3]|max_length[20]|is_unique[cof_usuarios.usuario]',
 		'clave'   => 'required|min_length[5]|max_length[25]'
 	];
 	public $userUpdate_errors = [
 		'usuario' => [
 			'required'   => 'Por favor, ingrese el Usuario.',
 			'min_length' => 'El usuario debe ser mayor a tres caracteres. Intente nuevamente.',
-			'max_length' => 'El usuario debe ser menor a veinte caracteres. Intente nuevamente.'
+			'max_length' => 'El usuario debe ser menor a veinte caracteres. Intente nuevamente.',
+			'is_unique'  => 'El usuario ingresado, ya existe en la base de datos. Intente Nuevamente.'
 		],
 		'clave' => [
 			'required'   => 'Por favor, ingrese la Contraseña.',
@@ -134,13 +135,14 @@ class Validation
 	];
 
 	public $facultadEditar =[
-		'facultad_editar' => 'required|min_length[5]|max_length[50]'
+		'facultad_editar' => 'required|is_unique[cof_facultad.facultad]|min_length[5]|max_length[50]',
 	];
 	public $facultadEditar_errors = [
 		'facultad_editar' => [
 			'required'   => 'Por favor, ingrese el nombre de la Facultad.',
 			'min_length' => 'El nombre de la facultad debe ser mayor a cinco caracteres. Intente nuevamente.',
-			'max_length' => 'El nombre de la facultad debe ser menor a cincuenta caracteres. Intente nuevamente.'
+			'max_length' => 'El nombre de la facultad debe ser menor a cincuenta caracteres. Intente nuevamente.',
+			'is_unique'  => 'La facultad ya existe en la base de datos. Intente nuevamente.'
 		],
 	];
 
@@ -168,13 +170,14 @@ class Validation
 	];
 
 	public $universidadEditar =[
-		'nombre_universidad_editar' => 'required',
+		'nombre_universidad_editar' => 'required|is_unique[cof_universidad.universidad]',
 		'direccion_editar'          => 'required|min_length[10]|max_length[250]',
 		'telefono_editar'           => 'required|min_length[9]|max_length[9]',
 	];
 	public $universidadEditar_errors = [
 		'nombre_universidad_editar' => [
-			'required'  => 'Por favor, ingrese el nombre de la Universidad.'
+			'required'  => 'Por favor, ingrese el nombre de la Universidad.',
+			'is_unique' => 'Lo sentimos, la Universidad ya existe en la base de datos. Intente nuevamente.'
 		],
 		'direccion_editar' => [
 			'required'   => 'Por favor, ingrese la dirección de la Universidad.',
@@ -205,13 +208,13 @@ class Validation
 	];
 
 	public $planEditar =[
-		'plan_editar'        => 'required|min_length[3]',
+		'plan_editar'        => 'required|is_unique[cof_planes.nombrePlan]',
 		'planAcuerdo_editar' => 'required|min_length[3]',
 	];
 	public $planEditar_errors = [
 		'plan_editar' => [
 			'required'   => 'Por favor, ingrese el nombre del Plan.',
-			'min_length' => 'El Plan debe ser mayor a tres caracteres. Intente nuevamente.'
+			'is_unique' => 'Lo sentimos este Plan ya existe en la base de datos. Intente nuevamente.'
 		],
 		'planAcuerdo_editar'    => [
 			'required'   => 'Por favor, ingrese el Plan Acuerdo para el Plan.',
@@ -254,7 +257,7 @@ class Validation
 	public $cicloEditar =[
 		'ciclo_editar'               => 'required|min_length[1]|max_length[1]',
 		'anio_editar'                => 'required|min_length[4]|max_length[4]',
-		'nombrePersonalizado_editar' => 'required|min_length[3]',
+		'nombrePersonalizado_editar' => 'required|is_unique[cof_aper_ciclo.nombrePersonalizado]',
 		'fechaInicio_editar'         => 'required',
 		'fechaFin_editar'            => 'required',
 	];
@@ -272,7 +275,8 @@ class Validation
 		,
 		'nombrePersonalizado_editar' => [
 			'required'   => 'Por favor, ingrese el Nombre Personalizado.',
-			'min_length' => 'El nombre personalizado debe ser mayor a tres caracteres. Intente nuevamente.'
+			'min_length' => 'El nombre personalizado debe ser mayor a tres caracteres. Intente nuevamente.',
+			'is_unique' => 'Lo sentimos el Nombre Personalizado ya existe en la base de datos. Intente nuevamente.'
 		],
 		'fechaInicio_editar' 			=> [
 			'required'  => 'Por favor, ingrese la Fecha de Inicio.'
@@ -302,21 +306,51 @@ class Validation
 		]
 	];
 
-	public $carrerasEditar =[
+	public $carrerasEditar_principal =[
 		'facultad_editar'       => 'required',
-		'nombre_carrera_editar' => 'required',
-		'nombre_corto_editar'   => 'required',
+		'nombre_carrera_editar' => 'required|is_unique[cof_carreras.nombre]',
+		'nombre_corto_editar'   => 'required|is_unique[cof_carreras.nombreCorto]',
 	];
-	public $carrerasEditar_errors = [
+	public $carrerasEditar_principal_errors = [
 		'facultad_editar' => [
 			'required'   => 'Por favor, seleccione una Facultad.',
 		],
 		'nombre_carrera_editar' => [
 			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
+			'is_unique' => 'Lo sentimos, el nombre de carrera ya existe en la base de datos. Intente nuevamente.',
 		]
 		,
 		'nombre_corto_editar' => [
 			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
+			'is_unique' => 'Lo sentimos, el nombre corto de la carrera ya existe en la base de datos. Intente nuevamente.',
+		]
+	];
+	//
+	public $carrerasEditar_uno =[
+		'facultad_editar'       => 'required',
+		'nombre_corto_editar'   => 'required|is_unique[cof_carreras.nombreCorto]',
+	];
+	public $carrerasEditar_uno_errors = [
+		'facultad_editar' => [
+			'required'   => 'Por favor, seleccione una Facultad.',
+		],
+		'nombre_corto_editar' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la Carrera.',
+			'is_unique' => 'Lo sentimos, el nombre corto de la carrera ya existe en la base de datos. Intente nuevamente.',
+		]
+	];
+	//
+	public $carrerasEditar_dos=[
+		'facultad_editar'       => 'required',
+		'nombre_carrera_editar' => 'required|is_unique[cof_carreras.nombre]',
+	];
+	public $carrerasEditar_dos_errors = [
+		'facultad_editar' => [
+			'required'   => 'Por favor, seleccione una Facultad.',
+		],
+		'nombre_carrera_editar' => [
+			'required'  => 'Por favor, ingrese el nombre de la Carrera.',
+			'is_unique' => 'Lo sentimos, el nombre de carrera ya existe en la base de datos. Intente nuevamente.',
 		]
 	];
 	public $materia =[
@@ -355,6 +389,53 @@ class Validation
 		'nombreCorto_editar' => [
 			'required'  => 'Por favor, ingrese el Nombre Corto de la materia.',
 		]
+	];
+//
+	public $materia_editar1 =[
+		'nombre_editar'       =>  'required|is_unique[cof_materias.nombre]',
+		'codMateria_editar' => 'required',
+	];
+	public $materia_editar1_errors = [
+		'nombre_editar' => [
+			'required'   => 'Por favor, ingrese el nombre de la materia.',
+			'is_unique'   => 'El nombre de la materia ya existe.',
+		],
+		'codMateria_editar' => [
+			'required'  => 'Por favor, ingrese el código de la materia.',
+		]
+	];
+	//
+	public $materia_editar2 =[
+		'codMateria_editar' => 'required',
+		'nombreCorto_editar'   => 'required|is_unique[cof_materias.nombreCorto]',
+	];
+	public $materia_editar2_errors = [
+		'codMateria_editar' => [
+			'required'  => 'Por favor, ingrese el código de la materia.',
+		]
+		,
+		'nombreCorto_editar' => [
+			'required'  => 'Por favor, ingrese el Nombre Corto de la materia.',
+			'is_unique'   => 'El nombre corto de la materia ya existe.',
+		]
+	];
+	public $ponderacion =[
+		'ponderacionMinima'       => 'required',
+
+	];
+	public $ponderacion_errors = [
+		'ponderacionMinima' => [
+			'required'   => 'Por favor, seleccione una ponderación minima.',
+		],
+	];
+	public $ponderacion_editar =[
+		'ponderacionMinima'       => 'required',
+
+	];
+	public $ponderacion_editar_errors = [
+		'ponderacionMinima' => [
+			'required'   => 'Por favor, seleccione una ponderación minima.',
+		],
 	];
 
 	public $cargaAcademica =[
@@ -547,6 +628,16 @@ class Validation
 		'persona' => [
 			'required'  => 'Por favor, seleccione una persona.',
 			'is_unique'  => 'Lo sentimos, esta persona ya tiene una inscripción.',
+		],
+		
+	];
+	public $evaluacionEstudiante =[
+		'formulario' => 'required',
+	];
+	public $evaluacionEstudiante_errors = [
+		'formulario' => [
+			'required'  => '',
+
 		],
 		
 	];

@@ -62,7 +62,16 @@ class Facultad extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     }
+    $facul = $this->request->getPost('facultad_editar');
+    $buscarFacultad = $facultad->select('facultad')->where('facultad',$facul)->where('facultadId',$id)->first();
+    if ($buscarFacultad) {
+          $facultad->update($id, [
+        'universidadId' =>$this->request->getPost('universidadId_editar'),
 
+      ]);
+      return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
+    }
+    if (!$buscarFacultad) {
     if($this->validate('facultadEditar')){
       $facultad->update($id, [
         'universidadId' =>$this->request->getPost('universidadId_editar'),
@@ -70,6 +79,8 @@ class Facultad extends BaseController {
 
       ]);
       return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
+    }
+
     }
 
     return redirect()->back()->withInput();

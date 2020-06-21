@@ -22,8 +22,8 @@
     this.elmStepContainer = $('<div></div>').addClass("stepContainer");
     this.loader = $('<div>Loading</div>').addClass("loader");
     this.buttons = {
-     previous : $('<a>'+options.iconoPrevios+options.labelPrevious+'</a>').attr("href","#").addClass("buttonPrevious"),
-     next : $('<a>'+options.labelNext+options.iconoNext+'</a>').attr("href","#").addClass("buttonNext"),
+     previous : $('<a>'+options.iconoPrevios+options.labelPrevious+'</a>').attr("href","#").addClass("btn btn-success"),
+     next : $('<a>'+options.labelNext+options.iconoNext+'</a>').attr("href","#").addClass("btn btn-success"),
      finish  : $('<a>'+options.icono+options.labelFinish+'</a>').attr("href","#").addClass("btn btn-info")
  };
 
@@ -52,11 +52,10 @@
 
         $this.elmStepContainer.append(allDivs);
         elmActionBar.append($this.loader);
-        $this.target.append($this.elmStepContainer);
-        elmActionBar.append($this.buttons.finish)
-        .append($this.buttons.previous)
-        .append($this.buttons.next);
-
+        $this.target.append($this.elmStepContainer)
+        elmActionBar.append($this.buttons.previous)
+        elmActionBar.append($this.buttons.next)
+       elmActionBar.append($this.buttons.finish);
         $this.target.append(elmActionBar);
         this.contentWidth = $this.elmStepContainer.width();
 
@@ -463,13 +462,12 @@ $.fn.smartWizard.defaults = {
     enableFinishButton: false, // make finish button enabled always
 	hideButtonsOnDisabled: false, // when the previous/next/finish buttons are disabled, hide them instead?
     errorSteps:[],    // Array Steps with errors
-    labelNext:'Siguiente ',
-    labelPrevious:' Anterior',
+    labelNext:'',
+    labelPrevious:'',
     labelFinish:' Finalizar',
     icono: '<i class="fa fa-save" ></i>',
-    iconoNext: '<i class="fa fa-arrow-circle-right" ></i>',
-    iconoPrevios: '<i class="fa fa-arrow-circle-left" ></i>',
-    iconoPrevios: '<i class="fa fa-arrow-circle-left" ></i>',
+    iconoNext: '<i class="fa fa-chevron-right" ></i>',
+    iconoPrevios: '<i class="fa fa-chevron-left" ></i>',
     noForwardJumping: false,
     onLeaveStep: null, // triggers when leaving a step
     onShowStep: null,  // triggers when showing a step

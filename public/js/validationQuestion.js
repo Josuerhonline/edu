@@ -1484,3 +1484,9 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('#area_editar').select2();
 });
+$(document).ready(function(){
+	$('#ponderacion').select2();
+});
+$(document).ready(function(){
+	$('#ponderacion_editar').select2();
+});

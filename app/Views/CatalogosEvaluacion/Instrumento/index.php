@@ -103,3 +103,4 @@
 
 
 
+<script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>

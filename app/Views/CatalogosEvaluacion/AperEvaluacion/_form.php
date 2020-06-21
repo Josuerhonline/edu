@@ -35,7 +35,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="ciclo" id="ciclo" >
@@ -50,7 +50,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="instrumento" id="instrumento" >
@@ -65,10 +65,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input type="date" value="<?= old('fechaInicio') ?>" name="fechaInicio" id="fechaInicio" class="form-control col-md-11">
+												<input style="width: 79%" type="date" value="<?= old('fechaInicio') ?>" name="fechaInicio" id="fechaInicio" class="form-control col-md-11">
 											</div>
 										</div>
 										<div class="item form-group "  <?= !$created ? "hidden" : "" ?> >
@@ -76,10 +76,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input type="date" value="<?= old('fechaFin') ?>" name="fechaFin" id="fechaFin" class="form-control col-md-11">
+												<input style="width: 79%" type="date" value="<?= old('fechaFin') ?>" name="fechaFin" id="fechaFin" class="form-control col-md-11">
 											</div>
 										</div>
 										<!-- 	campos para editar -->
@@ -88,7 +88,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="ciclo_editar" id="ciclo_editar">
@@ -103,7 +103,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="instrumento_editar" id="instrumento_editar">
@@ -118,10 +118,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input type="date" value="<?=old('fechaInicio_editar', $aperEva->fechaInicio)?>" name="fechaInicio_editar" id="fechaInicio_editar" class="form-control col-md-11">
+												<input style="width: 79%" type="date" value="<?=old('fechaInicio_editar', $aperEva->fechaInicio)?>" name="fechaInicio_editar" id="fechaInicio_editar" class="form-control col-md-11">
 											</div>
 										</div>
 										<div class="item form-group "  <?= $created ? "hidden" : "" ?> >
@@ -129,10 +129,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input type="date" value="<?=old('fechaFin_editar', $aperEva->fechaFin)?>" name="fechaFin_editar" id="fechaFin_editar" class="form-control col-md-11">
+												<input style="width: 79%" type="date" value="<?=old('fechaFin_editar', $aperEva->fechaFin)?>" name="fechaFin_editar" id="fechaFin_editar" class="form-control col-md-11">
 											</div>
 										</div>
 										<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
@@ -140,10 +140,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<select class="form-control"  name="estado" id="estado">
+												<select class="form-control col-md-11"  name="estado" id="estado">
 													<option <?= $aperEva->estadoAperEva !== "1" ?: "selected"?> value="1">ACTIVO</option>
 													<option <?= $aperEva->estadoAperEva !== "0" ?: "selected"?> value="0">INACTIVO</option>
 												</select>
@@ -174,6 +174,9 @@
 	});
 	$(document).ready(function(){
 		$('#instrumento_editar').select2();
+	});
+		$(document).ready(function(){
+		$('#estado').select2();
 	});
 </script>
 

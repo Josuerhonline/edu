@@ -44,7 +44,7 @@ class CambioClave extends BaseController {
       'title' => $title
     ];
 
-    echo view("dashboard/templates/header",$dataHeader);
+    echo view("dashboard/templates/headerSeleccionCiclo",$dataHeader);
     echo view("dashboard/cambioClave/$view");
     echo view("dashboard/templates/footer");
   }

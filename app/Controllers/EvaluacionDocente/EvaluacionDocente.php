@@ -1,105 +1,263 @@
 <?php namespace App\Controllers\EvaluacionDocente;
-use App\Models\EvaluacionDocente\InstrumentoDetalleModel;
+use App\Models\EvaluacionDocente\Evaluacion;
+use App\Models\EvaluacionDocente\EvaluacionDetalle;
+use App\Models\EvaluacionDocente\EvaluacionDocentes;
+use App\Models\EvaluacionDocente\EvaluacionDocentesDetalle;
+use App\Models\EvaluacionDocente\CargaViewModel;
+use App\Models\EvaluacionDocente\CargaInscripcionViewModel;
+use App\Models\CatalogosEvaluacion\AperEvaluacionModelView;
+use App\Models\SeleccionarCicloModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
-class Preguntas extends BaseController {
-  public function index(){
-    $pregunta = new preguntasModel();
+class EvaluacionDocente extends BaseController {
+ public function generarSesionCiclo(){
+  $array = array("cicloId"=>$_POST['id']);
+  $session = session();
+  $session->set($array);
 
+  $aperCiclo = new SeleccionarCicloModel();
+  $buscarCiclo = $aperCiclo->asObject()->select('nombrePersonalizado')->where('aperCicloId',$_POST['id'])->findAll();
+  foreach ($buscarCiclo as $key => $c){
+    $_SESSION["ciclo"] = $c->nombrePersonalizado;
+  }
+}
+public function index(){
+  $session = session(); 
+  $rol =  $session->rolId;
+  $carga = new CargaViewModel();
+  $inscripcion = new CargaInscripcionViewModel();
+  if ($rol == '1') {
     $data = [
-      'preguntas' => $pregunta->asObject()
-      ->select('eva_preguntas.*,eva_temas_capacitacion.temaCapacitacionId,eva_temas_capacitacion.tema')
-      ->join('eva_temas_capacitacion','eva_temas_capacitacion.temaCapacitacionId = eva_preguntas.temaCapacitacionId')->findAll()
+      'carga' => $carga->asObject()
+      ->select('view_carga_academica.*')->findAll()
     ];
 
-    $this->_loadDefaultView( 'Listado de preguntas',$data,'index');
+    $this->_loadDefaultView( ' Admin',$data,'admin');
+  }else if($rol == '2'){
+    $data = [
+      'carga' => $carga->asObject()
+      ->select('view_carga_academica.*')->findAll()
+    ];
+
+    $this->_loadDefaultView( ' Docente',$data,'docente');
+  }else if($rol == '3'){
+    $data = [
+      'inscripcion' => $inscripcion->asObject()
+      ->select('view_carga_inscripcion.*')->findAll()
+    ];
+
+    $this->_loadDefaultView( ' Estuadiante',$data,'estudiante');
+
+  }
+}
+
+public function evaluacionEstudiante(){
+  $evaluacion = new Evaluacion();
+  $evaluacionDetalle = new EvaluacionDetalle();
+  $identificador = $this->request->getPost('personaId');
+  $fecha = $this->request->getPost('fechaEvaluacion');
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacion->insert([
+      'personaId' =>$this->request->getPost('personaId'),
+      'planMateriaId' =>$this->request->getPost('planMateriaId'),
+      'aperEvaluacionId' =>$this->request->getPost('aperEvaluacionId'),
+      'fechaEvaluacion' =>$this->request->getPost('fechaEvaluacion'),
+      'observaciones' =>$this->request->getPost('obs'),
+    ]);
+  }
+  $EvaluacionId = $evaluacion->select('evaluacionId')->where('personaId',$identificador)->where('fechaEvaluacion',$fecha)->first();
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId1'),
+      'valor' =>$this->request->getPost('pregunta1'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId2'),
+      'valor' =>$this->request->getPost('pregunta2'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId3'),
+      'valor' =>$this->request->getPost('pregunta3'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId4'),
+      'valor' =>$this->request->getPost('pregunta4'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId5'),
+      'valor' =>$this->request->getPost('pregunta5'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId6'),
+      'valor' =>$this->request->getPost('pregunta6'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId7'),
+      'valor' =>$this->request->getPost('pregunta7'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId8'),
+      'valor' =>$this->request->getPost('pregunta8'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId9'),
+      'valor' =>$this->request->getPost('pregunta9'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDetalle->insert([
+      'evaluacionId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId10'),
+      'valor' =>$this->request->getPost('pregunta10'),
+    ]);
+
+  }
+  $EvaluacionResultado = $evaluacionDetalle->selectAvg('valor')->where('evaluacionId',$EvaluacionId)->first();
+    $evaluacion->update($EvaluacionId, [
+      'resultadoEvaluacion' =>$EvaluacionResultado,
+    ]);
+    return redirect()->to('/EvaluacionDocente/EvaluacionDocente/')->with('message', 'Evaluación realizada con éxito.');
+
+  return redirect()->back()->withInput();
+}
+// Evaluacion para  Docentes
+public function evaluacionDocente(){
+  $evaluacionDocentes = new EvaluacionDocentes();
+  $evaluacionDocentesDetalle = new EvaluacionDocentesDetalle();
+  $identificador = $this->request->getPost('personaIdCarga');
+  $fecha = $this->request->getPost('fechaEvaluacion');
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentes->insert([
+      'personaId' =>$this->request->getPost('personaIdCarga'),
+      'aperEvaluacionId' =>$this->request->getPost('aperEvaluacionIdCarga'),
+      'fechaEvaluacion' =>$this->request->getPost('fechaEvaluacion'),
+      'observaciones' =>$this->request->getPost('obs'),
+    ]);
   }
 
-  public function new(){
-    $temas = new TemasCapacitacionModel();
-    $pregunta = new preguntasModel();
-    $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Crear pregunta',['validation'=>$validation, 'preguntas'=> new preguntasModel(),'temas' => $temas->asObject()->where('estado','1')->findAll()],'new');
+  $EvaluacionId = $evaluacionDocentes->select('evaluacionDocenteId')->where('personaId',$identificador)->where('fechaEvaluacion',$fecha)->first();
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId1'),
+      'valor' =>$this->request->getPost('pregunta1'),
+    ]);
   }
-
-  public function create(){
-    $pregunta = new preguntasModel();
-
-    if($this->validate('pregunta')){
-      $id = $pregunta->insert([
-        'pregunta' =>$this->request->getPost('pregunta'),
-        'temaCapacitacionId' =>$this->request->getPost('tema'),
-        'estadoPregunta'  =>'1'
-      ]);
-
-      return redirect()->to('/CatalogosEvaluacion/preguntas/')->with('message', 'pregunta creada con éxito.');
-    }
-
-    return redirect()->back()->withInput();
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId2'),
+      'valor' =>$this->request->getPost('pregunta2'),
+    ]);
   }
-
-  public function edit($id = null){
-    $pregunta = new preguntasModel();
-    $temas = new TemasCapacitacionModel();
-    if ($pregunta->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }  
-
-    $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Actualizar pregunta',
-      ['validation'=>$validation,'preguntas'=> $pregunta->asObject()->find($id),'temas' => $temas->asObject()->where('estado','1')->findAll()],'edit');
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId3'),
+      'valor' =>$this->request->getPost('pregunta3'),
+    ]);
   }
-
-  public function update($id = null){
-    $pregunta = new preguntasModel();
-
-    if ($pregunta->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }
-  // VALIDAR SI EL VALOR INGRESADO NO EXISTE EN LA BASE DE DATOS, ACTUALIZAR SOLO SI ES EL MISMO VALOR O UNO NO EXISTENTE EN LA BASE DE DATOS
-    $valor = $this->request->getPost('pregunta_editar');
-    $buscarpregunta = $pregunta->select('pregunta')->where('pregunta',$valor)->where('preguntaId',$id)->first();
-    if ($buscarpregunta) {
-     if($this->validate('pregunta_editar')){
-      $pregunta->update($id, [
-        'temaCapacitacionId' =>$this->request->getPost('tema_editar'),
-        'estadoPregunta' =>$this->request->getPost('estado'),
-      ]);
-      return redirect()->to('/CatalogosEvaluacion/preguntas')->with('message', 'pregunta editada con éxito.');
-    }
-  }else if(!$buscarpregunta){
-    if($this->validate('pregunta_editar1')){
-      $pregunta->update($id, [
-        'pregunta' =>$this->request->getPost('pregunta_editar'),
-        'temaCapacitacionId' =>$this->request->getPost('tema'),
-        'estadoPregunta' =>$this->request->getPost('estado'),
-      ]);
-      return redirect()->to('/CatalogosEvaluacion/preguntas')->with('message', 'pregunta editada con éxito.');
-    }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId4'),
+      'valor' =>$this->request->getPost('pregunta4'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId5'),
+      'valor' =>$this->request->getPost('pregunta5'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId6'),
+      'valor' =>$this->request->getPost('pregunta6'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId7'),
+      'valor' =>$this->request->getPost('pregunta7'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId8'),
+      'valor' =>$this->request->getPost('pregunta8'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId9'),
+      'valor' =>$this->request->getPost('pregunta9'),
+    ]);
+  }
+  if($this->validate('evaluacionEstudiante')){
+    $id = $evaluacionDocentesDetalle->insert([
+      'evaluacionDocenteId' =>$EvaluacionId,
+      'instrumentoDetalleId' =>$this->request->getPost('instrumentoDetalleId10'),
+      'valor' =>$this->request->getPost('pregunta10'),
+    ]);
+    return redirect()->to('/EvaluacionDocente/EvaluacionDocente/')->with('message', 'Evaluación realizada con éxito.');
   }
   return redirect()->back()->withInput();
 }
 
-public function delete($id = null){
-  $pregunta = new preguntasModel();
-  $instrumentoDetalle = new InstrumentoDetalleModel();
-  $buscarpregunta = $instrumentoDetalle->select('preguntaId')->where('preguntaId',$id)->first();
-
-  if ($buscarpregunta) {
-    return redirect()->to("/CatalogosEvaluacion/preguntas")->with('messageError','Lo sentimos, la pregunta esta asociada a un instrumento de evaluación y no puede ser eliminada.');
-  }
-
-  if ($pregunta->find($id) == null)
+public function realizarEvaluacion($id = null){
+  $inscripcion = new CargaInscripcionViewModel();
+  if ($inscripcion->find($id) == null)
   {
     throw PageNotFoundException::forPageNotFound();
   }  
 
-  $pregunta->delete($id);
+  $validation =  \Config\Services::validation();
+  $this->_loadDefaultView('Actualizar evaluacion',
+    ['validation'=>$validation,'inscripcion'=> $inscripcion->asObject()->find($id)],'frmEvaluacionEstudiante');
+}
 
-  return redirect()->to('/CatalogosEvaluacion/preguntas')->with('message', 'pregunta eliminada con éxito.'); 
+public function realizarEvaluacionDocente($id = null){
+  $inscripcion = new CargaInscripcionViewModel();
+  if ($inscripcion->find($id) == null)
+  {
+    throw PageNotFoundException::forPageNotFound();
+  }  
+
+  $validation =  \Config\Services::validation();
+  $this->_loadDefaultView('Actualizar evaluacion',
+    ['validation'=>$validation,'inscripcion'=> $inscripcion->asObject()->find($id)],'frmEvaluacionDocente');
 }
 
 private function _loadDefaultView($title,$data,$view){
@@ -108,7 +266,7 @@ private function _loadDefaultView($title,$data,$view){
   ];
 
   echo view("dashboard/templates/header",$dataHeader);
-  echo view("CatalogosEvaluacion/preguntas/$view",$data);
+  echo view("EvaluacionDocente/EvaluacionDocente/$view",$data);
   echo view("dashboard/templates/footer");
 }
 }

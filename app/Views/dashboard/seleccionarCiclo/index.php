@@ -8,7 +8,7 @@
 <div class="right_col" role="main" >
 	<link rel="stylesheet" href="/build/css/selects.css">
 
-<link rel="stylesheet" href="/build/css/select2.css">
+	<link rel="stylesheet" href="/build/css/select2.css">
 	<div class="clearfix"></div>
 	<div class="row" >
 		<div class="col-md-12 col-sm-12 " >
@@ -26,9 +26,10 @@
 									<div class="col-md-12">
 										<div  class="form-group">
 											<p>Por favor, seleccione el período al que desea ingresar.</p>
-											<select class="form-control" name="cicloId" id="cicloId">
+											<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
+												<option value="">Seleccione un ciclo</option>
 												<?php foreach ($selectCiclo as $c): ?>
-													<option value="<?= $c->ciclo ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
+													<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
 												<?php endforeach?>
 											</select> 
 											<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
@@ -45,13 +46,22 @@
 </div>
 <script src="/js/jquery-3.4.1.slim.min.js"></script>
 <script type="text/javascript">
+	function procesarValor(){
+		let valorCiclo = document.getElementById('cicloId').value;
+		$.ajax({
+			type:"POST",
+			url:"/EvaluacionDocente/EvaluacionDocente/generarSesionCiclo",
+			data:"id=" + valorCiclo,
+			success:function(p){
+			}
+		});
+	}
 	function procesarCiclo(){
 		let valorCiclo = document.getElementById('cicloId').value;
 		if (valorCiclo!="") {
 			window.location="/principal";
 		}else{}
 	}
-
 	$(document).ready(function(){
 		$('#cicloId').select2();
 	});

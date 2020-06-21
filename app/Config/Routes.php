@@ -89,12 +89,15 @@ $routes->resource('Catalogos/carreras',['except' => ['show']]);
 $routes->resource('Catalogos/Ciclo',['except' => ['show']]);
 $routes->resource('Catalogos/Materias',['except' => ['show']]);
 $routes->resource('Catalogos/CargaAdemic',['except' => ['show']]);
+$routes->resource('Catalogos/Ponderaciones',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/TemasCapacitacion',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/Preguntas',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/AreasEvaluacion',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/Instrumento',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/Inscripcion',['except' => ['show']]);
 $routes->resource('EvaluacionDocente/EvaluacionDocente',['except' => ['show']]);
+$routes->resource('Graficos/Graficos',['except' => ['show']]);
+$routes->resource('Graficos/SeleccionGrafico',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
 
 

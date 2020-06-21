@@ -32,12 +32,12 @@
 									<div class="col-sm-12">
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
 											<!-- campos para crear -->
-											<div class="item form-group "  <?= !$created ? "hidden" : "" ?> >
+											<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?> >
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la persona<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="personaId" id="personaId" >
@@ -47,15 +47,15 @@
 													</select> 
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?> >
+											<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?> >
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el rol<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control" name="rolId" id="rolId" >
+													<select class="form-control col-md-11" name="rolId" id="rolId" >
 														<?php foreach ($rol as $r): ?>
 															<option value="<?= $r->rolId ?>"><?= $r->nombreRol?></option>
 														<?php endforeach?>
@@ -63,12 +63,12 @@
 												</div>
 											</div>
 											<!-- 	campos para editar -->
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la persona<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff"><i class="	fa fa-asl-interpretingfa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="personaId_editar" id="personaId_editar">
@@ -78,59 +78,58 @@
 													</select> 
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el rol<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff"><i class="	fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="rolId_editar" id="rolId_editar">
+													<select class="form-control col-md-11"  name="rolId_editar" id="rolId_editar">
 														<?php foreach ($rol as $r): ?>
 															<option <?= $user->rolId !== $r->rolId ?: "selected"?> value="<?= $r->rolId ?>"><?= $r->nombreRol ?> </option>
 														<?php endforeach?>
 													</select>
 												</div>
 											</div>
-											<div class="item form-group col-md-12">
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario <span class="required">*</span>
+											<div class="item form-group col-md-11" >
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="usuario" name="usuario" value="<?=old('usuario', $user->usuario)?>"/>
+													<input style="width: 79%" class="col-md-11" value="<?= old('usuario',$user->usuario)?>" type="text" id="usuario" name="usuario"/>
 												</div>
 											</div>
-											<div class="item form-group col-md-12">
+											<div class="item form-group col-md-11" >
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Contraseña<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1">***</span>
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff">***</span>
 													</div>
-													<input class="form-control"  type="password" id="clave" name="clave" value=""/>
+													<input style="width: 79%" class="col-md-11"type="password" id="clave" name="clave"/>
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el estado<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="estado_editar" id="estado_editar">
-														<option value="<?=old('estado', $user->estado)?>"><?=old('estado', $user->estado)?></option>
-														<option value="RETIRADO">RETIRADO</option>
-														<option value="ACTIVO">ACTIVO</option>
-														<option value="EN PROCESO">EN PROCESO</option>
+													<select class="form-control col-md-11"  name="estado_editar" id="estado_editar">
+														<option <?= $user->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
+														<option <?= $user->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
+														<option <?= $user->estado !== "2" ?: "selected"?> value="0">EN PROCESO</option>
 													</select>
 												</div>
 											</div>
-											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
+											<button class="btn btn-success" type="submit" style="width: 42%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
 										</form>
 									</div>
 								</div>
@@ -148,7 +147,16 @@
 		$('#personaId').select2();
 	});
 	$(document).ready(function(){
+		$('#rolId').select2();
+	});
+	$(document).ready(function(){
+		$('#rolId_editar').select2();
+	});
+	$(document).ready(function(){
 		$('#personaId_editar').select2();
+	});
+	$(document).ready(function(){
+		$('#estado_editar').select2();
 	});
 </script>
 

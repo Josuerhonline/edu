@@ -34,7 +34,7 @@ class Planes extends BaseController {
         'carreraId' =>$this->request->getPost('carreraId'),
         'nombrePlan' =>$this->request->getPost('plan'),
         'plaAcuerdo' =>$this->request->getPost('planAcuerdo'),
-        'estado' =>'ACTIVO',
+        'estado' =>'1',
       ]);
 
       return redirect()->to('/Catalogos/planes')->with('message', 'Plan creado con éxito.');
@@ -64,7 +64,18 @@ class Planes extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     }
+    $planE = $this->request->getPost('plan_editar');
+    $buscarPlan = $plan->select('nombrePlan')->where('nombrePlan',$planE)->where('planId',$id)->first();
+    if ($buscarPlan) {
+       $plan->update($id, [
+        'carreraId' =>$this->request->getPost('carreraId_editar'),
+        'plaAcuerdo' =>$this->request->getPost('planAcuerdo_editar'),
+        'estado' =>$this->request->getPost('estado'),
 
+      ]);
+      return redirect()->to('/Catalogos/planes')->with('message', 'Plan editado con éxito.');
+    }
+    else if (!$buscarPlan) {
     if($this->validate('planEditar')){
       $plan->update($id, [
         'carreraId' =>$this->request->getPost('carreraId_editar'),
@@ -75,6 +86,8 @@ class Planes extends BaseController {
       ]);
       return redirect()->to('/Catalogos/planes')->with('message', 'Plan editado con éxito.');
     }
+    }
+
 
     return redirect()->back()->withInput();
   }

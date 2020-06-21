@@ -5,6 +5,7 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;
 use App\Models\CatalogosEvaluacion\preguntasViewModel;
 use App\Models\CatalogosEvaluacion\preguntasModel;
 use App\Models\CatalogosEvaluacion\InstrumentoModel;
+use App\Models\Catalogos\PonderacionesModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
 
@@ -27,8 +28,9 @@ class Instrumento extends BaseController {
     $area = new AreasEvaluacioModel();
     $instrumento = new InstrumentoModel();
     $pregunta = new preguntasViewModel();
+    $ponderacion = new PonderacionesModel();
     $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Crear aperura de evaluación',['validation'=>$validation, 'instrumento'=> new InstrumentoModel(),'area' => $area->asObject()->where('estadoAreaEva','1')->findAll(),'instrumento' => $instrumento->asObject()->where('estadoInstrumento','1')->findAll(),'preguntas' => $pregunta->asObject()->where('estadoPregunta','1')->findAll()],'new');
+    $this->_loadDefaultView('Crear aperura de evaluación',['validation'=>$validation, 'instrumento'=> new InstrumentoModel(),'area' => $area->asObject()->where('estadoAreaEva','1')->findAll(),'instrumento' => $instrumento->asObject()->where('estadoInstrumento','1')->findAll(),'preguntas' => $pregunta->asObject()->where('estadoPregunta','1')->findAll(),'ponderacion' => $ponderacion->asObject()->where('estadoPonderacion','1')->findAll()],'new');
   }
 
   public function create(){
@@ -38,6 +40,7 @@ class Instrumento extends BaseController {
     if($this->validate('instrumento')){
       $id = $instrumento->insert([
         'areaEvaluacionId' =>$this->request->getPost('area'),
+        'ponderacionId' =>$this->request->getPost('ponderacion'),
         'nombreInstrumento' =>$this->request->getPost('nombre'),
         'descripcion' =>$this->request->getPost('descripcion'),
         'estadoInstrumento' =>'1',
@@ -125,6 +128,7 @@ class Instrumento extends BaseController {
    $instrumentoM = new InstrumentoDetalleModel();
    $area = new AreasEvaluacioModel();
    $pregunta = new preguntasViewModel();
+   $ponderacion = new PonderacionesModel();
 
 
    if ($instrumento->find($id) == null)
@@ -134,7 +138,7 @@ class Instrumento extends BaseController {
 
   $validation =  \Config\Services::validation();
   $this->_loadDefaultView('Actualizar instrumento',
-    ['validation'=>$validation,'instrumento'=> $instrumento->asObject()->find($id),'area' => $area->asObject()->where('estadoAreaEva','1')->findAll(),'preguntas' => $pregunta->asObject()->where('estadoPregunta','1')->findAll()],'edit');
+    ['validation'=>$validation,'instrumento'=> $instrumento->asObject()->find($id),'area' => $area->asObject()->where('estadoAreaEva','1')->findAll(),'preguntas' => $pregunta->asObject()->where('estadoPregunta','1')->findAll(),'ponderacion' => $ponderacion->asObject()->where('estadoPonderacion','1')->findAll()],'edit');
 }
 
 public function update($id = null){
@@ -152,6 +156,7 @@ public function update($id = null){
    if($this->validate('instrumento_editar')){
     $instrumento->update($id, [
       'areaEvaluacionId' =>$this->request->getPost('area'),
+      'ponderacionId' =>$this->request->getPost('ponderacion_editar'),
       'descripcion' =>$this->request->getPost('descripcion'),
       'estadoInstrumento' =>$this->request->getPost('estado'),
     ]);
@@ -241,23 +246,23 @@ if($this->validate('preguntas')){
 }
 }else if (!$buscarinstrumentos) {
   if($this->validate('instrumento')){
-  $instrumento->update($id, [
-    'nombreInstrumento' => $this->request->getPost('nombre'),
-    'areaEvaluacionId' =>$this->request->getPost('area'),
-    'descripcion' =>$this->request->getPost('descripcion'),
-    'estadoInstrumento' =>$this->request->getPost('estado'),
+    $instrumento->update($id, [
+      'nombreInstrumento' => $this->request->getPost('nombre'),
+      'areaEvaluacionId' =>$this->request->getPost('area'),
+      'descripcion' =>$this->request->getPost('descripcion'),
+      'estadoInstrumento' =>$this->request->getPost('estado'),
+    ]);
+  }
+  $id1 = $this->request->getPost('id1');
+  if($this->validate('preguntas')){
+   $instrumentoM->update($id1, [
+    'instrumentoId' =>$id,
+    'preguntaId' =>$this->request->getPost('pregunta_1'),
+    'orden' =>'1',
   ]);
-}
-$id1 = $this->request->getPost('id1');
-if($this->validate('preguntas')){
- $instrumentoM->update($id1, [
-  'instrumentoId' =>$id,
-  'preguntaId' =>$this->request->getPost('pregunta_1'),
-  'orden' =>'1',
-]);
-}
-$id2 = $this->request->getPost('id2');
-if($this->validate('preguntas')){
+ }
+ $id2 = $this->request->getPost('id2');
+ if($this->validate('preguntas')){
   $instrumentoM->update($id2, [
     'instrumentoId' =>$id,
     'preguntaId' =>$this->request->getPost('pregunta_2'),
@@ -364,7 +369,7 @@ private function _loadDefaultView($title,$data,$view){
 
   echo view("dashboard/templates/header",$dataHeader);
   echo view("CatalogosEvaluacion/Instrumento/$view",$data);
-  echo view("dashboard/templates/footer");
+  echo view("dashboard/templates/footerInstrumento");
 }
 
 }

@@ -53,7 +53,7 @@ class Carreras extends BaseController {
 
     $validation =  \Config\Services::validation();
     $this->_loadDefaultView('Actualizar carreras',
-    ['validation'=>$validation,'carreras'=> $carreras->asObject()->find($id),'facultades' => $facultades->asObject()->findAll()],'edit');
+      ['validation'=>$validation,'carreras'=> $carreras->asObject()->find($id),'facultades' => $facultades->asObject()->findAll()],'edit');
   }
 
   public function update($id = null){
@@ -63,8 +63,40 @@ class Carreras extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     } 
+    $carrNombre = $this->request->getPost('nombre_carrera_editar');
+    $carrNombreCorto = $this->request->getPost('nombre_corto_editar');
+    $buscarCarrera = $carreras->select('nombre')->where('nombre',$carrNombre)->where('carreraId',$id)->first();
+    $buscarCarrera1 = $carreras->select('nombreCorto')->where('nombreCorto',$carrNombreCorto)->where('carreraId',$id)->first();
+    $buscarC = $carreras->select('nombre','nombreCorto')->where('nombre',$carrNombre)->where('nombreCorto',$carrNombreCorto)->where('carreraId',$id)->first();
+    if ($buscarC) {
+      $carreras->update($id, [
+        'facultadId'  => $this->request->getPost('facultad_editar'),
+        'estado'      => $this->request->getPost('estado_editar'),
+      ]);
+      return redirect()->to('/Catalogos/carreras')->with('message', 'Carrera editada con éxito.');
+  }
+    else if ($buscarCarrera) {
+    if($this->validate('carrerasEditar_uno')){
+      $carreras->update($id, [
+        'facultadId'  => $this->request->getPost('facultad_editar'),
+        'nombreCorto' => $this->request->getPost('nombre_corto_editar'),
+        'estado'      => $this->request->getPost('estado_editar'),
+      ]);
+      return redirect()->to('/Catalogos/carreras')->with('message', 'Carrera editada con éxito.');
+    }
+  }
+    else if ($buscarCarrera1) {
+    if($this->validate('carrerasEditar_dos')){
+      $carreras->update($id, [
+        'facultadId'  => $this->request->getPost('facultad_editar'),
+        'nombre'      => $this->request->getPost('nombre_carrera_editar'),
+        'estado'      => $this->request->getPost('estado_editar'),
+      ]);
+      return redirect()->to('/Catalogos/carreras')->with('message', 'Carrera editada con éxito.');
+    }
+  }else if (!$buscarC || !$buscarCarrera || !$buscarCarrera1) {
 
-    if($this->validate('carrerasEditar')){
+    if($this->validate('carrerasEditar_principal')){
       $carreras->update($id, [
         'facultadId'  => $this->request->getPost('facultad_editar'),
         'nombre'      => $this->request->getPost('nombre_carrera_editar'),
@@ -73,7 +105,7 @@ class Carreras extends BaseController {
       ]);
       return redirect()->to('/Catalogos/carreras')->with('message', 'Carrera editada con éxito.');
     }
-
+  }
     return redirect()->back()->withInput();
   }
 

@@ -35,10 +35,8 @@ class Filters extends BaseConfig
 	//    'isLoggedIn' => ['before' => ['account/*', 'profiles/*']],
 	public $filters = [
 		'AutenticarRolAdmin' =>['before' =>[
-			'principal','principal/*',
 			'usuario','usuario/*',
-			'SeleccionarCiclo','SeleccionarCiclo/*',
-			'CambioClave','CambioClave/*'
+
 		]
 	]
 ];

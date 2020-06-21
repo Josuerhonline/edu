@@ -27,12 +27,12 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el Plan <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-book" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-asl-interpretingfa fa-book" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="planId" id="planId">
@@ -42,12 +42,12 @@
 													</select> 
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la Materia <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-asl-interpretingfa fa-book" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-asl-interpretingfa fa-book" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="materiaId" id="materiaId">
@@ -58,7 +58,7 @@
 												</div>
 											</div>
 											<div class="clearfix"></div><br>
-											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
+											<button class="btn btn-success" type="submit" style="width: 42%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
 										</form>
 									</div>
 								</div>

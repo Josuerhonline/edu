@@ -32,7 +32,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="persona" id="persona">
@@ -47,7 +47,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<?php   $inscripcionDetalle = new InscripcionDetalleModel();
@@ -67,7 +67,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select class="form-control col-md-11" name="ciclo" id="ciclo">
@@ -82,10 +82,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" value="<?=old('fechaInscripcion', $inscripcion->fechaInscripcion)?>" type="date" id="fechaInscripcion" name="fechaInscripcion">
+												<input style="width: 79%" class="form-control" value="<?=old('fechaInscripcion', $inscripcion->fechaInscripcion)?>" type="date" id="fechaInscripcion" name="fechaInscripcion">
 											</div>
 										</div>
 										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
@@ -93,10 +93,10 @@
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<select class="form-control"  name="estado" id="estado">
+												<select class="form-control col-md-11"  name="estado" id="estado">
 													<option <?= $inscripcion->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
 													<option <?= $inscripcion->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 												</select>
@@ -123,6 +123,9 @@
 	});
 	$(document).ready(function(){
 		$('#ciclo').select2();
+	});
+	$(document).ready(function(){
+		$('#estado').select2();
 	});
 </script>
 

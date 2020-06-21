@@ -33,31 +33,46 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;?>
 													</div>
 													<div class="x_content">
 														<br />
-														<div class="item form-group col-md-9 " style="margin-left: 4%" >
+														<div class="item form-group col-md-11 " >
 															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el área de evaluación<span class="required">*</span>
 															</label>
 															<div class="input-group mb-3 col-md-6">
 																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+																	<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 																	"></i></span>
 																</div>
-																<select  class="form-control col-md-11" name="area" id="area_editar">
+																<select  class="form-control col-md-9" name="area" id="area_editar">
 																	<?php foreach ($area as $a): ?>
 																		<option <?= $instrumento->areaEvaluacionId !== $a->areaEvaluacionId ?: "selected"?> value="<?= $a->areaEvaluacionId ?>"><?= $a->areaEvaluacion ?></option>
 																	<?php endforeach?>
 																</select> 
 															</div>
 														</div>
+														<div class="item form-group col-md-11"  <?= $created ? "hidden" : "" ?> >
+															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Rango de ponderaciones<span class="required">*</span>
+															</label>
+															<div class="input-group mb-3 col-md-6">
+																<div class="input-group-prepend">
+																	<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-sort-numeric-asc" style="color:#2A3F54;width: 20px;height: 24px;
+																	"></i></span>
+																</div>
+																<select class="form-control col-md-9" name="ponderacion_editar" id="ponderacion_editar" >
+																	<?php foreach ($ponderacion as $p): ?>
+																		<option <?= $instrumento->ponderacionId !== $p->ponderacionId ?: "selected"?> value="<?= $p->ponderacionId ?>"><?= $p->ponderacionMinima, " - ",$p->ponderacionMaxima ?></option>
+																	<?php endforeach?>
+																</select> 
+															</div>
+														</div>
 
-														<div class="item form-group col-md-9 "style="margin-left: 4%">
+														<div class="item form-group col-md-11">
 															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del instrumento<span class="required">*</span>
 															</label>
 															<div class="input-group mb-3 col-md-6">
 																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1"><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
+																	<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-file" style="color:#2A3F54;width: 20px;height: 24px;
 																	"></i></span>
 																</div>
-																<input  type="text" value="<?=old('nombre', $instrumento->nombreInstrumento)?>" name="nombre" id="nombre" class="form-control " required="" >
+																<input style="width: 76%"  type="text" value="<?=old('nombre', $instrumento->nombreInstrumento)?>" name="nombre" id="nombre" class="form-control col-md-9" required="" >
 															</div>
 														</div>
 														<div class="item form-group col-md-11 "  hidden="">
@@ -65,7 +80,7 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;?>
 															</label>
 															<div class="input-group mb-3 col-md-6" > 
 																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+																	<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 																	"></i></span>
 																</div>
 																<input type="text" id="formulario" name="formulario" value="editar">
@@ -142,25 +157,25 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;?>
 					</div>
 				</div>
 				<div class="item form-group col-md-11 " >
-					<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Descripción<span class="required">*</span>
+					<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Objtetivo<span class="required">*</span>
 					</label>
 					<div class="input-group mb-3 col-md-6">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
+							<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
 							"></i></span>
 						</div>
-						<textarea required="" name="descripcion" id="descripcion"  style="width: 73%"	 ><?=old('descripcion', $instrumento->descripcion)?></textarea>
+						<textarea required="" name="descripcion" id="descripcion"  style="width: 75%;border-top: #fff;border-left: #fff;border-right: #fff"	 ><?=old('descripcion', $instrumento->descripcion)?></textarea>
 					</div>
 				</div>
-				<div class="item form-group col-md-9 "style="margin-left: 4%">
+				<div class="item form-group col-md-11 ">
 					<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Estado <span class="required">*</span>
 					</label>
 					<div class="input-group mb-3 col-md-6">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+							<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 							"></i></span>
 						</div>
-						<select class="form-control"  name="estado" id="estado">
+						<select class="form-control col-md-9"  name="estado" id="estado">
 							<option <?= $instrumento->estadoInstrumento  !== "1" ?: "selected"?> value="1">ACTIVO</option>
 							<option <?= $instrumento->estadoInstrumento  !== "0" ?: "selected"?> value="0">INACTIVO</option>
 						</select>
@@ -254,6 +269,10 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.min.js"></script>
 <script src="/js/validationQuestion.js"></script>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('#estado').select2();
+});
+</script>
 
 

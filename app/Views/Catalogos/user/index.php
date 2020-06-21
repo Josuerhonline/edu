@@ -39,13 +39,13 @@
                       <tbody>
                        <?php $num=0;  foreach ($users as $key => $u): ?>
 
-                       <?php if ($u->estado =='ACTIVO'){
+                       <?php if ($u->estado =='1'){
                         $u->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
 
-                      }elseif ($u->estado =='RETIRADO') {
-                        $u->estado ='<font color="red" style="font-weight:bold;">RETIRADO</font>';
+                      }elseif ($u->estado =='0') {
+                        $u->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
 
-                      }elseif ($u->estado =='EN PROCESO') {
+                      }elseif ($u->estado =='2') {
                         $u->estado ='<font color="#1D79B9" style="font-weight:bold;">EN PROCESO</font>';
                       }
                       ?>

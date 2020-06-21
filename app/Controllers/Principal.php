@@ -20,7 +20,7 @@ class Principal extends BaseController {
 
     $this->_loadDefaultView('Dashboard',$data,'index');
   }
-
+ 
   public function new(){
    $user = new UsuariosModel();
    $persona = new PersonaModel();

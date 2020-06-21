@@ -32,12 +32,12 @@
 									<div class="col-sm-12">
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
 											<!-- campos para crear -->
-											<div class="item form-group col-md-12"  <?= !$created ? "hidden" : "" ?> >
+											<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?> >
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la carrera<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-balance-scale" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-balance-scale" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="carreraId" id="carreraId" >
@@ -47,35 +47,35 @@
 													</select> 
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del plan <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-edit"  style="color:#2A3F54;width: 20px;
 														"></i></span>
 													</div>
-													<input class="form-control" value="<?= old('plan') ?>" type="text" id="plan" name="plan">
+													<input style="width: 79%" class="col-md-11" value="<?= old('plan') ?>" type="text" id="plan" name="plan">
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= !$created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Plan Acuerdo <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;
 														"></i></span>
 													</div>
-													<input class="form-control" value="<?= old('planAcuerdo') ?>"  type="text" id="planAcuerdo" name="planAcuerdo">
+													<input style="width: 79%" class="col-md-11" value="<?= old('planAcuerdo') ?>"  type="text" id="planAcuerdo" name="planAcuerdo">
 												</div>
 											</div>
 											<!-- 	campos para editar -->
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la carrera<span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-balance-scale" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-balance-scale" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select class="form-control col-md-11" name="carreraId_editar" id="carreraId_editar">
@@ -86,44 +86,44 @@
 												</div>
 											</div>
 
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del plan <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="plan_editar" name="plan_editar" value="<?=old('plan_editar', $plan->nombrePlan)?>"/>
+													<input class="form-control" style="width: 79%" type="text" id="plan_editar" name="plan_editar" value="<?=old('plan_editar', $plan->nombrePlan)?>"/>
 												</div>
 											</div>
 
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Plan acuerdo <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-bank" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="planAcuerdo_editar" name="planAcuerdo_editar" value="<?=old('planAcuerdo_editar', $plan->plaAcuerdo)?>"/>
+													<input class="form-control" style="width: 79%" type="text" id="planAcuerdo_editar" name="planAcuerdo_editar" value="<?=old('planAcuerdo_editar', $plan->plaAcuerdo)?>"/>
 												</div>
 											</div>
-											<div class="item form-group col-md-12" <?= $created ? "hidden" : "" ?>>
+											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Estado <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="estado" id="estado">
+													<select class="form-control col-md-11"  name="estado" id="estado">
 														<option <?= $plan->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
 														<option <?= $plan->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 													</select>
 												</div>
 											</div>
-											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
+											<button class="btn btn-success" type="submit" style="width: 42%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
 										</form>
 									</div>
 								</div>
@@ -142,6 +142,9 @@
 	});
 	$(document).ready(function(){
 		$('#carreraId_editar').select2();
+	});
+		$(document).ready(function(){
+		$('#estado').select2();
 	});
 </script>
 

@@ -9,7 +9,7 @@ class AutenticarRolAdmin implements FilterInterface
     public function before(RequestInterface $request)
     {
        $session = session();
-       if ($session->rolId !='1') {
+       if ( $session->rolId !=='1') {
        	return redirect('login');
        }
     }

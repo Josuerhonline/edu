@@ -30,7 +30,7 @@ class Materias extends BaseController {
         'nombre' =>$this->request->getPost('nombre'),
         'codMateria' =>$this->request->getPost('codMateria'),
         'nombreCorto' =>$this->request->getPost('nombreCorto'),
-        'estado' =>'ACTIVO',
+        'estado' =>'1',
       ]);
 
       return redirect()->to('/Catalogos/materias')->with('message', 'materia creada con éxito.');
@@ -59,7 +59,40 @@ class Materias extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     }
+    $materiaE = $this->request->getPost('nombre_editar');
+    $nombreCortoE = $this->request->getPost('nombreCorto_editar');
+    $buscarMateria = $materias->select('nombre','nombreCorto')->where('nombre',$materiaE)->where('nombreCorto',$nombreCortoE)->where('materiaId',$id)->first();
+    $buscarMateria1 = $materias->select('nombre')->where('nombre',$materiaE)->where('materiaId',$id)->first();
+    $buscarMateria2 = $materias->select('nombreCorto')->where('nombreCorto',$nombreCortoE)->where('materiaId',$id)->first();
+    
+    if ($buscarMateria) {
+      $materias->update($id, [
+        'codMateria' =>$this->request->getPost('codMateria_editar'),
+        'estado' =>$this->request->getPost('estado'),
 
+      ]);
+      return redirect()->to('/Catalogos/materias')->with('message', 'materia editada con éxito.');
+    }else if ($buscarMateria1) {
+      if($this->validate('materia_editar2')){
+        $materias->update($id, [
+          'codMateria' =>$this->request->getPost('codMateria_editar'),
+          'nombreCorto' =>$this->request->getPost('nombreCorto_editar'),
+          'estado' =>$this->request->getPost('estado'),
+
+        ]);
+        return redirect()->to('/Catalogos/materias')->with('message', 'materia editada con éxito.');
+      }
+    }else if ($buscarMateria2) {
+      if($this->validate('materia_editar1')){
+      $materias->update($id, [
+        'nombre' =>$this->request->getPost('nombre_editar'),
+        'codMateria' =>$this->request->getPost('codMateria_editar'),
+        'estado' =>$this->request->getPost('estado'),
+
+      ]);
+      return redirect()->to('/Catalogos/materias')->with('message', 'materia editada con éxito.');
+    }
+  }else{
     if($this->validate('materia_editar')){
       $materias->update($id, [
         'nombre' =>$this->request->getPost('nombre_editar'),
@@ -70,36 +103,36 @@ class Materias extends BaseController {
       ]);
       return redirect()->to('/Catalogos/materias')->with('message', 'materia editada con éxito.');
     }
+  }
+  return redirect()->back()->withInput();
+}
 
-    return redirect()->back()->withInput();
+public function delete($id = null){
+  $materias = new MateriasModel();
+  $planMateria = new PlanMateriaModel();
+  $buscarplanMateria = $planMateria->select('materiaId')->where('materiaId',$id)->first();
+
+  if ($buscarplanMateria) {
+    return redirect()->to("/Catalogos/materias")->with('messageError','Lo sentimos, la materia esta asociada a un plan de materias y no puede ser eliminada.');
   }
 
-  public function delete($id = null){
-    $materias = new MateriasModel();
-    $planMateria = new PlanMateriaModel();
-    $buscarplanMateria = $planMateria->select('materiaId')->where('materiaId',$id)->first();
+  if ($materias->find($id) == null)
+  {
+    throw PageNotFoundException::forPageNotFound();
+  }  
 
-    if ($buscarplanMateria) {
-      return redirect()->to("/Catalogos/materias")->with('messageError','Lo sentimos, la materia esta asociada a un plan de materias y no puede ser eliminada.');
-    }
+  $materias->delete($id);
 
-    if ($materias->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }  
+  return redirect()->to('/Catalogos/materias')->with('message', 'materia eliminada con éxito.'); 
+}
 
-    $materias->delete($id);
+private function _loadDefaultView($title,$data,$view){
+  $dataHeader =[
+    'title' => $title
+  ];
 
-    return redirect()->to('/Catalogos/materias')->with('message', 'materia eliminada con éxito.'); 
-  }
-
-  private function _loadDefaultView($title,$data,$view){
-    $dataHeader =[
-      'title' => $title
-    ];
-
-    echo view("dashboard/templates/header",$dataHeader);
-    echo view("Catalogos/materias/$view",$data);
-    echo view("dashboard/templates/footer");
-  }
+  echo view("dashboard/templates/header",$dataHeader);
+  echo view("Catalogos/materias/$view",$data);
+  echo view("dashboard/templates/footer");
+}
 }

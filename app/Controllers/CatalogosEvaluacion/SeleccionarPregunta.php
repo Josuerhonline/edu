@@ -18,7 +18,7 @@ class SeleccionarPregunta extends BaseController {
   //     </label>
   //     <div class='input-group mb-3 col-md-6'>
   //     <div class='input-group-prepend'>
-  //     <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //     <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //     '></i></span>
   //     </div>
   //     <select style='width: 74%' class='form-control col-md-11' id='pregunta2' name='pregunta2' >
@@ -47,7 +47,7 @@ class SeleccionarPregunta extends BaseController {
   //       </label>
   //       <div class='input-group mb-3 col-md-6'>
   //       <div class='input-group-prepend'>
-  //       <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //       <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //       '></i></span>
   //       </div>
   //       <select style='width: 74%' class='form-control col-md-11' id='pregunta3' name='pregunta3' >
@@ -76,7 +76,7 @@ class SeleccionarPregunta extends BaseController {
   //         </label>
   //         <div class='input-group mb-3 col-md-6'>
   //         <div class='input-group-prepend'>
-  //         <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //         <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //         '></i></span>
   //         </div>
   //         <select style='width: 74%' class='form-control col-md-11' id='pregunta4' name='pregunta4' >
@@ -105,7 +105,7 @@ class SeleccionarPregunta extends BaseController {
   //           </label>
   //           <div class='input-group mb-3 col-md-6'>
   //           <div class='input-group-prepend'>
-  //           <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //           <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //           '></i></span>
   //           </div>
   //           <select style='width: 74%' class='form-control col-md-11' id='pregunta5' name='pregunta5' >
@@ -134,7 +134,7 @@ class SeleccionarPregunta extends BaseController {
   //             </label>
   //             <div class='input-group mb-3 col-md-6'>
   //             <div class='input-group-prepend'>
-  //             <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //             <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //             '></i></span>
   //             </div>
   //             <select style='width: 74%' class='form-control col-md-11' id='pregunta6' name='pregunta6' >
@@ -163,7 +163,7 @@ class SeleccionarPregunta extends BaseController {
   //               </label>
   //               <div class='input-group mb-3 col-md-6'>
   //               <div class='input-group-prepend'>
-  //               <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //               <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //               '></i></span>
   //               </div>
   //               <select style='width: 74%' class='form-control col-md-11' id='pregunta7' name='pregunta7' >
@@ -192,7 +192,7 @@ class SeleccionarPregunta extends BaseController {
   //                 </label>
   //                 <div class='input-group mb-3 col-md-6'>
   //                 <div class='input-group-prepend'>
-  //                 <span class='input-group-text' id='basic-addon1'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
+  //                 <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-list-ol' style='color:#2A3F54;width: 20px;height: 24px;
   //                 '></i></span>
   //                 </div>
   //                 <select style='width: 74%' class='form-control col-md-11' id='pregunta8' name='pregunta8' >
@@ -224,12 +224,13 @@ class SeleccionarPregunta extends BaseController {
     $preguntas = new preguntasViewModel();
     $id=$_POST['idTema2'];
     $preguntaData = $preguntas->asObject()->select('tema')->where('preguntaId',$id)->findAll();
+  
     $cadena="
     <label class='col-form-label col-md-3 col-sm-3 label-align' for='first-name'>Área de capacitación<span class='required'>*</span>
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -248,7 +249,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -267,7 +268,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -286,7 +287,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -305,7 +306,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -324,7 +325,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -343,7 +344,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -362,7 +363,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";
@@ -381,7 +382,7 @@ class SeleccionarPregunta extends BaseController {
     </label>
     <div class='input-group mb-3 col-md-6'>
     <div class='input-group-prepend'>
-    <span class='input-group-text' id='basic-addon1'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
+    <span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
     '></i></span>
     </div>
     <select style='width: 54%' class='form-control col-md-9' id='tema' name='tema' readonly>";

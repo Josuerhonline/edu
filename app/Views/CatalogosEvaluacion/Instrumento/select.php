@@ -7,7 +7,7 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<select style="width: 74%" class="form-control"  name="pregunta1" id="pregunta1" onchange ="valores()" >
@@ -23,7 +23,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-12">
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
+													<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<div id="tema1"  style="width: 67%"></div>
@@ -37,7 +37,7 @@
 											</label>
 											<div class="input-group mb-3 col-md-6" >
 												<div class="input-group-prepend">
-													<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+													<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
 												<select style="width: 74%" class="form-control col-md-11"  name="pregunta2" id="pregunta2" onchange ="valores2()" >
@@ -58,7 +58,7 @@
 										</label>
 										<div class="input-group mb-3 col-md-6" >
 											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+												<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 												"></i></span>
 											</div>
 											<select style="width: 74%" class="form-control col-md-11"  name="pregunta3" id="pregunta3" onchange ="valores3()" >
@@ -79,7 +79,7 @@
 									</label>
 									<div class="input-group mb-3 col-md-6" >
 										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+											<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 											"></i></span>
 										</div>
 										<select style="width: 74%" class="form-control col-md-11"  name="pregunta4" id="pregunta4" onchange ="valores4()" >
@@ -100,7 +100,7 @@
 								</label>
 								<div class="input-group mb-3 col-md-6">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+										<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 										"></i></span>
 									</div>
 									<select style="width: 74%" class="form-control col-md-11"  name="pregunta5" id="pregunta5" onchange ="valores5()" >
@@ -121,7 +121,7 @@
 							</label>
 							<div class="input-group mb-3 col-md-6">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+									<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 									"></i></span>
 								</div>
 								<select style="width: 74%" class="form-control col-md-11"  name="pregunta6" id="pregunta6" onchange ="valores6()" >
@@ -142,7 +142,7 @@
 						</label>
 						<div class="input-group mb-3 col-md-6">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+								<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 								"></i></span>
 							</div>
 							<select style="width: 74%" class="form-control col-md-11"  name="pregunta7" id="pregunta7" onchange ="valores7()" >
@@ -163,7 +163,7 @@
 					</label>
 					<div class="input-group mb-3 col-md-6">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+							<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 							"></i></span>
 						</div>
 						<select style="width: 74%" class="form-control col-md-11"  name="pregunta8" id="pregunta8" onchange ="valores8()" >
@@ -184,7 +184,7 @@
 				</label>
 				<div class="input-group mb-3 col-md-6">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+						<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 						"></i></span>
 					</div>
 					<select style="width: 74%" class="form-control col-md-11"  name="pregunta9" id="pregunta9" onchange ="valores9()" >
@@ -205,7 +205,7 @@
 			</label>
 			<div class="input-group mb-3 col-md-6">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+					<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 					"></i></span>
 				</div>
 				<select style="width: 74%" class="form-control col-md-11"  name="pregunta10" id="pregunta10" onchange ="valores10()" >

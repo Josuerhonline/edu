@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="/build/css/selects.css">
-
-<link rel="stylesheet" href="/build/css/select2.css">
 <?= view("dashboard/edu/menu"); ?>
 </div>
 </div>
@@ -34,38 +31,64 @@
 													</div>
 													<div class="x_content">
 														<br />
-														<div class="item form-group col-md-9 " style="margin-left: 4%"  <?= !$created ? "hidden" : "" ?> >
+														<div class="item form-group col-md-11 "  <?= !$created ? "hidden" : "" ?> >
 															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el área de evaluación<span class="required">*</span>
 															</label>
 															<div class="input-group mb-3 col-md-6">
 																<div class="input-group-prepend">
-																	<span class="input-group-text" style="background: #fff;border-color: #fff"id="basic-addon1"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+																	<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 																	"></i></span>
 																</div>
-																<select class="form-control col-md-11" name="area" id="area" >
+																<select class="form-control col-md-9" name="area" id="area" >
 																	<?php foreach ($area as $a): ?>
 																		<option value="<?= $a->areaEvaluacionId ?>"><?= $a->areaEvaluacion ?></option>
 																	<?php endforeach?>
 																</select> 
 															</div>
 														</div>
-														<div class="item form-group col-md-9 "style="margin-left: 4%"  <?= !$created ? "hidden" : "" ?> >
+														<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?> >
+															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Rango de ponderaciones<span class="required">*</span>
+															</label>
+															<div class="input-group mb-3 col-md-6">
+																<div class="input-group-prepend">
+																	<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-sort-numeric-asc" style="color:#2A3F54;width: 20px;height: 24px;
+																	"></i></span>
+																</div>
+																<select class="form-control col-md-9" name="ponderacion" id="ponderacion" >
+																	<?php foreach ($ponderacion as $p): ?>
+																		<option value="<?= $p->ponderacionId ?>"><?= $p->ponderacionMinima, " - ",$p->ponderacionMaxima ?></option>
+																	<?php endforeach?>
+																</select> 
+															</div>
+														</div>
+														<div class="item form-group col-md-11" style="margin-left: 4px" <?= !$created ? "hidden" : "" ?> >
 															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del instrumento<span class="required">*</span>
 															</label>
 															<div class="input-group mb-3 col-md-6">
 																<div class="input-group-prepend">
-																	<span class="input-group-text" style="background: #fff;border-color: #fff" id="basic-addon1"><i class="	fa fa-file" style="color:#2A3F54;height: 24px;
+																	<span style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff" class="input-group-text"  id="basic-addon1"><i class="	fa fa-file" style="color:#2A3F54;height: 24px;
 																	"></i></span>
 																</div>
-																<input  type="text" value="<?= old('nombre') ?>" name="nombre" id="nombre" class="form-control col-md-10" required="" >
+																<input style="width: 79%"  type="text" value="<?= old('nombre') ?>" name="nombre" id="nombre" class="form-control col-md-9" required="" >
 															</div>
 														</div>
+														<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?>>
+															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Objetivo<span class="required">*</span>
+															</label>
+															<div class="input-group mb-3 col-md-6">
+																<div class="input-group-prepend">
+																	<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
+																	"></i></span>
+																</div>
+																<textarea style="background: #fff;border-top: #fff;border-left: #fff;border-right: #fff;width: 76%" class="col-md-9"  type="text"  name="descripcion" id="descripcion"><?= old('descripcion') ?></textarea>
+															</div>
+														</div>	
 														<div class="item form-group col-md-11 "  hidden="">
 															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del instrumento<span class="required">*</span>
 															</label>
 															<div class="input-group mb-3 col-md-6" > 
 																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+																	<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 																	"></i></span>
 																</div>
 																<input type="text" id="formulario" name="formulario" value="crear">
@@ -79,17 +102,6 @@
 																<input  type="text" value="<?= old('pregunta_8') ?>" name="pregunta_8" id="pregunta_8" class="form-control " >
 																<input  type="text" value="<?= old('pregunta_9') ?>" name="pregunta_9" id="pregunta_9" class="form-control " >
 																<input  type="text" value="<?= old('pregunta_10') ?>" name="pregunta_10" id="pregunta_10" class="form-control " >
-															</div>
-														</div>
-														<div class="item form-group col-md-11 "  <?= !$created ? "hidden" : "" ?> >
-															<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Descripción<span class="required">*</span>
-															</label>
-															<div class="input-group mb-3 col-md-6">
-																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1"><i class="	fa fa-edit" style="color:#2A3F54;width: 20px;height: 24px;
-																	"></i></span>
-																</div>
-																<textarea required="" name="descripcion" id="descripcion"  style="width: 73%"	 ><?= old('descripcion') ?></textarea>
 															</div>
 														</div>
 													</div>
@@ -176,9 +188,6 @@
 <script src="/js/pnotify/dist/pnotify.js"></script>
 <script src="/js/pnotify/dist/pnotify.buttons.js"></script>
 <script src="/js/pnotify/dist/pnotify.nonblock.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.min.js"></script>
 <script src="/js/validationQuestion.js"></script>
 
 

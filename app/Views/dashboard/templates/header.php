@@ -36,6 +36,7 @@
               <span>Bienvenido</span>
               <h2><?php  $session = session(); 
               echo $session->usuario?></h2>
+             <small style="color: #fff">Ciclo:</small> <small style="color:#fff"><?= $_SESSION["ciclo"] ?></small>
             </div>
           </div>
           <br>

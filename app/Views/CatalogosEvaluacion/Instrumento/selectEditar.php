@@ -7,7 +7,7 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+														<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
 													<?php   
@@ -28,7 +28,7 @@
 										</label>
 										<div class="input-group mb-3 col-md-12">
 											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1"><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
+												<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 												"></i></span>
 											</div>
 											<div id="tema1"  style="width: 67%"></div>
@@ -42,7 +42,7 @@
 										</label>
 										<div class="input-group mb-3 col-md-6" >
 											<div class="input-group-prepend">
-												<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+												<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 												"></i></span>
 											</div>
 											<?php   
@@ -69,7 +69,7 @@
 								</label>
 								<div class="input-group mb-3 col-md-6" >
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+										<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 										"></i></span>
 									</div>
 									<?php   
@@ -96,7 +96,7 @@
 						</label>
 						<div class="input-group mb-3 col-md-6" >
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+								<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 								"></i></span>
 							</div>
 							<?php   
@@ -123,7 +123,7 @@
 				</label>
 				<div class="input-group mb-3 col-md-6">
 					<div class="input-group-prepend">
-						<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+						<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 						"></i></span>
 					</div>
 					<?php   
@@ -150,7 +150,7 @@
 		</label>
 		<div class="input-group mb-3 col-md-6">
 			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+				<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 				"></i></span>
 			</div>
 			<?php   
@@ -177,7 +177,7 @@
 		</label>
 		<div class="input-group mb-3 col-md-6">
 			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+				<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 				"></i></span>
 			</div>
 			<?php   
@@ -204,7 +204,7 @@
 		</label>
 		<div class="input-group mb-3 col-md-6">
 			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+				<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 				"></i></span>
 			</div>
 			<?php   
@@ -231,7 +231,7 @@
 		</label>
 		<div class="input-group mb-3 col-md-6">
 			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+				<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 				"></i></span>
 			</div>
 			<?php   
@@ -258,7 +258,7 @@
 		</label>
 		<div class="input-group mb-3 col-md-6">
 			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1"><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
+				<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 				"></i></span>
 			</div>
 			<?php   

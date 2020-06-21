@@ -24,26 +24,26 @@
 						<div class="x_content">
 							<div class="x_content">
 								<div class="row">
-									<div class="col-sm-12">
+								
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
 											<div class="item form-group col-md-6">
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Dui <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" data-inputmask="'mask': '99999999-9'" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
+													<input style="width: 77%" class="form-control col-md-9" type="text" data-inputmask="'mask': '99999999-9'" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Carné <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
+													<input style="width: 77%" class="form-control col-md-9" type="text" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -52,20 +52,20 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="nombres" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
+													<input style="width: 77%" class="form-control col-md-9" type="text" id="nombres" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
 												</div>
 
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Apellidos <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
 												</div>
 
 											</div>
@@ -75,10 +75,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-users" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="tipoPersona" id="tipoPersona">
+													<select style="width: 78%" class="form-control"  name="tipoPersona" id="tipoPersona">
 														<option <?= $personas->tipoPersona !== "E" ?: "selected"?> value="E">Estudiante</option>
 														<option <?= $personas->tipoPersona !== "D" ?: "selected"?> value="D">Docente</option>
 														<option <?= $personas->tipoPersona !== "A" ?: "selected"?> value="A">Administrador</option>
@@ -88,10 +88,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="estadoCivil" id="estadoCivil">
+													<select  style="width: 78%" class="form-control"  name="estadoCivil" id="estadoCivil">
 														<option <?= $personas->estadoCivil !== "S" ?: "selected"?> value="S">Soltero/a</option>
 														<option <?= $personas->estadoCivil !== "C" ?: "selected"?> value="C">Casado/a</option>
 														<option <?= $personas->estadoCivil !== "D" ?: "selected"?> value="D">Divorciado/a</option>
@@ -105,10 +105,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="fa fa-male" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-male" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="sexo" id="sexo">
+													<select style="width: 77%" class="form-control"  name="sexo" id="sexo">
 														<option <?= $personas->sexo !== "M" ?: "selected"?> value="M">Masculino</option>
 														<option <?= $personas->sexo !== "F" ?: "selected"?> value="F">Femenino</option>
 													</select>
@@ -117,10 +117,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-phone" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" id="telefono" data-inputmask="'mask': '9999-9999'" name="telefono" value="<?=old('telefono', $personas->telefono)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" id="telefono" data-inputmask="'mask': '9999-9999'" name="telefono" value="<?=old('telefono', $personas->telefono)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -129,19 +129,19 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-google-plus" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-google-plus" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="email" required=""  id="email" name="email" value="<?=old('email', $personas->email)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="email" required=""  id="email" name="email" value="<?=old('email', $personas->email)?>"/>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Fecha de nacimiento <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?=old('fechaNacimiento', $personas->fechaNacimiento)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?=old('fechaNacimiento', $personas->fechaNacimiento)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -150,19 +150,19 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" readonly="" id="fechaIngreso" name="fechaIngreso" value="<?=old('fechaIngreso', $personas->fechaIngreso)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" readonly="" id="fechaIngreso" name="fechaIngreso" value="<?=old('fechaIngreso', $personas->fechaIngreso)?>"/>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Año de ingreso <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" readonly="" id="anioIngreso" name="anioIngreso" value="<?=old('anioIngreso', $personas->anioIngreso)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" readonly="" id="anioIngreso" name="anioIngreso" value="<?=old('anioIngreso', $personas->anioIngreso)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -171,19 +171,19 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" readonly="" id="fechaTraslado" name="fechaTraslado" value="<?=old('fechaTraslado', $personas->fechaTraslado)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" readonly="" id="fechaTraslado" name="fechaTraslado" value="<?=old('fechaTraslado', $personas->fechaTraslado)?>"/>
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Usuario que trasladó <span class="required">*</span>
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input class="form-control" type="text" readonly="" id="usuarioTraslado" name="usuarioTraslado" value="<?=old('usuarioTraslado', $personas->usuarioTraslado)?>"/>
+													<input style="width: 77%" class="form-control col-md-9" type="text" readonly="" id="usuarioTraslado" name="usuarioTraslado" value="<?=old('usuarioTraslado', $personas->usuarioTraslado)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -193,10 +193,10 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-toggle-on" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<select class="form-control"  name="estado" id="estado">
+													<select style="width: 77%" class="form-control"  name="estado" id="estado">
 														<option <?= $personas->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
 														<option <?= $personas->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 													</select>
@@ -205,17 +205,17 @@
 												</label>
 												<div class="input-group mb-3 col-md-6">
 													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<textarea id="direccion" name="direccion" style="width: 77%; height:38px;resize: none;" placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
+													<textarea style="width: 78%;border-top: #fff;border-right: #fff;border-left: #fff" id="direccion" name="direccion" style="width: 77%; height:38px;resize: none;" placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
 												</div>
 											</div>
 											<div class="clearfix"></div><br>
 											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 18%"><i class="fa fa-save"></i> <?=$textButton?></button>
 										</form>
 									</div>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -228,6 +228,18 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#personaId').select2();
+	});
+		$(document).ready(function(){
+		$('#tipoPersona').select2();
+	});
+				$(document).ready(function(){
+		$('#estadoCivil').select2();
+	});
+					$(document).ready(function(){
+		$('#sexo').select2();
+	});
+										$(document).ready(function(){
+		$('#estado').select2();
 	});
 	$(document).ready(function(){
 		$('#personaId_editar').select2();

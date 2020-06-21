@@ -1,4 +1,5 @@
 <?php namespace App\Controllers;
+
 use App\Models\SeleccionarCicloModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
@@ -6,7 +7,6 @@ use \CodeIgniter\Exceptions\PageNotFoundException;
 class SeleccionarCiclo extends BaseController {
 
   public function index(){
-
     $datos = new SeleccionarCicloModel();
 
     $data = [
@@ -24,7 +24,7 @@ private function _loadDefaultView($title,$data,$view){
     'title' => $title
   ];
 
-  echo view("dashboard/templates/header",$dataHeader);
+  echo view("dashboard/templates/headerSeleccionCiclo",$dataHeader);
   echo view("dashboard/seleccionarCiclo/$view",$data);
   echo view("dashboard/templates/footer");
 }

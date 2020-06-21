@@ -38,7 +38,7 @@ class Usuario extends BaseController {
         'usuario' =>$this->request->getPost('usuario'),
         'clave' =>hashClave($this->request->getPost('clave')),
         'rolId' => $this->request->getPost('rolId'),
-        'estado' => 'EN PROCESO',
+        'estado' => '2',
       ]);
 
       return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario creado con éxito.');
@@ -59,7 +59,7 @@ class Usuario extends BaseController {
 
     $validation =  \Config\Services::validation();
     $this->_loadDefaultView('Actualizar usuario',
-    ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
+      ['validation'=>$validation,'user'=> $user->asObject()->find($id),'personas' => $persona->asObject()->findAll(),'rol' => $roles->asObject()->findAll(),'usuarios' => $user->asObject()->findAll() ],'edit');
   }
 
   public function update($id = null){
@@ -70,7 +70,18 @@ class Usuario extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     } 
-
+    $usuario = $this->request->getPost('usuario');
+    $buscarUsuario = $user->select('usuario')->where('usuario',$usuario)->where('usuarioId',$id)->first();
+    if ($buscarUsuario) {
+      $user->update($id, [
+        'personaId' =>$this->request->getPost('personaId_editar'),
+        'clave' =>hashClave($this->request->getPost('clave')),
+        'rolId' => $this->request->getPost('rolId_editar'),
+        'estado' =>$this->request->getPost('estado_editar'),
+      ]);
+      return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario editado con éxito.');
+    }
+    if (!$buscarUsuario) {
     if($this->validate('userUpdate')){
       $user->update($id, [
         'personaId' =>$this->request->getPost('personaId_editar'),
@@ -81,6 +92,8 @@ class Usuario extends BaseController {
       ]);
       return redirect()->to('/Catalogos/usuario')->with('message', 'Usuario editado con éxito.');
     }
+    }
+
 
     return redirect()->back()->withInput();
   }

@@ -50,6 +50,22 @@ class CargaAdemic extends BaseController {
     {
       throw PageNotFoundException::forPageNotFound();
     } 
+  $persona = $this->request->getPost('personaId');
+  $pmateria = $this->request->getPost('planMateria');
+  $cic = $this->request->getPost('ciclo');
+
+    $buscarCarga= $cargaAcademica->select('personaId','planMateriaId','aperCicloId')->where('personaId',$persona)->where('planMateriaId',$pmateria)->where('aperCicloId',$cic)->where('cargaAcademicaId',$id)->first();
+
+        $buscarCarga1= $cargaAcademica->select('personaId','planMateriaId','aperCicloId')->where('personaId',$persona)->where('planMateriaId',$pmateria)->where('aperCicloId',$cic)->first();
+
+    if ($buscarCarga) {
+           $cargaAcademica->update($id, [
+        'estadoCarga' =>$this->request->getPost('estado'),
+      ]);
+      return redirect()->to('/Catalogos/CargaAdemic')->with('message', 'Carga Académica editada con éxito.');
+    }else if ($buscarCarga1) {
+     return redirect()->to("/Catalogos/CargaAdemic/edit/$id")->with('messageError','Lo sentimos, esta carga académica ya existe');
+    }else{
 
     if($this->validate('cargaAcademica')){
       $cargaAcademica->update($id, [
@@ -60,7 +76,7 @@ class CargaAdemic extends BaseController {
       ]);
       return redirect()->to('/Catalogos/CargaAdemic')->with('message', 'Carga Académica editada con éxito.');
     }
-
+}
     return redirect()->back()->withInput();
   }
 

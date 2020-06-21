@@ -40,7 +40,10 @@
 <script src="/vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 <script src="/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 <script src="/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+<script src="/vendors/jQuery-Smart-Wizard/js/WizardEvaluacionDocente.js"></script>
+<script src="/vendors/echarts/map/js/world.js"></script>
+<script src="/vendors/echarts/dist/echarts.min.js"></script>
+
 
 
 </body>

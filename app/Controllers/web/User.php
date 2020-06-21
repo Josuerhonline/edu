@@ -15,7 +15,7 @@ class User extends BaseController {
         helper('user');
         $usuario       = $this->request->getPost('usuario');
         $clave         = $this->request->getPost('clave');
-        $estado        = 'ACTIVO';
+        $estado        = '1';
         $buscarUsuario = $user->select('usuarioId,usuario,clave,rolId,estado')->where('usuario',$usuario)->first();
         $buscarUsuarioActivo = $user->select('usuarioId,usuario,clave,rolId,estado')->where('usuario',$usuario)->first();
 
@@ -23,7 +23,7 @@ class User extends BaseController {
         $url              =  'https://www.google.com/recaptcha/api/siteverify';
 
         $data             =  array(
-            'secret'      => '6LeMmOgUAAAAALu8tlHkihej7tHwF0XUBLyapP8f',
+            'secret'      => '6Ld5oeIUAAAAAGBCFuQVMPm0DuZNI8EIPbBDLKu0',
             'response'    => $recaptcha
         );
 
@@ -70,9 +70,9 @@ class User extends BaseController {
 
     private function _redirectAuth(){
         $session = session();
-        if ($session->rolId=='1' && $session->estado=='ACTIVO') {
+        if ($session->rolId=='1' && $session->estado=='1' || $session->rolId=='2' && $session->estado=='1' || $session->rolId=='3' && $session->estado=='1' ) {
             return redirect()->to("/SeleccionarCiclo")->with('message','Bienvenido: '.$session->usuario);
-        }else if ($session->estado=='EN PROCESO') {
+        }else if ($session->rolId=='1' && $session->estado=='2' || $session->rolId=='2' && $session->estado=='2' || $session->rolId=='3' && $session->estado=='2') {
             return redirect()->to("/CambioClave")->with('message','Bienvenido: '.$session->usuario);
         }
     }

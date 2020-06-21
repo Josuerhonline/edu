@@ -17,6 +17,7 @@
                     <li><a href="/Catalogos/materias">Materias</a></li>
                     <li><a href="/Catalogos/planesMaterias">Plan Materias</a></li>
                     <li><a href="/Catalogos/ciclo">Ciclos</a></li>
+                    <li><a href="/Catalogos/Ponderaciones">Ponderaciones</a></li>
                     <li><a href="/Catalogos/CargaAdemic">Carga Académica</a></li>                  
                   </ul>
                 </li>
@@ -25,19 +26,20 @@
                     <li><a href="/CatalogosEvaluacion/TemasCapacitacion">Temas de Capacitación</a></li>
                     <li><a href="/CatalogosEvaluacion/Preguntas">Preguntas</a></li>
                     <li><a href="/CatalogosEvaluacion/AreasEvaluacion">Áreas de evaluación</a></li>
-                    <li><a href="/CatalogosEvaluacion/AperEvaluacion">Aperturar Evaluación</a></li>
                     <li><a href="/CatalogosEvaluacion/Instrumento">Instrumento</a></li>
+                    <li><a href="/CatalogosEvaluacion/AperEvaluacion">Aperturar Evaluación</a></li>
                     <li><a href="/CatalogosEvaluacion/Inscripcion">Inscripción</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-edit"></i>Evaluación Docente<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="form.html">Evaluación docente</a></li>
+                    <li><a href="/EvaluacionDocente/EvaluacionDocente">Evaluación docente</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-bar-chart-o"></i>Análisis de resultados<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="chartjs.html">Gráficos</a></li>
+                    <li><a href="/Graficos/SeleccionGrafico">Gráficos</a></li>
+                    <li><a href="/Graficos/SeleccionGraficoFacultad">Facultades</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-file-pdf-o"></i>Reportes<span class="fa fa-chevron-down"></span></a>
@@ -66,3 +68,5 @@
             <a data-toggle="tooltip"  title="Logout" href="/logout" style="width: 100%;background: #2A3F54">
             </a>
           </div>
+          <link rel="stylesheet" type="text/css" href="/build/css/select2.css">
+          <link rel="stylesheet" type="text/css" href="/build/css/selects.css">
