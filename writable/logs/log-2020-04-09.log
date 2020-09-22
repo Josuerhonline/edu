@@ -161,4 +161,4 @@ CRITICAL - 2020-04-09 02:01:56 --> Invalid file: catalogo/universidad/_form.php
 #9 C:\laragon\www\edu\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\laragon\www\edu\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #11 {main}
->>>>>>> Stashed changes
+
