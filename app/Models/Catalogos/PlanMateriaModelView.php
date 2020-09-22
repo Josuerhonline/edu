@@ -6,6 +6,6 @@ class PlanMateriaModelView extends Model
 {
     protected $table = 'view_planmateria';
     protected $primaryKey = 'planMateriaId';
-    protected $allowedFields = ['nombre','nombrePlan'];
+    protected $allowedFields = ['planMateriaId','nombre','nombrePlan'];
 
 }

@@ -6,6 +6,6 @@ class InscripcionModel extends Model
 {
     protected $table = 'eva_inscripcion';
     protected $primaryKey = 'inscripcionId';
-    protected $allowedFields = ['personaId','aperCicloId','fechaInscripcion','estado'];
+    protected $allowedFields = ['inscripcionId','personaId','aperCicloId','fechaInscripcion','estado'];
 
 }

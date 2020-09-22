@@ -29,6 +29,7 @@
 <script src="/vendors/moment/min/moment.min.js"></script>
 <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="/build/js/custom.min.js"></script>
+<script src="/build/js/alertify.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/select2/dist/js/select2.min.js"></script>
 <script src="/dashboard/js/main.js"></script>
@@ -41,6 +42,9 @@
 <script src="/vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 <script src="/vendors/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+<script src="/build/js/expirarSession.js"></script>
+<script src="/build/js/noBackButton.js"></script>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 
 
 

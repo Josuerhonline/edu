@@ -15,6 +15,7 @@
   <link href="/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
   <link href="/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
   <link href="/build/css/custom.min.css" rel="stylesheet">
+  <link href="/build/css/alertify.css" rel="stylesheet">
   <link rel="stylesheet" href="/dashboard/css/style.custom.css">
   <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
   <link href="/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">

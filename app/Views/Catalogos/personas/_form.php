@@ -5,6 +5,7 @@
 	<?= view("dashboard/edu/navbar"); ?>
 	<?= view("dashboard/partials/_session"); ?>
 </div>
+<h1>La concha de la lora</h1>
 <div class="right_col" role="main" >
 	<div class="clearfix"></div>
 	<div class="row" >
@@ -34,7 +35,7 @@
 														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input style="width: 77%" class="form-control col-md-9" type="text" data-inputmask="'mask': '99999999-9'" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
+													<input required="" style="width: 77%" class="form-control col-md-9" type="text" data-inputmask="'mask': '99999999-9'" id="DUI" name="DUI" value="<?=old('DUI', $personas->DUI)?>" />
 												</div>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Carné <span class="required">*</span>
 												</label>
@@ -43,7 +44,7 @@
 														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-credit-card" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input style="width: 77%" class="form-control col-md-9" type="text" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
+													<input required="" style="width: 77%" class="form-control col-md-9" type="text" id="carnet" name="carnet" value="<?=old('carnet', $personas->carnet)?>" />
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -55,7 +56,7 @@
 														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input style="width: 77%" class="form-control col-md-9" type="text" id="nombres" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
+													<input required="" style="width: 77%" class="form-control col-md-9" type="text" id="nombres" name="nombres" value="<?=old('nombres', $personas->nombres)?>" >
 												</div>
 
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Apellidos <span class="required">*</span>
@@ -65,7 +66,7 @@
 														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-user" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input style="width: 77%" class="form-control col-md-9" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
+													<input required="" style="width: 77%" class="form-control col-md-9" type="text" id="apellidos" name="apellidos" value="<?=old('apellidos', $personas->apellidos)?>"/>
 												</div>
 
 											</div>
@@ -141,7 +142,7 @@
 														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-calendar" style="color:#2A3F54;width: 20px;height: 24px;
 														"></i></span>
 													</div>
-													<input style="width: 77%" class="form-control col-md-9" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?=old('fechaNacimiento', $personas->fechaNacimiento)?>"/>
+													<input required="" style="width: 77%" class="form-control col-md-9" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?=old('fechaNacimiento', $personas->fechaNacimiento)?>"/>
 												</div>
 											</div>
 											<div class="clearfix"></div>
@@ -201,15 +202,6 @@
 														<option <?= $personas->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 													</select>
 												</div>
-												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Dirección <span class="required">*</span>
-												</label>
-												<div class="input-group mb-3 col-md-6">
-													<div class="input-group-prepend">
-														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-home" style="color:#2A3F54;width: 20px;height: 24px;
-														"></i></span>
-													</div>
-													<textarea style="width: 78%;border-top: #fff;border-right: #fff;border-left: #fff" id="direccion" name="direccion" style="width: 77%; height:38px;resize: none;" placeholder="Dirección"><?=old('direccion', $personas->direccion)?></textarea>
-												</div>
 											</div>
 											<div class="clearfix"></div><br>
 											<button class="btn btn-success" type="submit" style="width: 48%;margin-left: 18%"><i class="fa fa-save"></i> <?=$textButton?></button>
@@ -228,22 +220,13 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#personaId').select2();
-	});
-		$(document).ready(function(){
 		$('#tipoPersona').select2();
-	});
-				$(document).ready(function(){
 		$('#estadoCivil').select2();
-	});
-					$(document).ready(function(){
 		$('#sexo').select2();
-	});
-										$(document).ready(function(){
 		$('#estado').select2();
-	});
-	$(document).ready(function(){
 		$('#personaId_editar').select2();
 	});
+
 	$(function () {
 		$('#datetimepicker4').datetimepicker({
 			format: 'L'

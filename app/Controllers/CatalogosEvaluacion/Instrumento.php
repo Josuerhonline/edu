@@ -117,7 +117,9 @@ class Instrumento extends BaseController {
         'preguntaId' =>$this->request->getPost('pregunta_10'),
         'orden' =>'10',
       ]);
-
+      helper("Bitacora");
+      $identificador = $this->request->getPost('nombre');
+      insert_acciones('INSERTÓ','INSTRUMENTO DE EVALUACIÓN | nombre '.$identificador);
       return redirect()->to('/CatalogosEvaluacion/Instrumento')->with('message', 'Instrumento creado con éxito.');
     }
     return redirect()->back()->withInput();
@@ -241,7 +243,8 @@ if($this->validate('preguntas')){
     'preguntaId' =>$this->request->getPost('pregunta_10'),
     'orden' =>'10',
   ]);
-
+  helper("Bitacora");
+  insert_acciones('EDITÓ','INSTRUMENTO DE EVALUACIÓN | instrumentoId '.$id);
   return redirect()->to('/CatalogosEvaluacion/Instrumento')->with('message', 'Instrumento actualizado con éxito.');
 }
 }else if (!$buscarinstrumentos) {
@@ -333,7 +336,8 @@ if($this->validate('preguntas')){
     'preguntaId' =>$this->request->getPost('pregunta_10'),
     'orden' =>'10',
   ]);
-
+  helper("Bitacora");
+  insert_acciones('EDITÓ','INSTRUMENTO DE EVALUACIÓN | instrumentoId '.$id);
   return redirect()->to('/CatalogosEvaluacion/Instrumento')->with('message', 'Instrumento actualizado con éxito.');
 }
 }
@@ -357,8 +361,8 @@ public function delete($id = null){
   }  
   $instrumentoDetalle->where('instrumentoId',$id)->delete();
   $instrumento->delete($id);
-
-
+  helper("Bitacora");
+  insert_acciones('ELIMINÓ','INSTRUMENTO DE EVALUACIÓN | instrumentoId '.$id);
   return redirect()->to('/CatalogosEvaluacion/Instrumento')->with('message', 'Instrumento de evaluación eliminado con éxito.'); 
 }
 

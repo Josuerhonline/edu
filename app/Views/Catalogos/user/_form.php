@@ -125,7 +125,7 @@
 													<select class="form-control col-md-11"  name="estado_editar" id="estado_editar">
 														<option <?= $user->estado !== "0" ?: "selected"?> value="0">INACTIVO</option>
 														<option <?= $user->estado !== "1" ?: "selected"?> value="1">ACTIVO</option>
-														<option <?= $user->estado !== "2" ?: "selected"?> value="0">EN PROCESO</option>
+														<option <?= $user->estado !== "2" ?: "selected"?> value="2">EN PROCESO</option>
 													</select>
 												</div>
 											</div>

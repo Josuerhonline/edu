@@ -75,7 +75,24 @@ class Validation
 			'max_length' => 'La contraseña debe ser menor a veinticinco caracteres. Intente nuevamente.',
 		],
 	];
-
+	public $rol =[
+		'rol' =>  'required|is_unique[cof_rol.nombreRol]',
+	];
+	public $rol_errors = [
+		'rol' => [
+			'required'   => 'Por favor, ingrese el nombre del rol.',
+			'is_unique'  => 'El rol ingresado, ya existe en la base de datos. Intente con otro nombre.'
+		],
+	];
+	public $rol_editar =[
+		'rol_editar' =>  'required|is_unique[cof_rol.nombreRol]',
+	];
+	public $rol_editar_errors = [
+		'rol_editar' => [
+			'required'   => 'Por favor, ingrese el nombre del rol.',
+			'is_unique'  => 'El rol ingresado, ya existe en la base de datos. Intente con otro nombre.'
+		],
+	];
 	//Validaciones para Personas
 	public $personaUpdate =[
 		'DUI'             => 'required|min_length[10]|max_length[10]',
@@ -373,6 +390,26 @@ class Validation
 			'is_unique'   => 'El nombre corto de la materia ya existe.',
 		]
 	];
+	public $personaIns =[
+		'DUI'    => 'required|is_unique[cof_personas.DUI]',
+		'carnet' => 'required|is_unique[cof_personas.carnet]',
+		'email'  => 'required|is_unique[cof_personas.email]',
+	];
+	public $personaIns_errors = [
+		'DUI' => [
+			'required'  => 'Por favor, ingrese su DUI.',
+			'is_unique' => 'Este numero de DUI ya existe.',
+		],
+		'carnet' => [
+			'required'  => 'Por favor, ingrese su carnet.',
+			'is_unique' => 'Este carnet ya existe.',
+		]
+		,
+		'email' => [
+			'required'  => 'Por favor, ingrese su correo electrónico.',
+			'is_unique' => 'Este correo electrónico ya existe.',
+		]
+	];
 	public $materia_editar =[
 		'nombre_editar'       => 'required',
 		'codMateria_editar' => 'required',
@@ -641,6 +678,175 @@ class Validation
 		],
 		
 	];
+	public $menu =[
+		'nombreMenu'       => 'required|is_unique[cof_menus.nombreMenu]',
+	];
+	public $menu_errors = [
+		'nombreMenu' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú',
+			'is_unique'  => 'Lo sentimos, el nombre del menú ya existe',
+		],
+	];
+	public $menu_editar =[
+		'nombreMenuEditar'       => 'required',
+		'nombreIconoEditar'       => 'required|is_unique[cof_menus.nombreIcono]',
+	];
+	public $menu_editar_errors = [
+		'nombreMenuEditar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú',
+		],
+		'nombreIconoEditar' => [
+			'required'  => 'Por favor, Ingrese el nombre del icono',
+			'is_unique'  => 'Lo sentimos, el nombre del icono ya existe.',
+		],
+	];
+	public $menu_editar1 =[
+		'nombreMenuEditar'       => 'required|is_unique[cof_menus.nombreMenu]',
+		'nombreIconoEditar'       => 'required',
+	];
+	public $menu_editar1_errors = [
+		'nombreMenuEditar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú',
+			'is_unique'  => 'Lo sentimos, el nombre del menú ya existe.',
+		],
+		'nombreIconoEditar' => [
+			'required'  => 'Por favor, Ingrese el nombre del icono',
+
+		],
+	];
+	public $menuEditar_principal =[
+		'nombreMenuEditar' => 'required|is_unique[cof_menus.nombreMenu]',
+		'nombreIconoEditar'   => 'required|is_unique[cof_menus.nombreIcono]',
+	];
+	public $menuEditar_principal_errors = [
+
+		'nombreMenuEditar' => [
+			'required'  => 'Por favor, ingrese el nombre del menú.',
+			'is_unique' => 'Lo sentimos, el nombre del menú ya existe en la base de datos. Intente nuevamente.',
+		]
+		,
+		'nombreIconoEditar' => [
+			'required'  => 'Por favor, ingrese el nombre del icono.',
+			'is_unique' => 'Lo sentimos, el nombre del icono ya existe en la base de datos. Intente nuevamente.',
+		]
+	];
+
+	public $menuDetalle =[
+		'nombreMenuDetalle' => 'required|is_unique[cof_menus_detalle.nombreMenuDetalle]',
+		'orden'   => 'required|is_unique[cof_menus_detalle.orden]',
+		'archivo'   => 'required|is_unique[cof_menus_detalle.archivo]',
+	];
+	public $menuDetalle_errors = [
+
+		'nombreMenuDetalle' => [
+			'required'  => 'Por favor, ingrese el nombre del menú detalle.',
+			'is_unique' => 'Lo sentimos, el nombre del menú detalle ya existe en la base de datos. Intente nuevamente.',
+		]
+		,
+		'orden' => [
+			'required'  => 'Por favor, ingrese el orden del menú detalle.',
+			'is_unique' => 'Lo sentimos, este orden ya existe. Intente con uno diferente.',
+		]
+		,
+		'archivo' => [
+			'required'  => 'Por favor, ingrese el nombre del archivo.',
+			'is_unique' => 'Lo sentimos, este nombre de archivo ya existe. Intente con uno diferente.',
+		]
+	];
+
+/////////////////////////
+	public $menuDetalleNombre_editar =[
+		'nombreMenuDetalle_editar' => 'required|is_unique[cof_menus_detalle.nombreMenuDetalle]',
+		'orden_editar'             => 'required',
+		'archivo_editar'           => 'required',
+	];
+	public $menuDetalleNombre_editar_errors = [
+		'nombreMenuDetalle_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú detalle',
+			'is_unique' => 'Lo sentimos, el nombre del menú detalle ya existe.',
+		],
+		'orden_editar' => [
+			'required'  => 'Por favor, Ingrese el orden del menú detalle',
+		],
+		'archivo_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del archivo',
+		],
+	];
+
+	public $menuDetalle_editar =[
+		'nombreMenuDetalle_editar' => 'required',
+		'orden_editar'             => 'required',
+		'archivo_editar'           => 'required|is_unique[cof_menus_detalle.archivo]',
+	];
+	public $menuDetalle_editar_errors = [
+		'nombreMenuDetalle_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú detalle',
+		],
+		'orden_editar' => [
+			'required'  => 'Por favor, Ingrese el orden del menú detalle',
+		],
+		'archivo_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del archivo',
+			'is_unique'  => 'Lo sentimos, este nombre de archivo ya existe.',
+		],
+	];
+	public $menuDetalle_editar1 =[
+		'nombreMenuDetalle_editar' => 'required',
+		'orden_editar'           => 'required|is_unique[cof_menus_detalle.orden]',
+		'archivo_editar'             => 'required',
+	];
+	public $menuDetalle_editar1_errors = [
+		'nombreMenuDetalle_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú detalle',
+		],
+		'orden_editar' => [
+			'required'  => 'Por favor, Ingrese el orden del menú detalle',
+			'is_unique' => 'Lo sentimos, este orden ya existe.',
+		],
+		'archivo_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del archivo',
+
+		],
+	];
+	public $menuDetalle_editar2 =[
+		'nombreMenuDetalle_editar' => 'required|is_unique[cof_menus_detalle.nombreMenuDetalle]',
+		'orden_editar'           => 'required|is_unique[cof_menus_detalle.orden]',
+		'archivo_editar'             => 'required',
+	];
+	public $menuDetalle_editar2_errors = [
+		'nombreMenuDetalle_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú detalle',
+			'is_unique' => 'Lo sentimos, el nombre del menú detalle ya existe.',
+		],
+		'orden_editar' => [
+			'required'  => 'Por favor, Ingrese el orden del menú detalle',
+			'is_unique' => 'Lo sentimos, este orden ya ha sido asignado.',
+		],
+		'archivo_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del archivo',
+
+		],
+	];
+	public $menuDetalleEditar_principal =[
+		'nombreMenuDetalle_editar' => 'required|is_unique[cof_menus_detalle.nombreMenuDetalle]',
+		'orden_editar'             => 'required|is_unique[cof_menus_detalle.orden]',
+		'archivo_editar'           => 'required|is_unique[cof_menus_detalle.archivo]',
+	];
+	public $menuDetalleEditar_principal_errors = [
+		'nombreMenuDetalle_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del menú detalle',
+			'is_unique' => 'Lo sentimos, el nombre del menú detalle ya existe.',
+		],
+		'orden_editar' => [
+			'required'  => 'Por favor, Ingrese el orden del menú detalle',
+			'is_unique' => 'Lo sentimos, este orden ya ha sido asignado.',
+		],
+		'archivo_editar' => [
+			'required'  => 'Por favor, Ingrese el nombre del archivo',
+			'is_unique' => 'Lo sentimos, el nombre del archivo ya existe.',
+		],
+	];
+
 
 	/**
 	 * Specifies the views that are used to display the

@@ -39,7 +39,7 @@
 													<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" style="width: 79%" value="<?= old('ciclo') ?>" type="text" id="ciclo" name="ciclo" >
+												<input data-inputmask="'mask': '9'" class="form-control" style="width: 79%" value="<?= old('ciclo') ?>" type="text" id="ciclo" name="ciclo" >
 											</div>
 										</div>
 										<div class="item form-group col-md-11" <?= !$created ? "hidden" : "" ?>>
@@ -95,7 +95,7 @@
 													<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="	fa fa-list-ol" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<input class="form-control" style="width: 79%" value="<?=old('ciclo_editar', $ciclo->ciclo)?>" type="text" id="ciclo_editar" name="ciclo_editar">
+												<input data-inputmask="'mask':'9'" class="form-control" style="width: 79%" value="<?=old('ciclo_editar', $ciclo->ciclo)?>" type="text" id="ciclo_editar" name="ciclo_editar">
 											</div>
 										</div>
 										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>

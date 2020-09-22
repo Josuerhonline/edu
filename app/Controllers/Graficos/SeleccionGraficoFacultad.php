@@ -33,7 +33,7 @@ class SeleccionGraficoFacultad extends BaseController {
 
     $data = [
       'selectCiclo' => $datos->asObject()
-      ->select('cof_aper_ciclo.*')->findAll()
+      ->select('cof_aper_ciclo.*')->where('estado','1')->orderBy('anio','asc')->orderBy('ciclo','asc')->findAll()
     ];
     $this->_loadDefaultView( 'Gráficos facultad',$data,'index');
   }

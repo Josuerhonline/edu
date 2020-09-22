@@ -7,10 +7,12 @@ class Filters extends BaseConfig
 	// Makes reading things below nicer,
 	// and simpler to change out script that's used.
 	public $aliases = [
-		'csrf'     => \CodeIgniter\Filters\CSRF::class,
-		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
-		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-		'AutenticarRolAdmin' => \App\Filters\AutenticarRolAdmin::class,
+		'csrf'                => \CodeIgniter\Filters\CSRF::class,
+		'toolbar'             => \CodeIgniter\Filters\DebugToolbar::class,
+		'honeypot'            => \CodeIgniter\Filters\Honeypot::class,
+		'AutenticarRolSAdmin' => \App\Filters\AutenticarRolSAdmin::class,
+		'SeguridadRol'        => \App\Filters\SeguridadRol::class,
+	
 	];
 
 	// Always applied before every request
@@ -34,8 +36,32 @@ class Filters extends BaseConfig
 	// that they should run on, like:
 	//    'isLoggedIn' => ['before' => ['account/*', 'profiles/*']],
 	public $filters = [
-		'AutenticarRolAdmin' =>['before' =>[
-			'usuario','usuario/*',
+		'AutenticarRolSAdmin' =>['before' =>[
+			'Rol/Rol*/',
+			'Catalogos*/',
+			'CatalogosEvaluacion*/',
+			'Graficos*/',
+			'Menu*/',
+			'Reportes*/',
+			'Bitacora*/',
+			'emails*/',
+
+		]
+	],
+	'SeguridadRol' =>['before' =>[
+			'Rol/Rol*/',
+			'Catalogos*/',
+			'CatalogosEvaluacion*/',
+			'Graficos*/',
+			'Menu*/',
+			'Reportes*/',
+			'Bitacora*/',
+			'emails*/',
+			'Expirar*/',
+			'SeleccionarCiclo*/',
+			'NuevaClave*/',
+			'CambioClave*/',
+			'Principal*/',
 
 		]
 	]

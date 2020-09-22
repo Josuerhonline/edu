@@ -1,5 +1,4 @@
 <?php namespace App\Controllers;
-
 use App\Models\SeleccionarCicloModel;
 use App\Controllers\BaseController;
 use \CodeIgniter\Exceptions\PageNotFoundException;
@@ -11,9 +10,8 @@ class SeleccionarCiclo extends BaseController {
 
     $data = [
       'selectCiclo' => $datos->asObject()
-      ->select('cof_aper_ciclo.*, cof_aper_ciclo.ciclo as ciclo')
-      ->paginate(10),
-      'pager' => $datos->pager
+      ->select('cof_aper_ciclo.*, cof_aper_ciclo.ciclo as ciclo')->where('estado','1')->orderBy('anio','asc')->orderBy('ciclo','asc')
+      ->findAll()
     ];
     $this->_loadDefaultView( 'Seleccionar Ciclo',$data,'index');
   }

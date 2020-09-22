@@ -13,7 +13,7 @@
     <div class="col-md-12 col-sm-12 ">
       <div class="x_panel" style="border: 60%">
         <div class="x_title">
-          <h2>Administración de areas de evaluación</h2>
+          <h2>Administración de áreas de evaluación</h2>
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -30,7 +30,7 @@
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">Nº</th>
-                          <th style="color: #fff" >Area de evaluación</th>
+                          <th style="color: #fff" >Área de evaluación</th>
                           <th style="color: #fff">Estado</th>
                           <th style="color: #fff">Opciones</th>
                         </tr>

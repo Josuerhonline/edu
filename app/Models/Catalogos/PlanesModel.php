@@ -6,6 +6,6 @@ class PlanesModel extends Model
 {
     protected $table = 'cof_planes';
     protected $primaryKey = 'planId';
-    protected $allowedFields = ['carreraId','nombrePlan','plaAcuerdo','estado'];
+    protected $allowedFields = ['planId','carreraId','nombrePlan','plaAcuerdo','estado'];
 
 }

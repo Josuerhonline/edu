@@ -23,6 +23,7 @@ class AreasEvaluacion extends BaseController {
   }
 
   public function create(){
+    helper("Bitacora");
     $areas = new AreasEvaluacioModel();
 
     if($this->validate('area')){
@@ -30,7 +31,8 @@ class AreasEvaluacion extends BaseController {
         'areaEvaluacion' =>$this->request->getPost('area'),
         'estadoAreaEva'  =>'1'
       ]);
-
+      $valor1 = $this->request->getPost('area');
+      insert_acciones('INSERTÓ','ÁREA DE EVALUACIÓN | '.$valor1);
       return redirect()->to('/CatalogosEvaluacion/AreasEvaluacion/')->with('message', 'Area creada con éxito.');
     }
 
@@ -64,6 +66,9 @@ class AreasEvaluacion extends BaseController {
       $areas->update($id, [
         'estadoAreaEva' =>$this->request->getPost('estado'),
       ]);
+      helper("Bitacora");
+      $valor1 = $this->request->getPost('estado');
+      insert_acciones('EDITÓ','ÁREA DE EVALUACIÓN | estado '.$valor1);
       return redirect()->to('/CatalogosEvaluacion/AreasEvaluacion')->with('message', 'Area de evaluación editada con éxito.');
     }
   }else if(!$buscarAreas){
@@ -72,6 +77,10 @@ class AreasEvaluacion extends BaseController {
         'areaEvaluacion' =>$this->request->getPost('area_editar'),
         'estadoAreaEva' =>$this->request->getPost('estado'),
       ]);
+      helper("Bitacora");
+      $valor1 = $this->request->getPost('area_editar');
+      $valor2 = $this->request->getPost('estado');
+      insert_acciones('EDITÓ','ÁREA DE EVALUACIÓN | '.$valor1. '| estado: '.$valor2);
       return redirect()->to('/CatalogosEvaluacion/AreasEvaluacion')->with('message', 'Area de evaluación editada con éxito.');
     }
   }
@@ -93,7 +102,8 @@ public function delete($id = null){
   }  
 
   $areas->delete($id);
-
+      helper("Bitacora");
+      insert_acciones('ELIMINÓ','ÁREA DE EVALUACIÓN | areaEvaluacionId '.$id);
   return redirect()->to('/CatalogosEvaluacion/AreasEvaluacion')->with('message', 'Area de evaluación eliminada con éxito.'); 
 }
 

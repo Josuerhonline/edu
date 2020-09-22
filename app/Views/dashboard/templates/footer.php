@@ -29,6 +29,7 @@
 <script src="/vendors/moment/min/moment.min.js"></script>
 <script src="/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="/build/js/custom.min.js"></script>
+<script src="/build/js/alertify.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/select2/dist/js/select2.min.js"></script>
 <script src="/dashboard/js/main.js"></script>
@@ -43,8 +44,9 @@
 <script src="/vendors/jQuery-Smart-Wizard/js/WizardEvaluacionDocente.js"></script>
 <script src="/vendors/echarts/map/js/world.js"></script>
 <script src="/vendors/echarts/dist/echarts.min.js"></script>
-
-
-
+<script src="/build/js/expirarSession.js"></script>
+<script src="/build/js/noBackButton.js"></script>
+<script src="/js/select-multiple.js"></script>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
 </body>
 </html>

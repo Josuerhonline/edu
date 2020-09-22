@@ -23,6 +23,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card-box table-responsive">
+                        <a href="/catalogos/planesMaterias/new" title="Crear" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-retweet"></i> Trasladar</a>
                       <div class="clearfix"></div>
                       <table id="tabla" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">

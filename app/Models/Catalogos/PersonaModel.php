@@ -6,6 +6,6 @@ class PersonaModel extends Model
 {
     protected $table = 'cof_personas';
     protected $primaryKey = 'personaId';
-    protected $allowedFields = ['personaId','DUI','carnet','nombres','apellidos','tipoPersona','estadoCivil','sexo','direccion','telefono','email','fechaNacimiento','fechaIngreso','anioIngreso','estado','fechaTraslado','usuarioTraslado'];
+    protected $allowedFields = ['personaId','DUI','carnet','nombres','apellidos','tipoPersona','estadoCivil','sexo','telefono','email','fechaNacimiento','fechaIngreso','anioIngreso','estado','fechaTraslado','usuarioTraslado','personaIdUonline'];
 
 }

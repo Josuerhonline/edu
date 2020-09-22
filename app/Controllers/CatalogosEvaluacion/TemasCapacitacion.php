@@ -23,60 +23,68 @@ class TemasCapacitacion extends BaseController {
   }
 
   public function create(){
-    $tema = new TemasCapacitacionModel();
+   helper("Bitacora");
+   $tema = new TemasCapacitacionModel();
 
-    if($this->validate('temaCapacitacion')){
-      $id = $tema->insert([
-        'tema' =>$this->request->getPost('tema'),
-        'estado'  =>'1'
-      ]);
+   if($this->validate('temaCapacitacion')){
+    $id = $tema->insert([
+      'tema' =>$this->request->getPost('tema'),
+      'estado'  =>'1'
+    ]);
 
-      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion/')->with('message', 'Tema de capacitación creado con éxito.');
-    }
-
-    return redirect()->back()->withInput();
+    $valor1 = $this->request->getPost('tema');
+    insert_acciones('INSERTÓ','NUEVO TEMA DE CAPACITACIÓN | tema:'.$valor1);
+    return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion/')->with('message', 'Tema de capacitación creado con éxito.');
   }
 
-  public function edit($id = null){
-    $tema = new TemasCapacitacionModel();
+  return redirect()->back()->withInput();
+}
 
-    if ($tema->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }  
+public function edit($id = null){
+  $tema = new TemasCapacitacionModel();
 
-    $validation =  \Config\Services::validation();
-    $this->_loadDefaultView('Actualizar tema',
-      ['validation'=>$validation,'temas'=> $tema->asObject()->find($id)],'edit');
-  }
+  if ($tema->find($id) == null)
+  {
+    throw PageNotFoundException::forPageNotFound();
+  }  
 
-  public function update($id = null){
-    $tema = new TemasCapacitacionModel();
+  $validation =  \Config\Services::validation();
+  $this->_loadDefaultView('Actualizar tema',
+    ['validation'=>$validation,'temas'=> $tema->asObject()->find($id)],'edit');
+}
 
-    if ($tema->find($id) == null)
-    {
-      throw PageNotFoundException::forPageNotFound();
-    }
+public function update($id = null){
+ helper("Bitacora");
+ $tema = new TemasCapacitacionModel();
+
+ if ($tema->find($id) == null)
+ {
+  throw PageNotFoundException::forPageNotFound();
+}
   // VALIDAR SI EL VALOR INGRESADO NO EXISTE EN LA BASE DE DATOS, ACTUALIZAR SOLO SI ES EL MISMO VALOR O UNO NO EXISTENTE EN LA BASE DE DATOS
-    $valor = $this->request->getPost('tema_editar');
-    $buscarTema = $tema->select('tema')->where('tema',$valor)->where('temaCapacitacionId',$id)->first();
-    if ($buscarTema) {
-     if($this->validate('temaCapacitacion_editar')){
-      $tema->update($id, [
-        'estado' =>$this->request->getPost('estado'),
-      ]);
-      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
-    }
-  }else if(!$buscarTema){
-    if($this->validate('temaCapacitacion_editar1')){
-      $tema->update($id, [
-        'tema' =>$this->request->getPost('tema_editar'),
-        'estado' =>$this->request->getPost('estado'),
-      ]);
-      return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
-    }
- }
- return redirect()->back()->withInput();
+$valor = $this->request->getPost('tema_editar');
+$buscarTema = $tema->select('tema')->where('tema',$valor)->where('temaCapacitacionId',$id)->first();
+if ($buscarTema) {
+ if($this->validate('temaCapacitacion_editar')){
+  $tema->update($id, [
+    'estado' =>$this->request->getPost('estado'),
+  ]);
+  $valor1 = $this->request->getPost('estado');
+  insert_acciones('EDITÓ','TEMA DE CAPACITACIÓN | estado:'.$valor1);
+  return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
+}
+}else if(!$buscarTema){
+  if($this->validate('temaCapacitacion_editar1')){
+    $tema->update($id, [
+      'tema' =>$this->request->getPost('tema_editar'),
+      'estado' =>$this->request->getPost('estado'),
+    ]);
+    $valor1 = $this->request->getPost('tema_editar');
+    insert_acciones('EDITO','TEMA DE CAPACITACIÓN | tema:'.$valor1);
+    return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación editado con éxito.');
+  }
+}
+return redirect()->back()->withInput();
 }
 
 public function delete($id = null){
@@ -94,7 +102,8 @@ public function delete($id = null){
   }  
 
   $tema->delete($id);
-
+  helper("Bitacora");
+  insert_acciones('ELIMINÓ','TEMA DE CAPACITACIÓN | tema:'.$id);
   return redirect()->to('/CatalogosEvaluacion/TemasCapacitacion')->with('message', 'Tema de capacitación eliminado con éxito.'); 
 }
 

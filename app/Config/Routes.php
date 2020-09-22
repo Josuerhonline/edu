@@ -81,7 +81,7 @@ $routes->group('dashboard', function($routes)
 });
 
 $routes->resource('principal',['except' => ['show']]);
-$routes->resource('Catalogos/usuario',['except' => ['show']]);
+$routes->resource('Catalogos/Usuario',['except' => ['show']]);
 $routes->resource('Catalogos/personas',['except' => ['show']]);
 $routes->resource('Catalogos/universidad',['except' => ['show']]);
 $routes->resource('Catalogos/facultad',['except' => ['show']]);
@@ -90,6 +90,8 @@ $routes->resource('Catalogos/Ciclo',['except' => ['show']]);
 $routes->resource('Catalogos/Materias',['except' => ['show']]);
 $routes->resource('Catalogos/CargaAdemic',['except' => ['show']]);
 $routes->resource('Catalogos/Ponderaciones',['except' => ['show']]);
+$routes->resource('Menu/Menu',['except' => ['show']]);
+$routes->resource('Menu/MenuDetalle',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/TemasCapacitacion',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/Preguntas',['except' => ['show']]);
 $routes->resource('CatalogosEvaluacion/AreasEvaluacion',['except' => ['show']]);
@@ -98,13 +100,23 @@ $routes->resource('CatalogosEvaluacion/Inscripcion',['except' => ['show']]);
 $routes->resource('EvaluacionDocente/EvaluacionDocente',['except' => ['show']]);
 $routes->resource('Graficos/Graficos',['except' => ['show']]);
 $routes->resource('Graficos/SeleccionGrafico',['except' => ['show']]);
+$routes->resource('Graficos/Docente',['except' => ['show']]);
+$routes->resource('Graficos/SeleccionDocente',['except' => ['show']]);
 $routes->resource('CambioClave',['except' => ['show']]);
+$routes->resource('Reportes/Reportes',['except' => ['show']]);
+$routes->resource('Bitacora/Bitacora',['except' => ['show']]);
+$routes->resource('Ayuda/ManualUsuario',['except' => ['show']]);
+$routes->resource('Ayuda/ManualAdministrador',['except' => ['show']]);
+$routes->resource('Ayuda/ManualDesarrollador',['except' => ['show']]);
 
 
 
-$routes->get('/login', 'web/User::login');
-$routes->post('/login_post', 'web/User::login_post',['as' => 'user_login_post']);
-$routes->get('/logout', 'web/User::logout',['as' => 'user_logout']);
+
+$routes->get('login', 'web/User::login');
+$routes->post('/login_post', 'web/User::login_post');
+$routes->post('activar_usuario', 'web/User::activar_usuario',['as' => 'activar_usuario']);
+$routes->post('recuperar_clave', 'web/User::recuperar_clave',['as' => 'recuperar_clave']);
+$routes->get('/logout', 'web/User::logout');
 
 
 /**

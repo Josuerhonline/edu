@@ -15,11 +15,11 @@ class Facultad extends BaseController {
       ->join('cof_universidad','cof_universidad.universidadId = cof_facultad.universidadId')->findAll()
     ];
 
-    $this->_loadDefaultView( 'Listado de facultades',$data,'index');
+    $this->_loadDefaultView('Listado de facultades',$data,'index');
   }
 
   public function new(){
-    $facultad = new FacultadModel();
+    $facultad    = new FacultadModel();
     $universidad = new UniversidadModel();
 
     $validation =  \Config\Services::validation();
@@ -28,13 +28,18 @@ class Facultad extends BaseController {
 
   public function create(){
     $facultad = new FacultadModel();
+    helper("Bitacora");
 
     if($this->validate('facultad')){
       $id = $facultad->insert([
         'universidadId' =>$this->request->getPost('universidadId'),
-        'facultad' =>$this->request->getPost('facultad'),
+        'facultad'      =>$this->request->getPost('facultad'),
       ]);
 
+      $valor1 = $this->request->getPost('universidadId');
+      $valor2 = $this->request->getPost('facultad');
+
+      insert_acciones('INSERTÓ','NUEVA FACULTAD | universidadId: '.$valor1." | Facultad: ".$valor2);
       return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad creada con éxito.');
     }
 
@@ -42,7 +47,7 @@ class Facultad extends BaseController {
   }
 
   public function edit($id = null){
-    $facultad = new FacultadModel();
+    $facultad    = new FacultadModel();
     $universidad = new UniversidadModel();
 
     if ($facultad->find($id) == null)
@@ -56,39 +61,52 @@ class Facultad extends BaseController {
   }
 
   public function update($id = null){
+    helper("Bitacora");
     $facultad = new FacultadModel();
 
     if ($facultad->find($id) == null)
     {
       throw PageNotFoundException::forPageNotFound();
     }
-    $facul = $this->request->getPost('facultad_editar');
+
+    $facul          = $this->request->getPost('facultad_editar');
     $buscarFacultad = $facultad->select('facultad')->where('facultad',$facul)->where('facultadId',$id)->first();
+
     if ($buscarFacultad) {
           $facultad->update($id, [
         'universidadId' =>$this->request->getPost('universidadId_editar'),
 
       ]);
+
+      $valor1 = $this->request->getPost('universidadId_editar');
+
+      insert_acciones('ACTUALIZÓ','FACULTAD | facultadId: '.$id." | universidadId: ".$valor1);
       return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
     }
+
     if (!$buscarFacultad) {
-    if($this->validate('facultadEditar')){
-      $facultad->update($id, [
-        'universidadId' =>$this->request->getPost('universidadId_editar'),
-        'facultad' =>$this->request->getPost('facultad_editar'),
+      if($this->validate('facultadEditar')){
+        $facultad->update($id, [
+          'universidadId' => $this->request->getPost('universidadId_editar'),
+          'facultad'      => $this->request->getPost('facultad_editar'),
 
-      ]);
-      return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
-    }
+        ]);
 
+        $valor1 = $this->request->getPost('universidadId_editar');
+        $valor2 = $this->request->getPost('facultad_editar');
+
+        insert_acciones('ACTUALIZÓ','FACULTAD | facultadId: '.$id." | universidadId: ".$valor1." | Facultad: ".$valor2);
+        return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad editada con éxito.');
+      }
     }
 
     return redirect()->back()->withInput();
   }
 
   public function delete($id = null){
-    $facultad = new FacultadModel();
-    $carreras = new CarrerasModel();
+    helper("Bitacora");
+    $facultad      = new FacultadModel();
+    $carreras      = new CarrerasModel();
     $buscarCarrera = $carreras->select('facultadId')->where('facultadId',$id)->first();
 
     if ($buscarCarrera) {
@@ -101,7 +119,7 @@ class Facultad extends BaseController {
     }  
 
     $facultad->delete($id);
-
+    insert_acciones('ELIMINÓ','FACULTAD | facultadId:'.$id);
     return redirect()->to('/Catalogos/facultad')->with('message', 'Facultad eliminada con éxito.'); 
   }
 

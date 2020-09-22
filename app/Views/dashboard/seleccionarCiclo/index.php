@@ -1,4 +1,4 @@
-<?php use App\Models\UsuariosModel; ?>
+<?php use App\Models\SeleccionarCicloModel; ?>
 </div>
 </div>
 <div class="top_nav">
@@ -23,18 +23,40 @@
 						<div class="x_content">
 							<div class="x_content">
 								<div class="row">
-									<div class="col-md-12">
-										<div  class="form-group">
-											<p>Por favor, seleccione el período al que desea ingresar.</p>
-											<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
-												<option value="">Seleccione un ciclo</option>
-												<?php foreach ($selectCiclo as $c): ?>
-													<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
-												<?php endforeach?>
-											</select> 
-											<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
+
+									<?php $session = session();
+									if ($session->rolId =='1' || $session->rolId =='4'): ?>
+										<div class="col-md-12">
+											<div  class="form-group">
+												<p>Por favor, seleccione el período al que desea ingresar.</p>
+												<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
+													<option value="">Seleccione un ciclo</option>
+													<?php foreach ($selectCiclo as $c): ?>
+														<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
+													<?php endforeach?>
+												</select> 
+												<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
+											</div>
 										</div>
-									</div>
+									<?php endif ?>
+									<?php if ($session->rolId =='2' || $session->rolId =='3'): ?>
+										<div class="col-md-12">
+											<div  class="form-group">
+												<p>Por favor, seleccione el período al que desea ingresar.</p>
+												<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
+													<option value="">Seleccione un ciclo</option>
+													<?php 
+													 $datos = new SeleccionarCicloModel();
+													 $cil = $datos->asObject()->where('estado','1')->where('anio',date("Y"))->orderBy('ciclo','asc')->findAll();
+
+													 foreach ($cil as $c): ?>
+														<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
+													<?php endforeach?>
+												</select> 
+												<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
+											</div>
+										</div>
+									<?php endif ?>
 								</div>
 							</div>
 						</div>

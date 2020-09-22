@@ -41,7 +41,9 @@ class AperEvaluacion extends BaseController {
         'fechaFin' =>$this->request->getPost('fechaFin'),
         'estadoAperEva'  =>'1'
       ]);
-
+      helper("Bitacora");
+      $valor1 = $this->request->getPost('instrumento');
+      insert_acciones('INSERTÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1);
       return redirect()->to('/CatalogosEvaluacion/AperEvaluacion/')->with('message', 'Apertura de evaluación creada con éxito.');
     }
 
@@ -82,6 +84,12 @@ class AperEvaluacion extends BaseController {
         'instrumentoId' =>$this->request->getPost('instrumento_editar'),
         'estadoAperEva' =>$this->request->getPost('estado'),
       ]);
+      helper("Bitacora");
+      $valor1 = $this->request->getPost('instrumento_editar');
+      $valor2 = $this->request->getPost('fechaInicio_editar');
+      $valor3 = $this->request->getPost('fechaFin_editar');
+      $valor4 = $this->request->getPost('estado');
+      insert_acciones('EDITÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1. ' | fecha de inicio: '.$valor2.' | fecha de finalización: '.$valor3.' | estado '.$valor4);
       return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación editada con éxito.');
     }
   }else if ($buscarAperEva) {
@@ -92,6 +100,12 @@ class AperEvaluacion extends BaseController {
       'fechaFin' =>$this->request->getPost('fechaFin_editar'),
       'estadoAperEva' =>$this->request->getPost('estado'),
     ]);
+    helper("Bitacora");
+    $valor1 = $this->request->getPost('instrumento_editar');
+    $valor2 = $this->request->getPost('fechaInicio_editar');
+    $valor3 = $this->request->getPost('fechaFin_editar');
+    $valor4 = $this->request->getPost('estado');
+    insert_acciones('EDITÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1. ' | fecha de inicio: '.$valor2.' | fecha de finalización: '.$valor3.' | estado '.$valor4);
     return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación editada con éxito.');
   }
 }else if ($buscarAperEva1) {
@@ -102,6 +116,13 @@ class AperEvaluacion extends BaseController {
     'fechaInicio' =>$this->request->getPost('fechaInicio_editar'),
     'estadoAperEva' =>$this->request->getPost('estado'),
   ]);
+  helper("Bitacora");
+  $valor1 = $this->request->getPost('instrumento_editar');
+  $valor2 = $this->request->getPost('fechaInicio_editar');
+  $valor3 = $this->request->getPost('fechaFin_editar');
+  $valor4 = $this->request->getPost('estado');
+
+  insert_acciones('EDITÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1. ' | fecha de inicio: '.$valor2.' | fecha de finalización: '.$valor3.' | estado '.$valor4);
   return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación editada con éxito.');
 }
 }
@@ -113,8 +134,13 @@ else if(!$buscarAperEva){
       'fechaInicio' =>$this->request->getPost('fechaInicio_editar'),
       'fechaFin' =>$this->request->getPost('fechaFin_editar'),
       'estadoAperEva'  =>$this->request->getPost('estado'),
-      'estadoAperEva' =>$this->request->getPost('estado'),
     ]);
+    helper("Bitacora");
+    $valor1 = $this->request->getPost('instrumento_editar');
+    $valor2 = $this->request->getPost('fechaInicio_editar');
+    $valor3 = $this->request->getPost('fechaFin_editar');
+    $valor4 = $this->request->getPost('estado');
+    insert_acciones('EDITÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1. ' | fecha de inicio: '.$valor2.' | fecha de finalización: '.$valor3.' | estado '.$valor4);
     return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación editada con éxito.');
   }
 }
@@ -127,6 +153,12 @@ else if(!$buscarAperEva1){
       'fechaFin' =>$this->request->getPost('fechaFin_editar'),
       'estadoAperEva'  =>$this->request->getPost('estado'),
     ]);
+    helper("Bitacora");
+    $valor1 = $this->request->getPost('instrumento_editar');
+    $valor2 = $this->request->getPost('fechaInicio_editar');
+    $valor3 = $this->request->getPost('fechaFin_editar');
+    $valor4 = $this->request->getPost('estado');
+    insert_acciones('EDITÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id.' | instrumentoId '.$valor1. ' | fecha de inicio: '.$valor2.' | fecha de finalización: '.$valor3.' | estado '.$valor4);
     return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación editada con éxito.');
   }
 }
@@ -148,7 +180,8 @@ public function delete($id = null){
   }  
 
   $aperEva->delete($id);
-
+  helper("Bitacora");
+  insert_acciones('ELIMINÓ','APERTURA DE EVALUACIÓN | aperEvaluacionId '.$id);
   return redirect()->to('/CatalogosEvaluacion/AperEvaluacion')->with('message', 'Apertura de evaluación eliminada con éxito.'); 
 }
 

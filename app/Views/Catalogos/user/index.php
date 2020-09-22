@@ -4,6 +4,7 @@
 <div class="top_nav">
   <?= view("dashboard/edu/navbar"); ?>
   <?= view("dashboard/partials/_session"); ?>
+  <?= view("dashboard/partials/_sessionError"); ?>
 </div>
 <div class="right_col" role="main">
   <div class="clearfix"></div>
@@ -58,7 +59,9 @@
                        <td><?= $u->estado ?></td> 
                        <td>
                         <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/usuario/edit/<?= $u->usuarioId?>"><i class="fa fa-pencil"></i></a>
+                        <?php if ($u->rolId!='4'): ?>
                         <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?= $u->usuarioId ?>)"><i class="fa fa-trash"></i></button>
+                        <?php endif ?>
                       </td>
                     </tr>
                   <?php endforeach?>

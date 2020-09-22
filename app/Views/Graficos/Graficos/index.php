@@ -1,32 +1,227 @@
 <?php use App\Models\Catalogos\CarrerasModel; 
-use App\Models\Graficos\PromedioCarrerasModel;
-use App\Models\Graficos\CarreraFechaModel;
+use App\Models\SeleccionarCicloModel; 
+use App\Models\Graficos\ViewEvaluacion;
+use App\Models\Graficos\PromedioFacultadModel;
+use App\Models\Graficos\PromedioCarreraModel;
+use App\Models\Graficos\PromedioFacultadGeneroModel;
+use App\Models\Graficos\PromedioCarreraGeneroModel;
+use App\Models\Graficos\TotalEvaluaciones;
+use App\Models\Graficos\TotalAutoevaluaciones;
+use App\Models\Graficos\TotalAutoevaluacionesGenero;
+use App\Models\Graficos\TotalEvaluacionesGenero;
+use App\Models\CatalogosEvaluacion\AreasEvaluacioModel;
 
-use App\Models\Graficos\CountEvaluacionesModel;
-use App\Models\Graficos\CountEvaluacionesDocenteModel;
-use App\Models\Graficos\FacultadFechaModel;
-$promedio = new PromedioCarrerasModel();
-$nombreFecha = new CarreraFechaModel();
-$nombreFechaFacultad = new FacultadFechaModel();
-$countFecha = new CountEvaluacionesModel();
-$countFechaDocentes = new CountEvaluacionesDocenteModel();
+$cicloMod                    = new SeleccionarCicloModel();
+$evaluacion                  = new ViewEvaluacion();
+$facultadPromedio            = new PromedioFacultadModel();
+$carreraPromedio             = new PromedioCarreraModel();
+$facultadPromedioGenero      = new PromedioFacultadGeneroModel();
+$carreraPromedioGenero       = new PromedioCarreraGeneroModel();
+$totalEvaluaciones           = new TotalEvaluaciones();
+$totalAutoevaluaciones       = new TotalAutoevaluaciones();
+$totalAutoevaluacionesGenero = new TotalAutoevaluacionesGenero();
+$totalEvaluacionesGenero     = new TotalEvaluacionesGenero();
+$areas                       = new AreasEvaluacioModel();
 
-$nombreFacultad = $nombreFechaFacultad->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('nombreFechaFacultad');
-$promedioFacultad = $nombreFechaFacultad->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('promedio');
-//Data para el promedio de las evaluaciones por carrera
-$nombreFecha = $nombreFecha->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('nombreFecha');
-$promedio = $promedio->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('promedio');
-//Data de evaluaciones de estudiantes
-$fecha = $countFecha->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('fecha');
-$cantidad = $countFecha->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('cantidad');
-  //Data de auto evaluaciones
-$cantidadDocente = $countFechaDocentes->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('cantidad');
-$fechaDocente = $countFechaDocentes->where('aperCicloId',$_SESSION["cicloNombre"])->findColumn('fecha');?>
+$ciclo = $cicloMod->asObject()->where('aperCicloId',$_SESSION["cicloNombre"])->findAll();
+foreach ($ciclo as $ci ){
+ $_SESSION["nombrePersonalizado"]=$ci->nombrePersonalizado; 
+}
 
+////////////////////////////CONSULTAS PARA FACULTADES/////////////////////////////////
+// Query para el nombre de las facultades
+$nombresFacultades= $facultadPromedio->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->groupBy('facultadId')->findColumn('facultad');
+
+//Query para seleccionar el promedio de las facultades
+$promedioFacultades = $facultadPromedio->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->groupBy('facultadId')->findColumn('promedio');
+
+
+// Query para seleccionar los promedios por género facultades
+$promedioFacultadesFemenino = $facultadPromedioGenero->asObject()->select()->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','F')
+->groupBy('facultadId')->findAll();
+
+$promedioFacultadesMasculino = $facultadPromedioGenero->asObject()->select()->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','M')
+->groupBy('facultadId')->findAll();
+
+
+////////////////////////////CONSULTAS PARA CARRERAS/////////////////////////////////
+// Query para el nombre de las carreras
+$nombresCarreras= $carreraPromedio->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->groupBy('carreraId')->findColumn('nombre');
+
+//Query para seleccionar el promedio de las carreras
+$promedioCarreras = $carreraPromedio->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])
+->groupBy('carreraId')->findColumn('AVG(promedio)');
+
+
+// Query para seleccionar los promedios por género carreras
+
+$promedioCarrerasFemenino = $carreraPromedioGenero->asObject()->select()->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','F')
+->groupBy('carreraId')->findAll();
+
+
+$promedioCarrerasMasculino = $carreraPromedioGenero->asObject()->select()->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','M')
+->groupBy('carreraId')->findAll();
+
+////////////////////////////QUERY PARA SELECT DE AREAS EVALUADORAS/////////////////////////////////
+$areaEvaluacionEva  = $evaluacion->asObject()->select()->where('aperCicloId',$_SESSION["cicloNombre"])->groupBy('areaEvaluacionId','areaEvaluacion')->findAll();
+
+foreach ($areaEvaluacionEva as $ar ){
+ $_SESSION["areaEvaluacion"]=$ar->areaEvaluacion; 
+}
+
+///////////////////////////////CONSULTAS PARA TOTAL DE EVALUACIONES////////////////////////////
+$totalEva= $totalEvaluaciones->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->findColumn('contador');
+
+$totalEvaM= $totalEvaluacionesGenero->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','M')->findColumn('contador');
+
+$totalEvaF= $totalEvaluacionesGenero->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','F')->findColumn('contador');
+
+///////////////////////////////CONSULTAS PARA TOTAL DE AUTOEVALUACIONES////////////////////////////
+$totalAutoEva= $totalAutoevaluaciones->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->findColumn('contador');
+
+$totalAutoEvaM= $totalAutoevaluacionesGenero->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','M')->findColumn('contador');
+
+$totalAutoEvaF= $totalAutoevaluacionesGenero->where('aperCicloId',$_SESSION["cicloNombre"])->where('areaEvaluacionId',$_SESSION["areaEvaluacionSessionGraficos"])->where('sexo','F')->findColumn('contador');
+
+
+if($nombresFacultades){
+  $longitudNombres = count($nombresFacultades);//LONGITUD DE ARRAY CON NOMBRES DE FACULTADES
+}
+
+//CONVERTIR A DECIMAL PROMEDIOS GENERALES - FACULTADES
+if ($promedioFacultades) {
+  $longitud  = count($promedioFacultades);
+
+  //Recorrer Elementos
+  for($i=0; $i<$longitud; $i++){
+    $arrayNewPromediosFacultad[$i] = number_format($promedioFacultades[$i], 2, '.', ',');
+  }
+}else{
+  $arrayNewPromediosFacultad = array();
+}
+
+//CONVERTIR A DECIMAL PROMEDIOS FEMENINOS - FACULTADES
+if ($promedioFacultadesFemenino) {
+  $longitud2 = count($promedioFacultadesFemenino);
+  
+  for($i=0; $i<$longitudNombres; $i++){//RECORRER ARRAY DE NOMBRES DE FACULTADES
+    $nombreFacultad    = $nombresFacultades[$i];
+    $promedioFacultadF = "";
+
+    foreach ($promedioFacultadesFemenino as $key => $p){//RECORRER PROMEDIOS DE CONSULTA
+      if($nombreFacultad==$p->facultad){//VERIFICAR SI EXISTE PARA LA FACULTAD
+        $promedioFacultadF = $p->promedio;
+      }else{}
+      
+    }
+
+    if($promedioFacultadF!=""){//SI EXISTE, CONVERTIR A DECIMAL EL PROMEDIO
+      $arrayNewPromediosFacultadF[$i] = number_format($promedioFacultadF, 2, '.', ',');
+    }else{//SI NO EXISTE, PONER UNA POSICIÓN VACÍA
+      $arrayNewPromediosFacultadF[$i] = '';
+    }
+  }
+}else{
+  $arrayNewPromediosFacultadF = array();
+}
+
+//CONVERTIR A DECIMAL PROMEDIOS MASCULINOS - FACULTADES
+if ($promedioFacultadesMasculino) {
+  $longitud3 = count($promedioFacultadesMasculino);
+
+  for($i=0; $i<$longitudNombres; $i++){//RECORRER ARRAY DE NOMBRES DE FACULTADES
+    $nombreFacultad    = $nombresFacultades[$i];
+    $promedioFacultadM = "";
+
+    foreach ($promedioFacultadesMasculino as $key => $p){//RECORRER PROMEDIOS DE CONSULTA
+      if($nombreFacultad==$p->facultad){//VERIFICAR SI EXISTE PARA LA FACULTAD
+        $promedioFacultadM = $p->promedio;
+      }else{}
+      
+    }
+
+    if($promedioFacultadM!=""){//SI EXISTE, CONVERTIR A DECIMAL EL PROMEDIO
+      $arrayNewPromediosFacultadM[$i] = number_format($promedioFacultadM, 2, '.', ',');
+    }else{//SI NO EXISTE, PONER UNA POSICIÓN VACÍA
+      $arrayNewPromediosFacultadM[$i] = '';
+    }
+  }
+}else{
+  $arrayNewPromediosFacultadM = array();
+}
+
+/////////////////////////////////////CARRERAS///////////////////////////////////////////
+if($nombresCarreras){
+  $longitudNombresC = count($nombresCarreras);//LONGITUD DE ARRAY CON NOMBRES DE CARRERAS
+}
+
+//PROMEDIOS GENERALES DE CARRERAS, SIN GÉNEROS
+if ($promedioCarreras) {
+  $longitud  = count($promedioCarreras);
+
+  //Recorrer Elementos
+  for($i=0; $i<$longitud; $i++){
+    $arrayNewPromediosCarreras[$i] = number_format($promedioCarreras[$i], 2, '.', ',');
+  }
+}else{
+  $arrayNewPromediosCarreras = array();
+}
+
+//CONVERTIR A DECIMAL PROMEDIOS FEMENINOS - CARRERAS
+if ($promedioCarrerasFemenino) {
+  $longitud2 = count($promedioCarrerasFemenino);
+
+  for($i=0; $i<$longitudNombresC; $i++){//RECORRER ARRAY DE NOMBRES DE CARRERAS
+    $nombreCarrera    = $nombresCarreras[$i];
+    $promedioCarreraF = "";
+
+    foreach ($promedioCarrerasFemenino as $key => $p){//RECORRER PROMEDIOS DE CONSULTA
+      if($nombreCarrera==$p->nombre){//VERIFICAR SI EXISTE PARA LA CARRERA
+        $promedioCarreraF = $p->promedio;
+      }else{}
+      
+    }
+
+    if($promedioCarreraF!=""){//SI EXISTE, CONVERTIR A DECIMAL EL PROMEDIO
+      $arrayNewPromediosCarrerasF[$i] = number_format($promedioCarreraF, 2, '.', ',');
+    }else{//SI NO EXISTE, PONER UNA POSICIÓN VACÍA
+      $arrayNewPromediosCarrerasF[$i] = '';
+    }
+  }
+}else{
+  $arrayNewPromediosCarrerasF = array();
+}
+
+//CONVERTIR A DECIMAL PROMEDIOS MASCULINOS - CARRERAS
+if ($promedioCarrerasMasculino) {
+  $longitud3 = count($promedioCarrerasMasculino);
+
+  for($i=0; $i<$longitudNombresC; $i++){//RECORRER ARRAY DE NOMBRES DE CARRERAS
+    $nombreCarrera    = $nombresCarreras[$i];
+    $promedioCarreraM = "";
+
+    foreach ($promedioCarrerasMasculino as $key => $p){//RECORRER PROMEDIOS DE CONSULTA
+      if($nombreCarrera==$p->nombre){//VERIFICAR SI EXISTE PARA LA CARRERAS
+        $promedioCarreraM = $p->promedio;
+      }else{}
+      
+    }
+
+    if($promedioCarreraM!=""){//SI EXISTE, CONVERTIR A DECIMAL EL PROMEDIO
+      $arrayNewPromediosCarrerasM[$i] = number_format($promedioCarreraM, 2, '.', ',');
+    }else{//SI NO EXISTE, PONER UNA POSICIÓN VACÍA
+      $arrayNewPromediosCarrerasM[$i] = '';
+    }
+  }
+}else{
+  $arrayNewPromediosCarrerasM = array();
+
+
+}
+?>
 <?= view("dashboard/edu/menu"); ?>
 </div>
 </div>
-
 <div class="top_nav">
   <?= view("dashboard/edu/navbar"); ?>
   <?= view("dashboard/partials/_session"); ?>
@@ -42,15 +237,15 @@ $fechaDocente = $countFechaDocentes->where('aperCicloId',$_SESSION["cicloNombre"
           <div class="clearfix"></div>
         </div>
         <div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="x_content">
               <div class="x_content">
                 <div class="row">
                   <div class="col-md-12">
                     <div  class="form-group">
-                      <p>Por favor, seleccione el período del que desea ver los gráficos.</p>
+                      <label>Por favor, seleccione el período del que desea ver los gráficos.</label>
                       <select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
-                        <option value="">Seleccione un periodo</option>
+                        <option value="">Seleccione un período | Opción Seleccionada: <?= $_SESSION["nombrePersonalizado"]?></option>
                         <?php foreach ($selectCiclo as $c): ?>
                           <option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
                         <?php endforeach?>
@@ -61,100 +256,101 @@ $fechaDocente = $countFechaDocentes->where('aperCicloId',$_SESSION["cicloNombre"
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="x_content">
+              <div class="x_content">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div  class="form-group">
+                      <label>Área de evaluación.</label>
+                      <select class="form-control" name="areaEvaluacionId" id="areaEvaluacionId" onchange="procesarValorFacultad()">
+                        <option value="">Seleccione un área de evaluación | Opción Seleccionada: <?=$_SESSION["areaEvaluacion"] ?></option>
+                        <?php foreach ($areaEvaluacionEva as $a): 
+                          $areasName = $areas->select('areaEvaluacion')->where('areaEvaluacionId',$a->areaEvaluacionId)->findColumn('areaEvaluacion')?>
+                          <option value="<?= $a->areaEvaluacionId ?>"><?=$areasName[0]?></option>
+                        <?php endforeach?>
+                      </select> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!--     GRAFICO PARA LOS PROMEDIOS POR FACULTAD -->
         <div class="row">
-          <div class="col-md-6 col-sm-6  ">
+          <div class="col-md-12 col-sm-6 ">
             <div class="x_panel">
               <div class="x_title">
-                <h2>Resultados evaluación docente por facultades</h2>
+                <h2>Promedios por facultad</h2>
                 <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <div id="mainb" style="height:350px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--     GRAFICO PARA LOS PROMEDIOS POR CARRERA -->
+        <div class="row">
+          <div class="col-md-12 col-sm-6 ">
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>Promedios por carrera</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <div id="mainbC" style="height:350px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--        GRÁFICO PARA TOTAL EVALUADORES -->
+        <div class="row">
+         <div class="col-md-6">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Cantidad de evaluaciones</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+              <div id="echart_bar_horizontal" style="height:370px;"></div>
+            </div>
+          </div>
+        </div>
 
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <canvas id="lineChart"></canvas>
-              </div>
+        <div class="col-md-6">
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Cantidad de autoevaluaciones</h2>
+              <ul class="nav navbar-right panel_toolbox">
+                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6  ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Resultados evaluación docente por carreras</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <canvas id="mybarChart"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6  ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Cantidad de evaluaciones realizadas</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div id="echart_line" style="height:350px;"></div>
-              </div>
-            </div>
-          </div>
-          <!-- /////////////// -->
-          <div class="col-md-6 col-sm-6  ">
-            <div class="x_panel">
-              <div class="x_title">
-                <h2>Cantidad de auto evaluaciones realizadas</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Settings 1</a>
-                      <a class="dropdown-item" href="#">Settings 2</a>
-                    </div>
-                  </li>
-                  <li><a class="close-link"><i class="fa fa-close"></i></a>
-                  </li>
-                </ul>
-                <div class="clearfix"></div>
-              </div>
-              <div class="x_content">
-                <div id="echart_line1" style="height:350px;"></div>
-              </div>
+            <div class="x_content">
+              <div id="echart_bar_horizontalA" style="height:370px;"></div>
             </div>
           </div>
         </div>
@@ -172,15 +368,29 @@ $fechaDocente = $countFechaDocentes->where('aperCicloId',$_SESSION["cicloNombre"
 <script src="/vendors/raphael/raphael.min.js"></script>
 <script src="/vendors/morris.js/morris.min.js"></script>
 <script>
- var fecha=<?php echo json_encode($fecha);?>;
- var cantidad=<?php echo json_encode($cantidad);?>;
- var cantidadDocente=<?php echo json_encode($cantidadDocente);?>;
- var fechaDocente=<?php echo json_encode($fechaDocente);?>;
- var nombreFecha=<?php echo json_encode($nombreFecha);?>;
- var promedio=<?php echo json_encode($promedio);?>;
- var nombreFacultad=<?php echo json_encode($nombreFacultad);?>;
- var promedioFacultad=<?php echo json_encode($promedioFacultad);?>;
- function confirmarBorrar(id){
+  ////////////////////////////FACULTADES//////////////////////////////////////////////
+  var nombresFacultades=<?php echo json_encode($nombresFacultades);?>;
+  var arrayNewPromediosFacultad=<?php echo json_encode($arrayNewPromediosFacultad);?>;
+  var promedioFacultadesFemenino=<?php echo json_encode($arrayNewPromediosFacultadF);?>;
+  var promedioFacultadesMasculino=<?php echo json_encode($arrayNewPromediosFacultadM);?>;
+
+  ////////////////////////////CARRERAS//////////////////////////////////////////////
+  var nombresCarreras=<?php echo json_encode($nombresCarreras);?>;
+  var arrayNewPromediosCarreras=<?php echo json_encode($arrayNewPromediosCarreras);?>;
+  var arrayNewPromediosCarrerasF=<?php echo json_encode($arrayNewPromediosCarrerasF);?>;
+  var arrayNewPromediosCarrerasM=<?php echo json_encode($arrayNewPromediosCarrerasM);?>;
+
+///////////////////////////////EVALUACIONES ///////////////////////////////////////////
+var totalEva=<?php echo json_encode($totalEva);?>;
+var totalEvaM=<?php echo json_encode($totalEvaM);?>;
+var totalEvaF=<?php echo json_encode($totalEvaF);?>;
+
+///////////////////////////////AUTOEVALUACIONES ///////////////////////////////////////////
+var totalAutoEva=<?php echo json_encode($totalAutoEva);?>;
+var totalAutoEvaM=<?php echo json_encode($totalAutoEvaM);?>;
+var totalAutoEvaF=<?php echo json_encode($totalAutoEvaF);?>;
+
+function confirmarBorrar(id){
   swal({   
     title: "¿Desea eliminar este registro?",   text: "Presione confirmar para eliminar",
     type: "warning",   
@@ -211,37 +421,27 @@ function procesarValor(){
     url:"/Graficos/SeleccionGrafico/generarSesionCiclo",
     data:"id=" + valorCiclo,
     success:function(p){
-      procesarCiclo();
+      window.location="/Graficos/Graficos";
     }
   });
 }
-function procesarCiclo(){
-  let valorCiclo = document.getElementById('cicloId').value;
-  if (valorCiclo!="") {
-    window.location="/Graficos/Graficos";
-  }else{}
-}
-function verificarRangos(){
-  let rangos = document.getElementById('rangos').value;
+
+function procesarValorFacultad(){
+  let valorAreaEvaluacion = document.getElementById('areaEvaluacionId').value;
   $.ajax({
     type:"POST",
-    url:"/Graficos/SeleccionGrafico/verficarRango",
-    data:"id=" + rangos,
+    url:"/Graficos/SeleccionGrafico/generarSesionAreaEvaluacion",
+    data:"id=" + valorAreaEvaluacion,
     success:function(p){
-      procesarCiclo();
+      window.location="/Graficos/Graficos";
     }
   });
 }
+
 $(document).ready(function(){
   $('#cicloId').select2();
+  $('#areaEvaluacionId').select2();
 });
-
-$(document).ready(function(){
-  $('#rangos').select2();
-});
-
-
-
 </script>
 
 

@@ -6,16 +6,17 @@ use App\Models\CatalogosEvaluacion\InstrumentoDetalleModel;?>
 <!-- datos generales de la carga academica y la inscripción -->
 <?php  $cargaInscripcion = new CargaInscripcionViewModel();
 $cargaInscripcionData =  $cargaInscripcion->asObject()
-->select('view_carga_inscripcion.*')->where('ciclo',$_SESSION["cicloId"])->where('estadoInstrumento','1')->where('inscripcionDetalleId',$inscripcion->inscripcionDetalleId)->findAll() ?>
+->select('view_carga_inscripcion.*')->where('aperCicloId',$_SESSION["cicloId"])->where('estadoInstrumento','1')->where('inscripcionDetalleId',$inscripcion->inscripcionDetalleId)->findAll() ?>
+
 <?php $num=0;  foreach ($cargaInscripcionData as $key => $c): 
-$_SESSION["nombres"] = $c->nombres; $_SESSION["apellidos"] = $c->apellidos;$_SESSION["nombresCarga"] = $c->nombresCarga; $_SESSION["apellidosCarga"] = $c->apellidosCarga;  $_SESSION["materia"]=$c->materia;$_SESSION["personaId"]=$c->personaId;$_SESSION["planMateriaId"]=$c->planMateriaId?>
+$_SESSION["nombres"] = $c->nombres; $_SESSION["apellidos"] = $c->apellidos;$_SESSION["nombresCarga"] = $c->nombresCarga; $_SESSION["apellidosCarga"] = $c->apellidosCarga;  $_SESSION["materia"]=$c->materia;$_SESSION["personaId"]=$c->personaId;$_SESSION["planMateriaId"]=$c->planMateriaId ?>
 <?php endforeach ?>
 
 <!-- Datos generales de apertura de evaluación -->
 <?php  $aperEvaluacion = new AperEvaluacionModelView();
 $fechaActual = date("Y-m-d");
 $aperEvaluacionData =  $aperEvaluacion->asObject()
-->select('view_aper_evaluacion.*')->where('ciclo',$_SESSION["cicloId"])->where('fechaInicio<=',$fechaActual)->where('fechaFin>=',$fechaActual)->where('estadoInstrumento','1')->findAll() ?>
+->select('view_aper_evaluacion.*')->where('aperCicloId',$_SESSION["cicloId"])->where('fechaInicio<=',$fechaActual)->where('fechaFin>=',$fechaActual)->where('estadoInstrumento','1')->findAll() ?>
 <?php $num=0;  foreach ($aperEvaluacionData as $key => $i): ?>
 <h1 hidden=""><?$areaEvaluacion= $i->areaEvaluacion ?></h1>
 <h1 hidden=""><?php $_SESSION["ciclo"]= $i->nombrePersonalizado ?></h1>

@@ -45,7 +45,7 @@ body, html {
 /*---------------------------------------------*/
 a {
 	font-family: Poppins-Regular;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
@@ -179,13 +179,12 @@ iframe {
 .wrap-login100 {
   
   background: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
-
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -324,21 +323,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.btn-show-pass:hover {
-  color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
-}
 
-.btn-show-pass.active {
-  color: #6a7dfe;
-  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
-  color: -o-linear-gradient(left, #21d4fd, #b721ff);
-  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
-  color: linear-gradient(left, #21d4fd, #b721ff);
-}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {
@@ -368,8 +353,8 @@ iframe {
   width: 300%;
   height: 100%;
   background: #a64bf4;
-  background: -webkit-linear-gradient(right, #172D44, #1abb9c, #2A3F54, #172D44);
-  background: -o-linear-gradient(right, #172D44, #1abb9c, #2A3F54, #172D44);
+  background: -webkit-linear-gradient(right, #2A3F54, #2A3F54, #2A3F54, #172D44);
+  background: -o-linear-gradient(right, #2A3F54, #2A3F54, #2A3F54, #172D44);
   background: -moz-linear-gradient(right, #172D44, #1abb9c, #2A3F54, #172D44);
   background: linear-gradient(right, #172D44, #1abb9c, #2A3F54, #172D44);
   top: 0;

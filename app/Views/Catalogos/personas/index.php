@@ -23,6 +23,8 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card-box table-responsive">
+                      <a href="/catalogos/personas/new" title="Crear" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-plus"></i> Crear</a>
+                     
                       <div class="clearfix"></div>
                       <table id="tabla" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
@@ -34,7 +36,6 @@
                           <th style="color: #fff">Apellidos</th>
                           <th style="color: #fff">Tipo de persona</th>
                           <th style="color: #fff">Sexo</th>
-                          <th style="color: #fff">Dirección</th>
                           <th style="color: #fff">Teléfono</th>
                           <th style="color: #fff">Email</th>
                           <th style="color: #fff">Fecha de Ingreso</th>
@@ -48,27 +49,27 @@
                       <tbody>
                        <?php $num=0;  foreach ($personas as $key => $v):
                         //Validar estado de persona
-                        if ($v->estado =='1'){
-                          $v->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
-                        }elseif ($v->estado =='0') {
-                          $v->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
-                        }
+                       if ($v->estado =='1'){
+                        $v->estado ='<font color="green" style="font-weight:bold;">ACTIVO</font>';
+                      }elseif ($v->estado =='0') {
+                        $v->estado ='<font color="red" style="font-weight:bold;">INACTIVO</font>';
+                      }
 
                         //Validar tipo de persona
-                        if ($v->tipoPersona =='A'){
-                          $v->tipoPersona ='ADMINISTRADOR';
-                        }elseif ($v->tipoPersona =='D') {
-                          $v->tipoPersona ='DOCENTE';
-                        }elseif ($v->tipoPersona =='E') {
-                          $v->tipoPersona ='ESTUDIANTE';
-                        }
+                      if ($v->tipoPersona =='A'){
+                        $v->tipoPersona ='ADMINISTRADOR';
+                      }elseif ($v->tipoPersona =='D') {
+                        $v->tipoPersona ='DOCENTE';
+                      }elseif ($v->tipoPersona =='E') {
+                        $v->tipoPersona ='ESTUDIANTE';
+                      }
 
                         //Validar tipo de persona
-                        if ($v->sexo =='M'){
-                          $v->sexo ='MASCULINO';
-                        }elseif ($v->sexo =='F') {
-                          $v->sexo ='FEMENINO';
-                        }
+                      if ($v->sexo =='M'){
+                        $v->sexo ='MASCULINO';
+                      }elseif ($v->sexo =='F') {
+                        $v->sexo ='FEMENINO';
+                      }
                       ?>
                       <tr>
                        <td><?= $num+=1; ?></td>
@@ -78,7 +79,6 @@
                        <td><?= $v->apellidos ?></td>
                        <td><?= $v->tipoPersona ?></td>
                        <td><?= $v->sexo ?></td>
-                       <td><?= $v->direccion ?></td>
                        <td><?= $v->telefono ?></td>
                        <td><?= $v->email ?></td>
                        <td><?= $v->fechaIngreso ?></td>

@@ -1,4 +1,7 @@
-<?php use App\Models\UsuariosModel; ?>
+<?php use App\Models\UsuariosModel; 
+use App\Models\CatalogosEvaluacion\AreasEvaluacioModel;
+$areas = new AreasEvaluacioModel();
+$areasEvaluacion = $areas->asObject()->findAll();?>
 <?= view("dashboard/edu/menu"); ?>
 </div>
 </div>
@@ -15,7 +18,7 @@
 		<div class="col-md-12 col-sm-12 " >
 			<div class="x_panel" style="border: 1px solid #e1e1e1;" >
 				<div  class="x_title" >
-					<h2>Seleccione un Período</h2>
+					<h2>Seleccione un Período | Gráficos Generales</h2>
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content" style="background: #fff;border: 1px solid #E1E1E1;padding-top: 10px;border-radius: 10px">
@@ -24,17 +27,25 @@
 						<div class="x_content">
 							<div class="x_content">
 								<div class="row">
-									<div class="col-md-12">
-										<div  class="form-group">
-											<p>Por favor, seleccione el período al que desea ingresar.</p>
-											<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
-												<option value="">Seleccione un periodo</option>
-												<?php foreach ($selectCiclo as $c): ?>
-													<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
-												<?php endforeach?>
-											</select> 
-											<button type="button" class="btn btn-primary col-md-2 float-right form-control" onclick="procesarCiclo()" id="seleccionarCiclo" style="margin-right: -0.20%;margin-top: 5%;background:#2A3F54">INGRESAR</button>
-										</div>
+									<!-- 	Campo select para seleccionar el ciclo -->
+									<div class="col-md-6" style="padding-bottom: 40px">
+										<p>Por favor, seleccione el período al que desea ingresar.</p>
+										<select class="form-control" name="cicloId" id="cicloId" onchange="procesarValor()">
+											<option value="">Seleccione un periodo</option>
+											<?php foreach ($selectCiclo as $c): ?>
+												<option value="<?= $c->aperCicloId ?>"><?= 'Ciclo: ',$c->ciclo ,' - Año: ', $c->anio ?></option>
+											<?php endforeach?>
+										</select> 
+									</div>
+									<!-- 	Campo select para seleccionar el área de evaluación -->
+									<div id="areas" class="col-md-6"  style="display:none;">
+										<p>Área de evaluación.</p>
+										<select style="width: 100%;" class="form-control" name="areaEvaluacionId" id="areaEvaluacionId" onchange="procesarValorFacultad()">
+											<option value="">Seleccione un área de evaluación</option>
+											<?php foreach ($areasEvaluacion as $a): ?>
+												<option value="<?= $a->areaEvaluacionId ?>"><?=$a->areaEvaluacion?></option>
+											<?php endforeach?>
+										</select> 
 									</div>
 								</div>
 							</div>
@@ -45,6 +56,7 @@
 		</div>
 	</div>
 </div>
+</div>
 <script src="/js/jquery-3.4.1.slim.min.js"></script>
 <script type="text/javascript">
 	function procesarValor(){
@@ -54,17 +66,25 @@
 			url:"/Graficos/SeleccionGrafico/generarSesionCiclo",
 			data:"id=" + valorCiclo,
 			success:function(p){
+				document.getElementById('areas').style.display = 'block';
 			}
 		});
 	}
-	function procesarCiclo(){
-		let valorCiclo = document.getElementById('cicloId').value;
-		if (valorCiclo!="") {
-			window.location="/Graficos/Graficos";
-		}else{}
+		function procesarValorFacultad(){
+		let valorAreaEvaluacion = document.getElementById('areaEvaluacionId').value;
+		$.ajax({
+			type:"POST",
+			url:"/Graficos/SeleccionGrafico/generarSesionAreaEvaluacion",
+			data:"id=" + valorAreaEvaluacion,
+			success:function(p){
+				window.location="/Graficos/Graficos";
+			}
+		});
 	}
+
 	$(document).ready(function(){
 		$('#cicloId').select2();
+		$('#areaEvaluacionId').select2();
 	});
 
 </script>

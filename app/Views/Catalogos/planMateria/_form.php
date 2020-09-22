@@ -27,6 +27,22 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
+										<div class="item form-group col-md-11"  <?= !$created ? "hidden" : "" ?> >
+												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione la carrera<span class="required">*</span>
+												</label>
+												<div class="input-group mb-3 col-md-6">
+													<div class="input-group-prepend">
+														<span class="input-group-text" id="basic-addon1" style="background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff"><i class="fa fa-balance-scale" style="color:#2A3F54;width: 20px;height: 24px;
+														"></i></span>
+													</div>
+													<select class="form-control col-md-11" name="carreraId" id="carreraId" >
+														<?php foreach ($plan as $p): ?>
+															<option value="<?= $p->planId ?>"><?= $p->nombrePlan ?></option>
+														<?php endforeach?>
+													</select> 
+												</div>
+											</div>
+										<!-- 	EDITAR -->
 											<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
 												<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Seleccione el Plan <span class="required">*</span>
 												</label>
@@ -75,7 +91,7 @@
 	$(document).ready(function(){
 		$('#planId').select2();
 	});
-		$(document).ready(function(){
+	$(document).ready(function(){
 		$('#materiaId').select2();
 	});
 	$(function () {

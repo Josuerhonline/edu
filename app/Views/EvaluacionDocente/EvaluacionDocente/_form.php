@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/build/css/selects.css">
 <link rel="stylesheet" href="/build/css/select2-evaluacionDocente.css">
 <?= view("EvaluacionDocente/EvaluacionDocente/preguntas");  
+date_default_timezone_set('America/El_Salvador');
 $session = session(); 
 $rol =  $session->rolId; ?>
 <?= view("dashboard/edu/menu"); ?>

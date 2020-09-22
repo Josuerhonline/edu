@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/build/css/selects.css">
 <link rel="stylesheet" href="/build/css/select2-evaluacionDocente.css">
-<?= view("EvaluacionDocente/EvaluacionDocente/preguntas");  
+<?= view("EvaluacionDocente/EvaluacionDocente/preguntasDocente");  
+date_default_timezone_set('America/El_Salvador');
 $session = session(); 
 $rol =  $session->rolId; ?>
 <?= view("dashboard/edu/menu"); ?>
@@ -44,7 +45,6 @@ $ponderacionResultado =  $ponderacion->asObject()
 						<h3 style="margin-left: 6%"><font color="#2A3F54">EVALUACIÓN DOCENTE | CICLO  <?= $_SESSION["ciclo"] ?></font></h3>
 					</div>
 					<div class="col-md-4">
-						<h2><font color="#172D44" >Materia:</font><font color="#4b5f71"> <?=  $_SESSION["materia"] ?></font></h2>
 						<h2><font color="#172D44">Docente:</font><font color="#4b5f71"> <?=  $_SESSION["nombresCarga"];echo " "; echo  $_SESSION["apellidosCarga"]; ?></font></h2>
 						<h2><font color="#172D44">Fecha de evaluación:</font><font color="#4b5f71"> <?=  date("d") . " del " . date("m") . " de " . date("Y"); ?></font></h2>
 					</div>

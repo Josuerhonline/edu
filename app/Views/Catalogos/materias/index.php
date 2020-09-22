@@ -23,9 +23,9 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card-box table-responsive">
-                      <a href="/catalogos/materias/new" title="Crear" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-plus"></i> Crear</a>
+                      <a href="/catalogos/materias/trasladar" title="Trasladar" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-retweet"></i> Trasladar</a> <a href="/Catalogos/Materias/new" title="Trasladar" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-plus"></i> Crear</a>
                       <div class="clearfix"></div>
-                      <table id="tablaUsuarios" class="display table table-bordered responsive nowrap" style="width:100%">
+                      <table id="tabla" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">Nº</th>
@@ -51,8 +51,8 @@
                        <td><?= $m->nombreCorto ?></td>
                        <td><?= $m->estado ?></td>
                        <td>
-                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/materias/edit/<?= $m->materiaId?>"><i class="fa fa-pencil"></i></a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?= $m->materiaId ?>)"><i class="fa fa-trash"></i></button>
+                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/catalogos/materias/edit/<?=$m->materiaId ?>"><i class="fa fa-pencil"></i></a>
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?=$m->materiaId ?>)"><i class="fa fa-trash"></i></button>
                       </td>
                     </tr>
                   <?php endforeach?>
@@ -89,7 +89,7 @@
   }
 
   $(document).ready(function() {
-    $('#tablaUsuarios').DataTable( {
+    $('#tabla').DataTable( {
       "paging":   true,
       "ordering": true,
       "info":     true,

@@ -24,13 +24,15 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="card-box table-responsive">
-                      <div class="clearfix"></div>
-                      <table id="tablaUsuarios" class="display table table-bordered responsive nowrap" style="width:100%">
+                     <a href="/CatalogosEvaluacion/Inscripcion/new" title="Trasladar" class="btn btn-success mb-12" style="margin-left: 19px"><i class="fa fa-retweet"></i> Trasladar</a>
+                     <div class="clearfix"></div>
+                     <table id="tablaUsuarios" class="display table table-bordered responsive nowrap" style="width:100%">
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">Nº</th>
                           <th style="color: #fff" >Persona</th>
                           <th style="color: #fff" >Plan</th>
+                          <th style="color: #fff" >Materia</th>
                           <th style="color: #fff" >Ciclo</th>
                           <th style="color: #fff" >Fecha de inscripción</th>
                           <th style="color: #fff">Estado</th>
@@ -49,11 +51,12 @@
                        <td><?= $num+=1; ?></td>
                        <td><?= $i->nombres," ", $i->apellidos ?></td>
                        <td><?= $i->nombrePlan  ?></td>
+                       <td><?= $i->materia  ?></td>
                        <td><?= $i->nombrePersonalizado?></td>
                        <td><?= $i->fechaInscripcion  ?></td>
                        <td><?= $i->estadoInstrumento ?></td>
                        <td>
-                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="floaa-right ml-2 btn btn-primary btn-sm" href="/CatalogosEvaluacion/Inscripcion/edit/<?= $i->inscripcionId?>"><i class="fa fa-pencil"></i></a>
+                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="floaa-right ml-2 btn btn-primary btn-sm" href="/CatalogosEvaluacion/Inscripcion/edit/<?= $i->inscripcionDetalleId?>"><i class="fa fa-pencil"></i></a>
                         <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="floaa-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?= $i->inscripcionId ?>)"><i class="fa fa-trash"></i></button>
                       </td>
                     </tr>

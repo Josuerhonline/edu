@@ -4,5 +4,5 @@ function hashClave($clavePlana){
 }
 
 function verifyKey($clavePlana,$claveEncriptada){
-return password_verify($clavePlana, $claveEncriptada );
+	return password_verify($clavePlana, $claveEncriptada );
 }

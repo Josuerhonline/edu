@@ -37,7 +37,8 @@
 												</div>
 												<select class="form-control col-md-11" name="persona" id="persona">
 													<?php foreach ($persona as $p): ?>
-														<option <?= $inscripcion->personaId !== $p->personaId ?: "selected"?> value="<?= $p->personaId ?>"><?= $p->nombres, " ", $p->apellidos ?> </option>
+														<option <?= $inscripcion->personaId
+														!== $p->personaId ?: "selected"?> value="<?= $p->personaId ?>"><?= $p->nombres, " ", $p->apellidos ?> </option>
 													<?php endforeach?>
 												</select> 
 											</div>
@@ -50,15 +51,13 @@
 													<span span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class="	fa fa-graduation-cap" style="color:#2A3F54;width: 20px;height: 24px;
 													"></i></span>
 												</div>
-												<?php   $inscripcionDetalle = new InscripcionDetalleModel();
-												$planMateriaDetalle= $inscripcionDetalle->asObject()->where('inscripcionId',$inscripcion->inscripcionId)->findAll()  ?>
-												<?php foreach ($planMateriaDetalle as $pl): ?>
-													<input hidden="" type="text" name="inscripcionDetalleId" id="inscripcionDetalleId" value="<?= $pl->inscripcionDetalleId ?>">
-													<select class="form-control col-md-11" name="planMateria" id="planMateria">
-														<?php foreach ($planMateria as $p): ?>
-															<option <?= $pl->planMateriaId !== $p->planMateriaId ?: "selected"?> value="<?= $p->planMateriaId ?>"><?= $p->nombre, " ", $p->nombrePlan ?> </option>
-														<?php endforeach?>
+												
+												<input  hidden="" type="text" name="inscripcionDetalleId" id="inscripcionDetalleId" value="<?= $inscriDeta->inscripcionDetalleId ?>">
+												<select class="form-control col-md-11" name="planMateriaId" id="planMateriaId">
+													<?php foreach ($planMateria as $p): ?>
+														<option <?= $inscriDeta->planMateriaId !== $p->planMateriaId ?: "selected"?> value="<?= $p->planMateriaId ?>"><?= $p->nombre, " ", $p->nombrePlan ?> </option>
 													<?php endforeach?>
+
 												</select> 
 											</div>
 										</div>
@@ -78,7 +77,7 @@
 											</div>
 										</div>
 										<div class="item form-group col-md-11" <?= $created ? "hidden" : "" ?>>
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nombre del area de evaluación<span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Fecha de inscripción<span class="required">*</span>
 											</label>
 											<div class="input-group mb-3 col-md-6">
 												<div class="input-group-prepend">
@@ -119,7 +118,9 @@
 		$('#persona').select2();
 	});
 	$(document).ready(function(){
-		$('#planMateria').select2();
+		$('#planMateriaId').select2();
+
+
 	});
 	$(document).ready(function(){
 		$('#ciclo').select2();

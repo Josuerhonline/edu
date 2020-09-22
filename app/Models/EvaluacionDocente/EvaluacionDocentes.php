@@ -6,6 +6,6 @@ class EvaluacionDocentes extends Model
 {
 	protected $table = 'eva_evaluacion_docentes';
 	protected $primaryKey = 'evaluacionDocenteId';
-	protected $allowedFields = ['personaId','aperEvaluacionId','fechaEvaluacion','observaciones'];
+	protected $allowedFields = ['personaId','aperEvaluacionId','fechaEvaluacion','observaciones','resultadoEvaluacion'];
 
 }

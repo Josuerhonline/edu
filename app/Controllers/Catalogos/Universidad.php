@@ -7,12 +7,14 @@ use \CodeIgniter\Exceptions\PageNotFoundException;
 class Universidad extends BaseController {
   public function index(){
     $universidad = new UniversidadModel();
+
     $data = [
       'universidades' => $universidad->asObject()
       ->select('cof_universidad.*')
       ->findAll()
     ];
-    $this->_loadDefaultView( 'Listado de Universidades',$data,'index');
+
+    $this->_loadDefaultView('Datos de Universidad',$data,'index');
   }
 
   public function new(){
@@ -23,13 +25,20 @@ class Universidad extends BaseController {
 
   public function create(){
     $universidad = new UniversidadModel();
+    helper("Bitacora");
+
     if($this->validate('universidad')){
       $id = $universidad->insert([
-        'universidad' =>$this->request->getPost('nombre_universidad'),
-        'direccion'   =>$this->request->getPost('direccion'),
-        'telefono'    =>$this->request->getPost('telefono'),
+        'universidad' => $this->request->getPost('nombre_universidad'),
+        'direccion'   => $this->request->getPost('direccion'),
+        'telefono'    => $this->request->getPost('telefono'),
       ]);
 
+      $valor1 = $this->request->getPost('nombre_universidad');
+      $valor2 = $this->request->getPost('direccion');
+      $valor3 = $this->request->getPost('telefono');
+
+      insert_acciones('INSERTÓ','NUEVA UNIVERSIDAD | Nombre: '.$valor1." | Dirección: ".$valor2." | Teléfono: ".$valor3);
       return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad creada con éxito.');
     }
 
@@ -38,6 +47,7 @@ class Universidad extends BaseController {
 
   public function edit($id = null){
     $universidad = new UniversidadModel();
+
     if ($universidad->find($id) == null){
       throw PageNotFoundException::forPageNotFound();
     }  
@@ -48,38 +58,53 @@ class Universidad extends BaseController {
   }
 
   public function update($id = null){
+    helper("Bitacora");
     $universidad = new UniversidadModel();
 
     if ($universidad->find($id) == null){
       throw PageNotFoundException::forPageNotFound();
     }  
-    $uni = $this->request->getPost('nombre_universidad_editar');
+
+    $uni               = $this->request->getPost('nombre_universidad_editar');
     $buscarUniversidad = $universidad->select('universidad')->where('universidad',$uni)->where('universidadId',$id)->first();
+
     if ($buscarUniversidad) {
       $universidad->update($id, [
         'direccion' =>$this->request->getPost('direccion_editar'),
-        'telefono' =>$this->request->getPost('telefono_editar'),
+        'telefono'  =>$this->request->getPost('telefono_editar'),
       ]);
-      return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad edita con éxito.');
-    }
-    if (!$buscarUniversidad) {
-      if($this->validate('universidadEditar')){
-      $universidad->update($id, [
-        'universidad' =>$this->request->getPost('nombre_universidad_editar'),
-        'direccion' =>$this->request->getPost('direccion_editar'),
-        'telefono' =>$this->request->getPost('telefono_editar'),
-      ]);
-      return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad edita con éxito.');
+
+      $valor1 = $this->request->getPost('direccion_editar');
+      $valor2 = $this->request->getPost('telefono_editar');
+
+      insert_acciones('ACTUALIZÓ','UNIVERSIDAD | universidadId: '.$id." | direccion: ".$valor1." | telefono: ".$valor2);
+      return redirect()->to('/Catalogos/universidad')->with('message', 'Datos editados con éxito.');
     }
 
+    if (!$buscarUniversidad) {
+      if($this->validate('universidadEditar')){
+        $universidad->update($id, [
+          'universidad' =>$this->request->getPost('nombre_universidad_editar'),
+          'direccion'   =>$this->request->getPost('direccion_editar'),
+          'telefono'    =>$this->request->getPost('telefono_editar'),
+        ]);
+
+        $valor1 = $this->request->getPost('direccion_editar');
+        $valor2 = $this->request->getPost('telefono_editar');
+        $valor3 = $this->request->getPost('nombre_universidad_editar');
+
+        insert_acciones('ACTUALIZÓ','UNIVERSIDAD | universidadId: '.$id." | direccion: ".$valor1." | telefono: ".$valor2." | nombre: ".$valor3);
+        return redirect()->to('/Catalogos/universidad')->with('message', 'Datos editados con éxito.');
+      }
     }
 
     return redirect()->back()->withInput();
   }
 
   public function delete($id = null){
-    $universidad = new UniversidadModel();
-    $facultad = new FacultadModel();
+    helper("Bitacora");
+    $universidad    = new UniversidadModel();
+    $facultad       = new FacultadModel();
     $buscarFacultad = $facultad->select('universidadId')->where('universidadId',$id)->first();
 
     if ($buscarFacultad) {
@@ -92,6 +117,7 @@ class Universidad extends BaseController {
     }  
 
     $universidad->delete($id);
+    insert_acciones('ELIMINÓ','UNIVERSIDAD | universidadId:'.$id);
     return redirect()->to('/Catalogos/universidad')->with('message', 'Universidad eliminada con éxito.');
   }
 
