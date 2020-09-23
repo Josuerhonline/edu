@@ -29,33 +29,36 @@
                        <thead style="background:#2A3F54;">
                         <tr>
                           <th style="color: #fff">N°</th>
-                          <th style="color: #fff">Nombres</th>
-                          <th style="color: #fff">Apellidos</th>
+                          <th style="color: #fff">Nombres docente</th>
+                          <th style="color: #fff">Apellidos docente</th>
+                          <th style="color: #fff">Nombre de la combinación</th>
+                          <th style="color: #fff">Materia</th>
                           <th style="color: #fff">Opciones</th>
                         </tr>
                       </thead>
                       <tbody>
                        <?php $num=0;  foreach ($carga as $key => $u): ?>
-                      <tr>
-                       <td><?= $num+=1; ?></td>
-                       <td><?= $u->nombresCarga ?></td>
-                       <td><?= $u->apellidosCarga ?></td>
-                       <td>
-                        <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar" class="float-right ml-2 btn btn-primary btn-sm" href="/Catalogos/CombinarMaterias/edit/"><i class="fa fa-pencil"></i></a>
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar()"><i class="fa fa-trash"></i></button>
-          
-                      </td>
-                    </tr>
-                  <?php endforeach?>
-                </tbody>
-              </table>
+                       <tr>
+                         <td><?= $num+=1; ?></td>
+                         <td><?= $u->nombres?></td>
+                         <td><?= $u->apellidos ?></td>
+                         <td><?= $u->nombreCombinacion ?></td>
+                         <td><?= $u->nombre ?></td>
+                         <td>
+                          <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Borrar" class="float-right btn btn-danger btn-sm ml-2"  onclick="confirmarBorrar(<?= $u->combinarMateriaId ?>)"><i class="fa fa-trash"></i></button>
+
+                        </td>
+                      </tr>
+                    <?php endforeach?>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <br><br><br><br>
 </div>

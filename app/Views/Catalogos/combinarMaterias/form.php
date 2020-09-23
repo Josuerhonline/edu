@@ -40,7 +40,7 @@ $planesMateria = $carga->asObject()
 								<div class="row">
 									<div class="col-sm-12">
 										<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" >
-											<input type="text" id="personaId" name="personaId" value="<?=$_SESSION["personaIdBuscar"] ?>">
+											<input hidden="" type="text" id="personaId" name="personaId" value="<?=$_SESSION["personaIdBuscar"] ?>">
 											<div class="item form-group col-md-11" >
 												<label class='col-form-label col-md-3 col-sm-3 label-align' for='first-name'>Materias a combinar<span class='required'>*</span>
 												</label>
@@ -49,12 +49,23 @@ $planesMateria = $carga->asObject()
 														<span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
 														'></i></span>
 													</div>
-													<select onchange ="getValues()" id="planMateriaId" name="planMateriaId" class="col-md-11 selectpicker" multiple data-live-search="true">
+													<select onchange="mostrar()" id="planMateriaId" name="planMateriaId" class="form-control selectpicker" multiple="multiple" required="" >
 														<?php foreach ($planesMateria as $p): ?>
 															<option value="<?= $p->planMateriaId ?>"><?= $p->nombre ,' ', $p->nombrePlan ?></option>
 														<?php endforeach?>
 													</select>
 												</div>
+											</div>
+											<div hidden="">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias1">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias2">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias3">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias4">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias5">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias6">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias7">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias8">
+												<input  type="text" name="planesMaterias[]" id="planesMaterias9">
 											</div>
 											<div class="item form-group col-md-11" >
 												<label class='col-form-label col-md-3 col-sm-3 label-align' for='first-name'>Nombre de la combinación<span class='required'>*</span>
@@ -64,13 +75,17 @@ $planesMateria = $carga->asObject()
 														<span class='input-group-text' id='basic-addon1' style='background: #fff;border-top: #fff;border-left: #fff;border-bottom: #fff;border-right: #fff'><i class='fa fa-graduation-cap' style='color:#2A3F54;width: 20px;height: 24px;
 														'></i></span>
 													</div>
-													<input class="form-control col-md-11" type="text" id="nombreCombinacion" name="nombreCombinacion">
+													<input class="form-control col-md-11" type="text" id="nombreCombinacion" name="nombreCombinacion" required="">
 												</div>
 											</div>
-										
-											<button class="btn btn-success" type="submit" style="width: 42%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
-												<div id="listaElementos">
-										</form>
+											<div id="boton" style="display: none;">
+
+
+												<button onclick="combinar()" class="btn btn-success" type="submit" style="width: 42%;margin-left: 26%"><i class="fa fa-save"></i> <?=$textButton?></button>
+											</div>
+											<div id="listaElementos">
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -80,27 +95,48 @@ $planesMateria = $carga->asObject()
 			</div>
 		</div>
 	</div>
-</div>
-<script src="/js/jquery-3.4.1.slim.min.js"></script>
+	<script src="/js/jquery-3.4.1.slim.min.js"></script>
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#planMateriaId').selectpicker();
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#personaId').selectpicker();
 
-	});
+		});
 
-	function getValues() {
-    document.getElementById('listaElementos').innerHTML = '';
-    var selectObject =document.getElementById("secretariaTxt");
-    for (var i = 0; i < selectObject.options.length; i++) {
-        if(selectObject.options[i].selected ==true){              
-           document.getElementById('listaElementos').innerHTML += selectObject.options[i].value + '<br>';
-          }
-      }
+		function mostrar(){
+			let planMateriaId = document.getElementById('planMateriaId').value;
 
-}
+			if (planMateriaId!="") {
+				document.getElementById('boton').style.display = 'block';
+			}else{
+				document.getElementById('boton').style.display = 'none';
+			}
+		}
 
-</script>
+		function buscarDatosDocente(){
+			var personaId = document.getElementById('personaId')
+			$.ajax({
+				type:"POST",
+				url:"/Catalogos/CombinarMaterias/generarSesion",
+				data:"id=" + valorCiclo,
+				success:function(p){
+				}
+			});
+		}
+
+		function combinar(){
+			document.getElementById('listaElementos').innerHTML = '';
+			var selectObject =document.getElementById("planMateriaId");
+			var num=1;
+			for (var i = 0; i < selectObject.options.length; i++) {
+				if(selectObject.options[i].selected ==true){
+					document.getElementById('planesMaterias'+num).value+=selectObject.options[i].value;  
+					num+=1;
+				}
+			}
+
+		}
+	</script>
 
 
 
